@@ -1,4 +1,19 @@
 title: DI
 lang: es
-remote_theme: just-the-docs/just-the-docs
+remote_theme: rundocs/jekyll-rtd-theme
 
+# Theme settings:
+repo_url: "https://github.com/carlosperate/jekyll-theme-rtd"
+edit_on_github: true
+github_docs_folder: true
+sticky_navigation: true
+prev_next_buttons_location: bottom
+search_enabled: true
+hljs_style: github-gis
+
+theme: jekyll-theme-minimal
+
+plugins:
+  - jemoji
+  - jekyll-avatar
+  - jekyll-mentions

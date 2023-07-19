@@ -1,11 +1,3 @@
----
-layout: default
-has_children: true
----
-
-
-
-
 # UT1.1 Introducción a las interfaces
 
 ## Interfaz gráfica de usuario (GUI)
