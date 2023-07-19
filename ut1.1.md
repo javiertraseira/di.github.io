@@ -2,7 +2,7 @@
 
 ## Interfaz gráfica de usuario (GUI)
 
-``` 
+```note
 La Interfaz gráfica de usuario o **GUI** (*Graphic User Interface*) es el entorno visual de imágenes y objetos mediante el cual una máquina y un usuario interactúan.
 ```
 
@@ -12,7 +12,7 @@ Hay interfaces visuales como las de los smartphones, diseñadas para disminuir a
 
 ## Interfaz de un sitio web
 
-``` 
+```note
 La interfaz de un sitio web, se refiere a todos los gráficos, información y herramientas que aparecen en la pantalla al abrir una página web en un navegador.
 ```
 
