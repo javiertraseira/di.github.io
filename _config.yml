@@ -1,6 +1,6 @@
 title: DI
 lang: es
-remote_theme: carlosperate/jekyll-theme-rtd
+remote_theme: just-the-docs/just-the-docs
 
 # Theme settings:
 repo_url: "https://github.com/carlosperate/jekyll-theme-rtd"
