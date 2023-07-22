@@ -162,11 +162,17 @@ Los elementos básicos de **Flexbox** son los siguientes:
 -   **Eje secundario**: De la misma forma, los contenedores flexibles tendrán una orientación secundaria, perpendicular a la principal. Si la principal es en horizontal, la secundaria será en vertical, y viceversa.
 -   **Ítem**: Cada uno de los hijos flexibles que tendrá el contenedor en su interior.
 
-![](media/a5a9ce13118f2af008e29b4d981464e5.png)
-
 💡 Si queremos utilizar las propiedades de Flexbox tendremos que definirlo mediante la propiedad **display** y su valor **flex** o **flex-inline** dentro del selector que nosotros definamos, que será nuestro elemento padre o contenedor-flex.
 
 💡 La propiedad flex no se hereda desde el contenedor donde es aplicada.
+
+```css
+.contendor-padre {
+ display: flex;
+}
+```
+
+![](media/a5a9ce13118f2af008e29b4d981464e5.png)
 
 ### Dirección de los ejes: flex-direction
 
