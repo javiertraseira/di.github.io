@@ -215,10 +215,12 @@ Cuidado porque el selector de clases es **case-sensitive**.
 
 Si un elemento dispone de un atributo **class** con más de un valor, es posible utilizar un selector más avanzado:
 
+```css
     .error { color: red; }
     .error.destacado { color: blue; }
     .destacado { font-size: 15px; }
     .especial	{ font-weight: bold; }
+```
 
 ### Selector de id
 
@@ -335,9 +337,11 @@ Para el siguiente ejemplo por tanto:
 
 Solo se seleccionará únicamente en el HTML el elemento h2 que se encuentre inmediatamente a continuación del h1.
 
+```html
     <h1>Content</h1>
     <h2>Content</h2>  <-----
     <h3>Content</h3>
+```
 
 ### Selector de atributos
 
@@ -601,9 +605,11 @@ El tipo de letra del texto se puede indicar de dos formas diferentes:
 -   Mediante el nombre específico de la fuente: como por ejemplo "*Arial* " o "*Verdana*".
 -   Mediante el **nombre genérico** de una familia tipográfica: los nombres genéricos no se refieren a ninguna fuente en concreto, sino que hacen referencia al estilo del tipo de letra. Las familias genéricas definidas son serif (pj *Times New Roman*), sans-serif (pj *Arial*), cursive (pj Comic Sans), fantasy (pj *Impact*) y monospace (pj *Courier New*).
 
+```html
         h3 {
         font-family: sans-serif;
         }
+```
 
 Las fuentes específicas sólo se visualizarán **si el usuario las tiene instaladas en su sistema o dispositivo**. En caso contrario, se usará otra tipografía sustituta disponible en el sistema.
 
