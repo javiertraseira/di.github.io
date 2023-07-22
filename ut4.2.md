@@ -59,15 +59,19 @@ Existen tres formas conocidas de emplear CSS para maquetar una página HTML:
 
 Se hace utilizando el atributo \<style\>. Dentro de su valor irán las propiedades y sus respectivos valores CSS. Se trata de un formato en desuso al no separar contenido de presentación.
 
+```css
     <p style="color: red;"> este es un párrafo \<p>
+```
 
 ### CSS incrustado en el HTML
 
 Se hace aplicando también la etiqueta \<style\> que contiene el código CSS que se desea aplicar a todo el documento HTML.
 
+```css
     <style>
     /* Aquí irá todo el código CSS*/
     </style>
+```
 
 ### CSS externo referenciado
 
@@ -75,6 +79,7 @@ Esta es sin duda la forma más recomendable de aplicar estilos a documentos HTML
 
 Para realizar la invocación se empleará la etiqueta \<link\> dentro de la etiqueta \<head\> del documento HTML y mediante el atributo rel y href invocamos al documento CSS mediante su nombre.
 
+```html
     <html>
     <head>
     <title> TITULO </title>
@@ -85,6 +90,7 @@ Para realizar la invocación se empleará la etiqueta \<link\> dentro de la etiq
     </body>
 
     </html>
+```
 
 ## Reglas CSS
 
@@ -110,10 +116,12 @@ A pesar de su sencillez, no se utiliza habitualmente, ya que es difícil que un 
 
 El siguiente ejemplo elimina el margen y el relleno de todos los elementos HTML:
 
+```css
     * { 
     margin: 0;
     padding: 0;
     }
+```
 
 ### Selector de etiqueta
 
@@ -125,10 +133,12 @@ Para utilizar este selector, solamente es necesario indicar el nombre de una eti
 
 Para el siguiente ejemplo selecciona todos los párrafos de la página:
 
+```css
     p { 
     margin: 0;
     font-weight: bold;
     }
+```
 
 ### Selector de etiqueta múltiple
 
@@ -136,11 +146,13 @@ Si se quiere aplicar los mismos estilos a varias etiquetas diferentes, se pueden
 
 En el ejemplo, los títulos de sección **h1**, **h2** y **h3** comparten los mismos estilos:
 
+```css
     h1, h2, h3 { 
     color: #8A8E27;
     font-weight: normal;
     font-family: Arial, Helvetica, sans-serif;
     }
+```
 
 
 En las hojas de estilo complejas, es habitual agrupar las propiedades comunes de varios elementos en una única regla CSS y posteriormente definir las propiedades específicas de esos mismos elementos aparte.
@@ -155,18 +167,22 @@ El último selector indica el elemento sobre el que se aplican los estilos y tod
 
     selector1 selector2 selector3 ... selectorN
 
+```css
     p span { 
     color: red; 
     font-size: 2em;
     }
+```
 
 
 Dado este código HTML, el selector afectaría también a los selectores *span* de texto2:
 
+```html
     <p>
     <span>texto1</span>
     <a href="">...<span>texto2</span></a>
     </p>
+```
 
 
 ![](media/8ad398bb62da1b9f98358d35dbd04763.png)
@@ -183,13 +199,17 @@ Los selectores de clase en CSS se usan por tanto cuando hay más de un elemento 
 
 En HTML la clase se definirá de la siguiente forma:
 
+```html
     <span class="miclase"\>Aquí hay un span de una clase.\</span\>
+```
 
 Y en CSS se referenciará con el **punto**:
 
+```css
     .miclase {
     background-color: blue;
     }
+```
 
 Cuidado porque el selector de clases es **case-sensitive**.
 
@@ -210,13 +230,17 @@ El selector CSS para indicar los id es la **almohadilla** \#.
 
 En HTML el **id** se referenciará de la siguiente forma:
 
+```html
     <h2 id="oferta"\>Aquí hay una oferta.</h2>
+```
 
 Para el siguiente ejemplo:
 
+```css
     h2#ofertas {
     background-color: yellow;
     }
+```
 
 Aplicará un fondo amarillo al elemento \<h2\> que tenga el id único ofertas. Al igual que el selector de clases también es **case-sensitive.**
 
@@ -224,7 +248,9 @@ Aplicará un fondo amarillo al elemento \<h2\> que tenga el id único ofertas. A
 
 La diferencia entre un selector de **id** y uno de clase, es que el selector de id se puede usar para identificar un solo elemento, mientras que una **clase** se puede usar para agrupar más de uno, es decir las clases están pensadas para poder definir el mismo estilo a varios elementos de la página.
 
+```html
     <div id="principal" class="section nuevo"\>
+```
 
 Otro ejemplo práctico, si se tiene una página con un menú de navegación que aparece una única vez, se le podría asignar un id a la capa donde está la barra de navegación.
 
@@ -246,18 +272,22 @@ Se trata de un selector similar al selector descendente, pero muy diferente en s
 
 Para el siguiente ejemplo:
 
+```css
     div > span { 
     color: blue;
     }
+```
 
 El selector p \> span se interpreta como cualquier elemento \<span\> que sea hijo directo de un elemento \<div\>
 
+```html
     <div>
     <span></span>   <-----
     </div>
     <div>
     <p> <span></span> </p>
     </div>
+```
 
 ### Selector de hermanos
 
@@ -267,12 +297,15 @@ Podemos definir también un selector con la condición de que una etiqueta esté
 
 Un selector hermano se escribe separando las etiquetas con un carácter **\~**
 
+```css
     div ~ p { 
     color: red
     }
+```
 
 Y el HTML:
 
+```html
     <div>
     <p> Párrafo 1</p>
     </div>
@@ -280,6 +313,7 @@ Y el HTML:
     <p> Párrafo 2</p>   <-----
     <code>Código</code>
     <p> Párrafo 3</p>    <-----
+```
 
 ### Selector adyacente
 
@@ -293,9 +327,11 @@ Su sintaxis emplea el signo + para separar los dos elementos. Su sintaxis:
 
 Para el siguiente ejemplo por tanto:
 
+```css
     h1 + h2 { 
     color: red;
     }
+```
 
 Solo se seleccionará únicamente en el HTML el elemento h2 que se encuentre inmediatamente a continuación del h1.
 
@@ -314,9 +350,11 @@ Permiten seleccionar elementos HTML en función de sus atributos y/o valores de 
 
 Así por ejemplo:
 
+```css
     a[class="externo"] { 
         color: blue;
     }
+```
 
 ### Resumen de selectores
 
@@ -358,10 +396,12 @@ Existen algunas pseudoclases orientadas a los enlaces o hipervínculos. En este 
 
 Por ejemplo:
 
+```css
     a:link { 
     color: black;
     font-weight: bold;
     }
+```
 
 ### Pseudoclases de ratón
 
@@ -374,9 +414,11 @@ Permiten aplicar estilos como respuesta a la interacción con el puntero del rat
 
 Dado el ejemplo:
 
+```css
     div:hover a {
     background-color: steelblue; color: white;
     }
+```
 
 
 Cuando el usuario mueva el ratón sobre un div se resaltarán todos los enlaces que contenga.
@@ -430,6 +472,7 @@ Si no queremos quedarnos solo en los primeros o últimos elementos podemos hacer
 
 Así por ejemplo tendríamos:
 
+```css
     # Para el primer elemento
     strong:nth-child(1) { font-size: 15px;
     }
@@ -437,6 +480,7 @@ Así por ejemplo tendríamos:
     # Para el cuarto elemento
     strong:nth-child(4) { font-size: 8px;
     }
+```
 
 ## Pseudoelementos
 
@@ -672,10 +716,12 @@ En el modelo **RGB decimal** un color se define indicando sus tres componentes R
 
 El **RGB hexadecimal** convierte los valores de cada elemento a valor hexadecimal y le añade delante la almohadilla, de la forma: \#RRGGBB
 
+```css
     body { 
     background-color: #4762B0;
     color: #000; 
     }
+```
 
 ### RGB con canal alpha
 
@@ -683,10 +729,11 @@ Los canales alpha permiten establecer una **transparencia** parcial en determina
 
 Posteriormente, en lugar de establecer 3 parámetros (rojo, verde, azul), añadiremos uno más, que será el canal **alfa**. Dicho canal alfa será un valor (del 0 al 1 con decimales) o un porcentaje (del 0% al 100%).
 
+```css
     div { 
     rgba(0 0 0 / 50%);
     }
-
+```
 
 ![Espacio de color RGBA - Wikipedia, la enciclopedia libre](media/7426781e7f796c5ffb4d2157df798acf.jpeg)
 
@@ -694,10 +741,11 @@ Posteriormente, en lugar de establecer 3 parámetros (rojo, verde, azul), añadi
 
 Las siglas HSL significan **matiz** (*Hur*), **saturación** (*Saturation*) y **brillo** (*Lightness*). La primera cifra selecciona el matiz de color (una cifra de 0 a 360 grados), seleccionando el color del círculo exterior de la imagen. Por su parte, las dos siguientes, son el porcentaje de saturación y el brillo del color, respectivamente (*ambos, porcentajes de 0% a 100%*).
 
+```css
     div.nav { 
     color: hsl(120deg 25% 75%); 
     }
-
+```
 
 ![Rueda de color HSL](media/f1fe418b634cea8ef0118337e9439701.png)
 
@@ -716,8 +764,10 @@ El mecanismo simplificado que se puede aplicar es el siguiente:
 
 Por ejemplo, ante la siguiente regla:
 
+```css
     p { color: red; }
     p { color: blue; }
+```
 
 Prevalecerá la última, en este caso el azul (blue).
 

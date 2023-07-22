@@ -144,12 +144,13 @@ Al igual que con otras propiedades CSS, podemos utilizar la propiedad de atajo b
 
 También se puede utilizar propiedades para bordes específicos y combinarlos junto con la herencia vista previamente:
 
+```css
     div {
     border-bottom-width: 2px;
     border-bottom-style: dotted;
     border-bottom-color: black;
     }
-
+```
 
 ### Fondo
 
