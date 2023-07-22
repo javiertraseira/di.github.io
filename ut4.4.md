@@ -488,9 +488,9 @@ Por ejemplo:
 ![](media/f040b4298131b80ecae8c376a0d92233.png)
 
 
-## Grid Items
+### Grid Items
 
-### Posicionamiento items en grid
+#### Posicionamiento items en grid
 
 Para los elementos (**ítems**) dentro del contenedor también podremos utilizar las propiedades **justify-items** y **align-items**
 
@@ -499,7 +499,7 @@ Para los elementos (**ítems**) dentro del contenedor también podremos utilizar
 | justify-items | start \| end \| center \| **stretch** | Distribuye los elementos en el eje horizontal. |
 | align-items   | start \| end \| center \| **stretch** | Distribuye los elementos en el eje vertical.   |
 
-### Espacios entre filas/columnas: span
+#### Espacios entre filas/columnas: span
 
 También podemos utilizar la palabra clave **span**, para extender el tamaño de celdas de nuestros ítems en horizontal o vertical.
 
@@ -525,7 +525,7 @@ Por ejemplo, **span 2** quiere decir que el ítem se extiende exactamente dos ce
 ![](media/7e8e9e14386849d338e436adf811a0f4.jpeg)
 
 
-### Grid con filas/columnas nombradas
+#### Grid con filas/columnas nombradas
 
 Cuando declaramos un Grid, a cada línea se le asigna un número índice por defecto:
 
@@ -542,7 +542,7 @@ No obstante, tenemos la posibilidad de ponerle nombre a las líneas de nuestro s
 
 ![](media/57339bd254e89a620359de39a5fc5c9f.png)
 
-### Expandir o delimitar zonas
+#### Expandir o delimitar zonas
 
 Una vez aplicados nombres, se pueden delimitar que zonas del *grid* queremos que ocupe cada uno de nuestros bloques. Para ello usaremos las propiedades:
 
@@ -569,7 +569,7 @@ Una vez aplicados nombres, se pueden delimitar que zonas del *grid* queremos que
 
 ![](media/3e58c32eb0c0c29c492112408a87a3b3.png) 
 
-### Expandir o delimitar zonas
+#### Expandir o delimitar zonas
 
         grid-column-start, grid-column-end se abrevia utilizando grid-column inicio/fin
         grid-column-start, grid-column-end se abrevia utilizando grid-row  inicio/fin
@@ -626,7 +626,7 @@ Mediante el uso de estructuras flexibles que ya hemos visto (como Flexbox o Grid
 
 ![](media/89581460a002a515aabb00dfc7bc406b.jpeg)
 
-## Media queries
+### Media queries
 
 Las **Media queries** son una sintaxis especial para CSS que nos permite definir unos estilos que solo se aplicarán en el caso de que se cumplan unas condiciones definidas. Podemos asimilarlos a unas líneas de código opcional, que sólo se mostrarán para algunos usuarios o dispositivos.
 
