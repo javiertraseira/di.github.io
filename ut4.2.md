@@ -109,7 +109,7 @@ Un **documento CSS** está compuesto generalmente por una colección de reglas. 
 ### Selector universal
 
 ```tip
-Se utiliza para seleccionar todos los elementos de la página. El selector universal se indica mediante un asterisco (\*).
+El *selector universal* se utiliza para seleccionar todos los elementos de la página. El selector universal se indica mediante un asterisco (\*).
 ```
 
 A pesar de su sencillez, no se utiliza habitualmente, ya que es difícil que un mismo estilo se pueda aplicar a todos los elementos de una página.
@@ -126,7 +126,7 @@ El siguiente ejemplo elimina el margen y el relleno de todos los elementos HTML:
 ### Selector de etiqueta
 
 ```tip
-Selecciona todos los elementos de la página cuya etiqueta HTML coincide con el valor del selector.
+El *selector de etiqueta* selecciona todos los elementos de la página cuya etiqueta HTML coincide con el valor del selector.
 ```
 
 Para utilizar este selector, solamente es necesario indicar el nombre de una etiqueta HTML (sin los caracteres \< y \>) correspondiente a los elementos que se quieren seleccionar.
@@ -160,7 +160,7 @@ En las hojas de estilo complejas, es habitual agrupar las propiedades comunes de
 ### Selector descendente
 
 ```tip
-Selecciona los elementos que se encuentran dentro de otros elementos. 
+El *selector descendente* selecciona los elementos que se encuentran dentro de otros elementos. 
 ```
 
 El último selector indica el elemento sobre el que se aplican los estilos y todos los selectores anteriores indican el lugar en el que se debe encontrar ese elemento. Su sintaxis:
@@ -190,7 +190,7 @@ Dado este código HTML, el selector afectaría también a los selectores *span* 
 ### Selector de clase
 
 ```tip
-En un documento HTML, se pueden asignar clases utilizando el atributo **class**.
+En un documento HTML, se pueden asignar clases utilizando el atributo **class** y luego usar un *selector de clase*.
 ```
 
 El selector CSS para indicar las clases es el **punto** y se aplica a todos los elementos del documento con esa clase.
@@ -225,7 +225,7 @@ Si un elemento dispone de un atributo **class** con más de un valor, es posible
 ### Selector de id
 
 ```tip
-El atributo **id** debe ser único dentro de un documento HTML y por tanto sólo puede aplicarse a una única aparición de un elemento dentro del árbol del documento.
+Para el *selector de id* se usa el atributo **id**, el cual debe ser único dentro de un documento HTML y por tanto sólo puede aplicarse a una única aparición de un elemento dentro del árbol del documento.
 ```
 
 El selector CSS para indicar los id es la **almohadilla** \#. 
@@ -267,7 +267,7 @@ Existen selectores específicos para seleccionar **hijos** y **hermanos**, todos
 ### Selector de hijos
 
 ```tip
-Se utiliza para seleccionar un elemento que es hijo directo de otro elemento y se indica mediante el "signo de mayor que" **\>**
+El *selector de hijos* se utiliza para seleccionar un elemento que es hijo directo de otro elemento y se indica mediante el "signo de mayor que" **\>**
 ```
 
 Se trata de un selector similar al selector descendente, pero muy diferente en su funcionamiento. 
@@ -320,7 +320,7 @@ Y el HTML:
 ### Selector adyacente
 
 ```tip
-El selector adyacente se emplea para seleccionar elementos que en el código HTML de la página se encuentran justo a continuación de otros elementos.
+El *selector adyacente* se emplea para seleccionar elementos que en el código HTML de la página se encuentran justo a continuación de otros elementos.
 ```
 
 Su sintaxis emplea el signo + para separar los dos elementos. Su sintaxis:

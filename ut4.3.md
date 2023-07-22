@@ -84,7 +84,7 @@ Y de forma similar para el **padding**:
 
 Como se puede ver en la tabla, por defecto no hay relleno (*el relleno está a cero*), aunque puede modificarse tanto con las propiedades anteriores como la propiedad de atajo que veremos a continuación.
 
-💡 El margin y el padding se pueden especificar de <u>forma compacta</u>:
+💡 El **margin** y el **padding** se pueden especificar de <u>forma compacta</u>:
 
 | **Nº parámetros** | **Significado**                                          | **Ejemplo**                   |
 |-------------------|----------------------------------------------------------|-------------------------------|
