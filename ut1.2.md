@@ -1,6 +1,8 @@
 
 # UT1.2 Interacción Persona-Ordenador
 
+📕 [Contenido en presentación PDF](/pdf/UT1.2 - Interacción persona-ordenador.pdf)
+
 ## Introducción
 
 ```note

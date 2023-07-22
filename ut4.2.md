@@ -1,5 +1,7 @@
 # UT4.2 Hojas de estilo CSS
 
+📕 [Contenido en presentación PDF](/pdf/UT4.2 - Lenguaje de descripción - Hojas de estilo CSS.pdf)
+
 ## Hojas de estilo CSS
 
 Las hojas de estilos aparecieron poco después que el lenguaje de etiquetas SGML, alrededor del año 1970. Desde la creación de SGML, se observó la necesidad de definir un mecanismo que permitiera aplicar de forma consistente diferentes estilos a los documentos electrónicos.

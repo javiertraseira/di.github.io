@@ -1,5 +1,9 @@
 # UT3.3 Imágenes y gráficos
 
+📕 [Contenido en presentación PDF](/pdf/UT3.3 - Imágenes y gráficos.pdf)
+
+## Imágenes
+
 El uso de imágenes es muy importante en el diseño de cualquier tipo de interfaz, puesto que estas contribuyen favorablemente a la experiencia del usuario, siempre y cuando se adecuen al contenido que se está trabajando.
 
 Además de cumplir ciertos requisitos de calidad y formato, se debe tener en cuenta la autoría de las imágenes o derechos de autor para ciertos trabajos.

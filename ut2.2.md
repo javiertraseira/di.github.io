@@ -1,5 +1,9 @@
 # UT2.2 Java Swing
 
+📕 [Contenido en presentación PDF](/pdf/UT2.2 - Java Swing.pdf)
+
+## Introducción
+
 **Java Swing** fue una respuesta a las deficiencias presentes en el subsistema GUI original de Java: el **Abstract Window Toolkit (AWT).**
 
 **AWT** define un conjunto básico de controles, ventanas y cuadros de diálogo que admiten una interfaz gráfica útil pero **limitada.** Una razón para la naturaleza limitada del AWT es que traduce sus diversos componentes visuales en sus correspondientes equivalentes específicos de plataforma o pares (peers).

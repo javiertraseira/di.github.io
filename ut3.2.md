@@ -1,8 +1,14 @@
 # UT3.2 Guías de estilo. Retícula, color y fuentes
 
+📕 [Contenido en presentación PDF](/pdf/UT3.2 - Guías de estilo. Retícula, color y fuentes.pdf)
+
+## Guías de estilo
+
 Para asegurar la consistencia de las interfaces gráficas de una web o aplicación es fundamental plasmar las pautas de estilo en una guía que pueda seguir el equipo de desarrollo (programadores, analistas, diseñadores gráficos, etc.) durante el proceso de desarrollo del sitio. Estas guías se llaman **guías de estilo** o *look and feel*.
 
-Las guías de estilo recogen los criterios y normas que deben seguir los desarrolladores para que tenga una apariencia uniforme y atractiva para el usuario.
+```note
+Las *guías de estilo* recogen los criterios y normas que deben seguir los desarrolladores para que tenga una apariencia uniforme y atractiva para el usuario.
+```
 
 ![](media/ccd50528b8b0fb369667e756c9fcf27f.png)
 

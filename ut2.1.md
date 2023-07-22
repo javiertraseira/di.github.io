@@ -1,5 +1,9 @@
 # UT2.1 Repaso POO en Java y conceptos de desarrollo
 
+📕 [Contenido en presentación PDF](/pdf/UT2.1 - Repaso POO, herramientas de desarrollo y metodologías.pdf)
+
+## Introducción
+
 El desarrollo de **interfaces gráficas** permite la creación del canal de comunicación entre el usuario y la aplicación, por esta razón requiere de especial atención en su diseño.
 
 En la actualidad, las herramientas de desarrollo permiten la implementación del código relativo a una interfaz a través de vistas diseño que facilitan y hacen más intuitivo el proceso de creación. La programación orientada a objetos permite utilizar entidades o componentes que tienen su propia identidad y comportamiento.
@@ -11,8 +15,6 @@ En este unidad se verán en detalle los principales tipos de componentes de dife
 La distribución de este tipo de elementos depende de los llamados **layout**, los cuales permiten situar los elementos en la interfaz.
 
 Una misma aplicación puede presentar más de un tipo de ventana, principal o de diálogo. Las ventanas de diálogo definen los llamados diálogos modales o no modales, elementos destacados en el desarrollo de interfaces. La combinación de tipos de ventanas y elementos de diseño es infinita.
-
-## Introducción
 
 ```tip
 Un **componente software** está formado por **clases** creadas para ser reutilizadas y que puede ser manipulada por una herramienta de desarrollo de aplicaciones visual.

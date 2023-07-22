@@ -1,5 +1,7 @@
 # UT4.3 Hojas de estilo CSS
 
+📕 [Contenido en presentación PDF](/pdf/UT4.3 - Lenguaje de descripción - Hojas de estilo CSS.pdf)
+
 ## Modelo de cajas
 
 ```note
