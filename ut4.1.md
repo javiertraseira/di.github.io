@@ -4,7 +4,9 @@
 
 El uso de la tecnología **XML** tiene un papel importante en la actualidad, ya que permite la compatibilidad entre sistemas para compartir información de manera fácil, segura y fiable. Compite en la actualidad con otros dos lenguajes como son **JSON** y **YAML**.
 
-![](media/7fe9961d5b5db5ae41dee2d72600071e.jpeg)![](media/eb580aa34ad2ca6abea192f9c64f4faf.png)![](media/fa0e2328b672c6db1168f3034a532d00.png)
+![](media/7fe9961d5b5db5ae41dee2d72600071e.jpeg)
+![](media/eb580aa34ad2ca6abea192f9c64f4faf.png)
+![](media/fa0e2328b672c6db1168f3034a532d00.png)
 
 Cuando se trata de compartir datos **JSON** es la mejor herramienta debido a que los datos están almacenados en vectores y registros mientras que XML almacena los datos en árboles.
 
@@ -63,7 +65,9 @@ Ejemplo de un archivo **YAML**:
 
 ### Lenguaje XML
 
->   💡 XML es un metalenguaje extensible de etiquetas, es decir que a partir de la definición de datos por medio de etiquetas y ciertas reglas sirve como base para definir otros lenguajes de marcas.
+```note
+💡 XML es un metalenguaje extensible de etiquetas, es decir que a partir de la definición de datos por medio de etiquetas y ciertas reglas sirve como base para definir otros lenguajes de marcas.
+```
 
 XML presenta diversos usos que ya conocemos, entre los que destacan:
 -   Intercambio de información entre aplicaciones: al almacenar información mediante documentos de texto plano no se requiere software especial.
@@ -91,7 +95,8 @@ A continuación se llevará a cabo una descripción de algunos lenguajes de prog
 
 XSLT (*XSL Transformations*) es un estándar de la organización *W3C* que presenta una forma de transformar documentos XML en otros tipos de documentos, incluso en formatos que no son XML.
 
-![](media/f09dbf318afaac8b649429eddeff541b.jpeg)![](media/f9926c775e195847ff07787706c5b397.png)
+![](media/f09dbf318afaac8b649429eddeff541b.jpeg)
+![](media/f9926c775e195847ff07787706c5b397.png)
 
 La unión de XML y XSLT ayudará al aumento de la productividad por permitir la separación de contenido y presentación gráfica.
 

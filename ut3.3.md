@@ -10,7 +10,9 @@ Una de las características más importantes que tener en cuenta es el formato d
 
 ## Imágenes de mapa de bits
 
+```note
 Estas imágenes, también llamadas de **raster**, son aquellas formadas por un conjunto de puntos, llamados **píxeles**, donde cada uno de estos puntos contiene un conjunto de valores que define un color.
+```
 
 Por esta razón, son indicadas para aquellas imágenes en las que es deseable mostrar una gama de colores muy amplia y con variaciones precisas de color y luminosidad.
 
@@ -20,7 +22,9 @@ La calidad de estas imágenes depende de la cantidad de píxeles utilizados en s
 
 ## Imágenes vectorizadas
 
+```note
 Representan, a través de **fórmulas matemáticas**, entidades geométricas simples (puntos, segmentos, rectángulos, círculos), sus parámetros principales: grosor, posición inicial, final, etc. El procesador es el encargado de traducir esta información matemática a la tarjeta gráfica.
+```
 
 Las imágenes vectoriales mantendrán su forma independientemente de cuán grande o pequeño sea su tamaño. Esto significa que no se mostrarán píxeles cuando amplíe. La calidad de estos diseños seguirá siendo la misma.
 
@@ -37,7 +41,9 @@ No son adecuados para describir imágenes demasiado irregulares (un paisaje de f
 
 ## Resolución
 
+```note
 La resolución de una imagen consiste en el grado de detalle o calidad de una imagen digital. Este valor se expresa en **ppp** (píxeles por pulgada) o en **dpi** (dots per inch).
+```
 
 Cuantos más píxeles contenga una imagen por pulgada lineal, mayor será su calidad. Por ejemplo, cuando hablamos de la resolución de un monitor, estamos haciendo referencia al número de píxeles por pulgada que es capaz de mostrar. Por otro lado, en un medio de impresión se habla del número de puntos por pulgada (ppp) que se puede imprimir.
 
@@ -66,7 +72,9 @@ Existe una amplia gama de resoluciones estandarizadas por la industria de los mo
 
 Una imagen en mapa de bits está formada por un conjunto de píxeles, donde cada uno de ellos presenta un determinado color, el archivo donde está almacenada la imagen, también contendrá la información de color de cada uno de los píxeles.
 
+```note
 La **profundidad de color** se refiere al número de bits necesarios para codificar y guardar la información de color de cada píxel en una imagen. Un bit es una posición de memoria que puede tener el valor 0 o 1. Cuanto mayor sea la profundidad de color en bits, la imagen dispondrá de una paleta de colores más amplia.
+```
 
 | **Profundidad** | **Nº de colores** |
 |-----------------|-------------------|
@@ -78,7 +86,9 @@ La **profundidad de color** se refiere al número de bits necesarios para codifi
 
 ## Modos de color
 
+```note
 Llamamos modo de color al sistema de coordenadas que nos permiten describir el color de cada píxel utilizando valores numéricos.
+```
 
 ### Modo monocromático
 

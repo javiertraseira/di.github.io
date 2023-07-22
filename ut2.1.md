@@ -5,6 +5,7 @@ El desarrollo de **interfaces gráficas** permite la creación del canal de comu
 En la actualidad, las herramientas de desarrollo permiten la implementación del código relativo a una interfaz a través de vistas diseño que facilitan y hacen más intuitivo el proceso de creación. La programación orientada a objetos permite utilizar entidades o componentes que tienen su propia identidad y comportamiento.
 
 ![Free icon \&quot;Layout 3 icon&quot;](media/14683c68c38e0f4e98bb5577b7ba1cb4.png)
+
 En este unidad se verán en detalle los principales tipos de componentes de diferentes librerías así como sus características más importantes.
 
 La distribución de este tipo de elementos depende de los llamados **layout**, los cuales permiten situar los elementos en la interfaz.
@@ -13,7 +14,9 @@ Una misma aplicación puede presentar más de un tipo de ventana, principal o de
 
 ## Introducción
 
+```tip
 Un **componente software** está formado por **clases** creadas para ser reutilizadas y que puede ser manipulada por una herramienta de desarrollo de aplicaciones visual.
+```
 
 Se define por su **estado** que se almacena en un conjunto de propiedades, las cuales pueden ser modificadas para adaptar el componente al programa en el que se inserte. También tiene un comportamiento que se define por los **eventos** ante los que responde y los **métodos** que ejecuta ante dichos eventos.
 
@@ -31,21 +34,23 @@ En POO los objetos son entidades que tienen un determinado estado, comportamient
 -   El **comportamiento** está definido por los métodos o mensajes a los que sabe responder dicho objeto, es decir, qué operaciones se pueden realizar con él.
 -   La **identidad** es una propiedad de un objeto que lo diferencia del resto, dicho con otras palabras, es su identificador (concepto análogo al de identificador de una variable o una constante).
 
-    La definición o instanciación de un objeto, con sus propiedades y comportamiento se lleva a cabo a través de las **clases**.
+💡 La definición o instanciación de un objeto, con sus propiedades y comportamiento se lleva a cabo a través de las **clases**.
 
-    A su vez, los objetos disponen de mecanismos de interacción llamados **métodos**, que favorecen la comunicación entre ellos.
+💡 A su vez, los objetos disponen de mecanismos de interacción llamados **métodos**, que favorecen la comunicación entre ellos.
 
 ## Características de la POO
 
 ### Abstracción
 
-> 💡 La **abstracción** es un procedimiento que permite la elección de una determinada entidad de la realidad, sus características y funciones que desempeñan, la cual es representada mediante clases que contienen atributos y métodos de dicha clase.
+```note
+La **abstracción** es un procedimiento que permite la elección de una determinada entidad de la realidad, sus características y funciones que desempeñan, la cual es representada mediante clases que contienen atributos y métodos de dicha clase.
+```
 
 ![](media/3e7f62afba99f653778c6cbe1185ae5f.jpeg)
 
 ### Encapsulamiento
 
-En POO, se acostumbra a proteger la información o el estado de los atributos para que no se pueda ver o modificar la información del objeto sin el mecanismo adecuado.
+💡 En POO, se acostumbra a proteger la información o el estado de los atributos para que no se pueda ver o modificar la información del objeto sin el mecanismo adecuado.
 
 Para ello, se utilizan métodos para recuperar la información (**getters**) y a su vez, poder asignar (**setters**) un nuevo valor y verificar que no afecte la integridad del objeto.
 
@@ -54,7 +59,9 @@ Para ello, se utilizan métodos para recuperar la información (**getters**) y a
 
 ### Herencia
 
-> 💡 La **herencia** es un mecanismo que permite la definición de una clase a partir de la definición de otra ya existente.
+```note
+💡 La **herencia** es un mecanismo que permite la definición de una clase a partir de la definición de otra ya existente.
+```
 
 Conceptos importantes:
 
@@ -68,13 +75,19 @@ La clase Laptop sigue siendo una computadora, tiene todos sus atributos y métod
 
 ## Polimorfismo
 
-![](media/2e4cdc423a49fb6db4e1cfbe6fe0a0fc.png)El **polimorfismo** es la capacidad que tienen los objetos de una clase en ofrecer respuesta distinta e independiente en función de los parámetros usados durante su invocación.
+```note
+El **polimorfismo** es la capacidad que tienen los objetos de una clase en ofrecer respuesta distinta e independiente en función de los parámetros usados durante su invocación.
+```
+
+![](media/2e4cdc423a49fb6db4e1cfbe6fe0a0fc.png)
 
 ## Conceptos de POO
 
 ### Clases
 
-> 💡 Una **clase** representa un conjunto de objetos que comparten una misma estructura (atributos) y comportamiento (métodos).
+```note
+💡 Una **clase** representa un conjunto de objetos que comparten una misma estructura (atributos) y comportamiento (métodos).
+```
 
 A partir de una clase se podrán instanciar tantos objetos correspondientes a una misma clase como se quieran. Para ello se utilizan los **constructores**.
 
@@ -84,7 +97,9 @@ El **constructor** de una clase puede recibir argumentos, de esta forma podrá c
 
 ### Atributos
 
+```note
 Un **objeto** es una unidad dentro de un programa que tiene un estado, y un comportamiento.
+```
 
 La información contenida en el objeto será accesible solo a través de la ejecución de los **métodos** adecuados, creándose una interfaz para la comunicación con el mundo exterior.
 
@@ -96,7 +111,9 @@ La estructura de una clase en Java quedaría formada por los siguientes bloques,
 
 ### Métodos
 
+```note
 Un **método** es una subrutina cuyo código es definido en una clase y puede pertenecer tanto a una clase, como es el caso de los métodos de clase o estáticos, como a un objeto, como es el caso de los métodos de instancia.
+```
 
 Los métodos definen el comportamiento de un objeto, es decir, toda aquella acción que se quiera realizar sobre la clase tiene que estar previamente definida en un método.
 
@@ -121,7 +138,9 @@ Para que una clase sea considerada un **componente** debe cumplir ciertas normas
 
 ## Programación de eventos
 
-> Los **eventos** son acciones o sucesos que se generan en aplicaciones gráficas definidas en los componentes y ocasionado por los usuarios, como presionar un botón, ingresar un texto, cambiar de color, etc.
+```note
+💡 Los **eventos** son acciones o sucesos que se generan en aplicaciones gráficas definidas en los componentes y ocasionado por los usuarios, como presionar un botón, ingresar un texto, cambiar de color, etc.
+```
 
 -   Los eventos le corresponden a las interacciones del usuario con los componentes
 -   Los componentes están asociados a distintos tipos de eventos
@@ -179,7 +198,9 @@ A menudo los patrones se confunden con **algoritmos** porque ambos conceptos des
 
 ### MVC
 
+```note
 El Modelo Vista Controlador (MVC) es un patrón de diseño teórico que separa los **datos** de la aplicación (modelo), la **interfaz** (vista), y la **lógica** de funcionamiento (controlador).
+```
 
 -   **Modelo**: Contiene la información de los datos. Es una representación.
 -   **Vista**: Es la interfaz de usuario, es decir, con lo que interactúa el usuario.
@@ -243,9 +264,7 @@ Ejemplo del fichero build.xml para la clase principal de holamundo:
 
 ### Maven
 
-Maven fue desarrollado para resolver los problemas que enfrentan los scripts
-
-basados ​​en Ant e introdujo la **gestión automática de dependencias**, facilitando en gran manera el desarrollo. Además, la estructura de proyectos está estandarizada.
+Maven fue desarrollado para resolver los problemas que enfrentan los scripts basados ​​en Ant e introdujo la **gestión automática de dependencias**, facilitando en gran manera el desarrollo. Además, la estructura de proyectos está estandarizada.
 
 Ejemplo del fichero pom.xml de la clase principal de holamundo del ejemplo anterior:
 
@@ -291,7 +310,8 @@ Ejemplo del fichero build.gradle de la clase principal de holamundo del ejemplo:
 
 ## Github Classroom
 
-Acceder con la dirección especificada por el profesor y desde ahí a la tarea que se especifique con las instrucciones de desarrollo requeridas:![](media/a9676197c22b9ccd12bfd3807227a6d3.jpeg)
+Acceder con la dirección especificada por el profesor y desde ahí a la tarea que se especifique con las instrucciones de desarrollo requeridas:
+![](media/a9676197c22b9ccd12bfd3807227a6d3.jpeg)
 
 
 **Comandos git**
@@ -322,7 +342,7 @@ Desde el año pasado es necesario generar un **token de acceso personal** en lug
 
 ## Netbeans
 
-> Los **debugger** son herramientas imprescindibles en la programación, sin las cuales sería muy complicado detectar cualquier problema, desde un mínimo error de síntesis perdido en cientos de rutinas hasta escribir por equivocación un código que genere un bucle infinito para ciertas casuísticas.
+💡 Los **debugger** son herramientas imprescindibles en la programación, sin las cuales sería muy complicado detectar cualquier problema, desde un mínimo error de síntesis perdido en cientos de rutinas hasta escribir por equivocación un código que genere un bucle infinito para ciertas casuísticas.
 
 ![](media/b917128d263061d75f14af22d74cf555.jpeg)
 

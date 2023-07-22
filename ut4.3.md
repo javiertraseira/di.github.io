@@ -2,18 +2,24 @@
 
 ## Modelo de cajas
 
-El **modelo de cajas** es una de las características más importantes de las hojas de estilos. Los elementos de HTML están contenidos en cajas rectangulares. La etiqueta *body* es la caja principal dentro de la cual se van colocando las cajas de las etiquetas que se van creando, las cajas pueden estar unas dentro de otras, al lado de otras, o superponer.
+```note
+El **modelo de cajas** es una de las características más importantes de las hojas de estilos ya que los elementos de HTML están contenidos en cajas rectangulares. 
+```
+
+La etiqueta *body* es la caja principal dentro de la cual se van colocando las cajas de las etiquetas que se van creando, las cajas pueden estar unas dentro de otras, al lado de otras, o superponer.
 
 ![](media/1cba31b99bd8aaf07c3324521798bd77.png)
 
-![](media/1b755134c90fa91527822ef7fbf0563b.png) ![](media/2cb7171a0a8b6d0730e79876ef0e4ec9.png)
+![](media/1b755134c90fa91527822ef7fbf0563b.png) 
 
 Respecto a sus valores por defecto:
 
 -   El atributo **border** tiene inicialmente siempre el valor cero.
 -   Los valores por defecto del **margin** y del **padding** no son siempre cero. Sus valores dependen de los navegadores web, aunque son similares en la mayoría de los casos.
 
-💡 El **padding** y el **margin** siempre son siempre transparentes, y dejan ver la imagen de fondo y el color de fondo de su propia caja.
+```tip
+El **padding** y el **margin** siempre son siempre transparentes, y dejan ver la imagen de fondo y el color de fondo de su propia caja.
+```
 
 -  La etiqueta párrafo *p* tiene unos valores de *1em* por defecto para los márgenes superior e inferior, y un valor cero para los márgenes derecho e izquierdo. 
 Esto tiene sentido porque si no fuese así, dos párrafos quedarían pegados entre sí, no habría diferencia entre un salto de línea y un párrafo.
@@ -32,7 +38,9 @@ En CSS existen ciertas palabras clave para hacer referencia a una zona u orienta
 
 ### Anchura y altura
 
-💡 La propiedad que controla la **anchura** de la caja de los elementos se denomina *width*:
+```tip
+La propiedad que controla la **anchura** de la caja de los elementos se denomina *width*.
+```
 
 | **Propiedad** | **Valor**                                         | **Significado**                     |
 |---------------|---------------------------------------------------|-------------------------------------|
@@ -42,7 +50,9 @@ La propiedad *width* no admite valores negativos y los valores en porcentaje se 
 
 El valor *inherit* indica que la altura del elemento se hereda de su elemento padre. El valor auto, que es el que se utiliza si no se establece de forma explícita un valor a esta propiedad, indica que el navegador debe calcular automáticamente la altura del elemento, teniendo en cuenta sus contenidos y el sitio disponible en la página.
 
-💡 La propiedad que controla la **altura** de la caja de los elementos es *height*:
+```tip
+La propiedad que controla la **altura** de la caja de los elementos es *height*.
+```
 
 | **Propiedad** | **Valor**                                         | **Significado**                    |
 |---------------|---------------------------------------------------|------------------------------------|
@@ -74,7 +84,7 @@ Y de forma similar para el **padding**:
 
 Como se puede ver en la tabla, por defecto no hay relleno (*el relleno está a cero*), aunque puede modificarse tanto con las propiedades anteriores como la propiedad de atajo que veremos a continuación.
 
-El margin y el padding se pueden especificar de <u>forma compacta</u>:
+💡 El margin y el padding se pueden especificar de <u>forma compacta</u>:
 
 | **Nº parámetros** | **Significado**                                          | **Ejemplo**                   |
 |-------------------|----------------------------------------------------------|-------------------------------|
@@ -89,7 +99,7 @@ Existe un truco para **centrar horizontalmente** cualquier elemento en pantalla 
 
 ### Márgenes adyacentes
 
-Los **márgenes verticales** pueden **solaparse** cuando tenemos dos elementos adyacentes, lo que puede dar lugar a resultados inesperados. Esto no ocurre en el caso de los márgenes izquierdo y derecho.
+💡 Los **márgenes verticales** pueden **solaparse** cuando tenemos dos elementos adyacentes, lo que puede dar lugar a resultados inesperados. Esto no ocurre en el caso de los márgenes izquierdo y derecho.
 
 ![](media/208748fcec69afe4c2709fb206c8efba.png)
 
@@ -112,7 +122,7 @@ Las propiedades básicas y específicas de los **bordes** en CSS son las siguien
 | border-width  | thin \| **medium** \| thick \| | Especifica un tamaño predefinido para el grosor del borde.             |
 |  border-style | **none** \| style              | Define el estilo para el borde a utilizar (los veremos a continuación) |
 
-La propiedad *border-style* podemos aplicar un estilo determinado al borde de un elemento. En estilo de borde podemos elegir cualquiera de las siguientes opciones:
+💡 La propiedad *border-style* podemos aplicar un estilo determinado al borde de un elemento. En estilo de borde podemos elegir cualquiera de las siguientes opciones:
 
 | **Valor** | **Descripción**                                                        | **Diseño**                                       |
 |-----------|------------------------------------------------------------------------|--------------------------------------------------|
@@ -143,7 +153,11 @@ También se puede utilizar propiedades para bordes específicos y combinarlos ju
 
 ### Fondo
 
-Dentro del modelo de cajas el **fondo** está formado por dos elementos opcionales, la imagen de fondo y el color de fondo. El contenido está delante de ambos. Por defecto, tanto la imagen como el color de fondo llegan hasta el border, a continuación tenemos el margin que separa esta caja de las adyacentes.
+```tip
+Dentro del modelo de cajas el **fondo** está formado por dos elementos opcionales, la imagen de fondo y el color de fondo. El contenido está delante de ambos. 
+```
+
+Por defecto, tanto la imagen como el color de fondo llegan hasta el border, a continuación tenemos el margin que separa esta caja de las adyacentes.
 
 ![](media/fd8cf86f374a611c0de62e471976bea6.png) 
 
@@ -167,7 +181,9 @@ Y esta puede personalizar a su vez con las siguientes propiedades:
 
 ## Cascada
 
-💡 Uno de los conceptos principales más importantes de las hojas de estilo CSS es el concepto denominado **cascada**.
+```tip
+Uno de los conceptos principales más importantes de las hojas de estilo CSS es el concepto denominado **cascada**.
+```
 
 El navegador, para saber que bloque de estilos tiene prioridad sobre los demás, analiza <u>por orden</u> tres conceptos clave del código CSS que veremos a continuación:
 
@@ -193,7 +209,9 @@ Aunque no es recomendable utilizarlo frecuentemente, se puede añadir al final d
 
 ### Especificidad
 
+```tip
 Si la importancia no elimina la ambigüedad de un CSS, se pasa a determinar la **especificidad** de los selectores CSS, que es uno de los criterios más importantes de la cascada de CSS (y también más desconocido).
+```
 
 Para determinar la especificidad de un selector, se sigue un cálculo basado en 4 componentes ordenados de **mayor a menor** especificidad que veremos a continuación:
 

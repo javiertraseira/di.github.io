@@ -30,7 +30,9 @@ En cuanto a la jerarquía general de paquetes de Java Swing:
 
 ![](media/8a29cce3339c97d9e7ea53e087964965.jpeg)
 
-![Descripción de la imagen: Diagrama con un componente inicial titulado 'JFrame' y luego un segundo componente ligado al anterior, este con un título de puntos suspensivos, ahora un tercer componente vinculado al anterior, este con el título de 'Content Pane', luego un cuarto componente vinculado al anterior, este con título 'JPanel', finalmente dos componentes titulados 'JLabel' y 'JTextField', vinculados al componente anterior.](media/496cd494b3e98b38119991b62588d143.png)La jerarquía anterior trabaja con tres tipos de niveles en la aplicación:
+![Descripción de la imagen: Diagrama con un componente inicial titulado 'JFrame' y luego un segundo componente ligado al anterior, este con un título de puntos suspensivos, ahora un tercer componente vinculado al anterior, este con el título de 'Content Pane', luego un cuarto componente vinculado al anterior, este con título 'JPanel', finalmente dos componentes titulados 'JLabel' y 'JTextField', vinculados al componente anterior.](media/496cd494b3e98b38119991b62588d143.png)
+
+La jerarquía anterior trabaja con tres tipos de niveles en la aplicación:
 
 -   **Contenedor de nivel superior**: Es un elemento que generalmente se usa como base, es decir, proporcionar un lugar para usar otros elementos. Ejemplos de este tipo serían: JFrame, JDialog y JApplet.
 -   **Componente de nivel intermedio**: Es un elemento que se usa solo para manejar la ubicación de los elementos de botones y etiquetas. Ejemplos de este tipo serían: JPanel, JScrollPane y JTabbedPane.

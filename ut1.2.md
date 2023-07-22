@@ -3,7 +3,9 @@
 
 ## Introducción
 
-> 💡 La *Interacción Persona-Ordenador* (**IPO**), también conocida como *Human-Computer Interaction* (**HCI**), es la disciplina dedicada a estudiar cómo se produce la interacción entre las personas y los sistemas informáticos para tratar de mejorar esta relación por medio del diseño gráfico.
+```note
+💡 La *Interacción Persona-Ordenador* (**IPO**), también conocida como *Human-Computer Interaction* (**HCI**), es la disciplina dedicada a estudiar cómo se produce la interacción entre las personas y los sistemas informáticos para tratar de mejorar esta relación por medio del diseño gráfico.
+```
 
 Su objetivo principal es incrementar la productividad de los equipos y minimizar los errores al tiempo que se dota a los usuarios de una experiencia segura, confortable y satisfactoria.
 
@@ -53,7 +55,9 @@ Atendiendo a cómo el usuario puede interactuar con una interfaz, ya hemos visto
 
 ## El factor humano
 
-> 💡 La **cognición** es el proceso por el que los humanos adquirimos conocimientos e interactuamos con el entorno.
+```note
+💡 La **cognición** es el proceso por el que los humanos adquirimos conocimientos e interactuamos con el entorno.
+```
 
 Sobre los usuarios es importante entender cuáles son sus capacidades y los procesos de **cognición** involucrados durante el desempeño de tareas a través del computador: la memoria, la visión, el oído o el tacto, son factores que determinan cómo manipulan y hace uso efectivo de la tecnología computacional, radicando allí la importancia del factor humano para optimizar su interacción.
 

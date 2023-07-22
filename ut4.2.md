@@ -102,7 +102,9 @@ Un **documento CSS** está compuesto generalmente por una colección de reglas. 
 
 ### Selector universal
 
+```tip
 Se utiliza para seleccionar todos los elementos de la página. El selector universal se indica mediante un asterisco (\*).
+```
 
 A pesar de su sencillez, no se utiliza habitualmente, ya que es difícil que un mismo estilo se pueda aplicar a todos los elementos de una página.
 
@@ -115,7 +117,9 @@ El siguiente ejemplo elimina el margen y el relleno de todos los elementos HTML:
 
 ### Selector de etiqueta
 
+```tip
 Selecciona todos los elementos de la página cuya etiqueta HTML coincide con el valor del selector.
+```
 
 Para utilizar este selector, solamente es necesario indicar el nombre de una etiqueta HTML (sin los caracteres \< y \>) correspondiente a los elementos que se quieren seleccionar.
 
@@ -143,7 +147,11 @@ En las hojas de estilo complejas, es habitual agrupar las propiedades comunes de
 
 ### Selector descendente
 
-Selecciona los elementos que se encuentran dentro de otros elementos. El último selector indica el elemento sobre el que se aplican los estilos y todos los selectores anteriores indican el lugar en el que se debe encontrar ese elemento. Su sintaxis:
+```tip
+Selecciona los elementos que se encuentran dentro de otros elementos. 
+```
+
+El último selector indica el elemento sobre el que se aplican los estilos y todos los selectores anteriores indican el lugar en el que se debe encontrar ese elemento. Su sintaxis:
 
     selector1 selector2 selector3 ... selectorN
 
@@ -165,7 +173,9 @@ Dado este código HTML, el selector afectaría también a los selectores *span* 
 
 ### Selector de clase
 
+```tip
 En un documento HTML, se pueden asignar clases utilizando el atributo **class**.
+```
 
 El selector CSS para indicar las clases es el **punto** y se aplica a todos los elementos del documento con esa clase.
 
@@ -192,7 +202,9 @@ Si un elemento dispone de un atributo **class** con más de un valor, es posible
 
 ### Selector de id
 
+```tip
 El atributo **id** debe ser único dentro de un documento HTML y por tanto sólo puede aplicarse a una única aparición de un elemento dentro del árbol del documento.
+```
 
 El selector CSS para indicar los id es la **almohadilla** \#. 
 
@@ -226,7 +238,11 @@ Existen selectores específicos para seleccionar **hijos** y **hermanos**, todos
 
 ### Selector de hijos
 
-Se trata de un selector similar al selector descendente, pero muy diferente en su funcionamiento. Se utiliza para seleccionar un elemento que es hijo directo de otro elemento y se indica mediante el "signo de mayor que" **\>**
+```tip
+Se utiliza para seleccionar un elemento que es hijo directo de otro elemento y se indica mediante el "signo de mayor que" **\>**
+```
+
+Se trata de un selector similar al selector descendente, pero muy diferente en su funcionamiento. 
 
 Para el siguiente ejemplo:
 
@@ -245,7 +261,9 @@ El selector p \> span se interpreta como cualquier elemento \<span\> que sea hij
 
 ### Selector de hermanos
 
+```tip
 Podemos definir también un selector con la condición de que una etiqueta esté después de otra y al mismo nivel de profundidad o anidamiento o lo que es lo mismo, que sea un **hermano** de otra.
+```
 
 Un selector hermano se escribe separando las etiquetas con un carácter **\~**
 
@@ -265,7 +283,11 @@ Y el HTML:
 
 ### Selector adyacente
 
-El selector adyacente se emplea para seleccionar elementos que en el código HTML de la página se encuentran justo a continuación de otros elementos. Su sintaxis emplea el signo + para separar los dos elementos. Su sintaxis:
+```tip
+El selector adyacente se emplea para seleccionar elementos que en el código HTML de la página se encuentran justo a continuación de otros elementos.
+```
+
+Su sintaxis emplea el signo + para separar los dos elementos. Su sintaxis:
 
     elemento1 + elemento2 ... elementoN
 
@@ -313,7 +335,9 @@ Así por ejemplo:
 
 ## Pseudoclases
 
+```tip
 Las **pseudoclases** se utilizan para hacer referencia a ciertos comportamientos de los elementos HTML.
+```
 
 Así como los combinadores CSS se utilizan para dar estilos dependiendo de donde estén colocados en la estructura del HTML, las pseudoclases se utilizan para dar estilos a elementos respecto al comportamiento que experimentan en un determinado momento.
 
@@ -445,7 +469,11 @@ CSS divide las unidades de medida en dos grupos:
 
 ### Unidades absolutas
 
-Una medida indicada mediante unidades absolutas está completamente definida, ya que su valor no depende de otro valor de referencia y se definen respecto a una unidad dada. La lista completa de unidades absolutas definidas por CSS y su significado:
+```tip
+Una medida indicada mediante unidades absolutas está completamente definida, ya que su valor no depende de otro valor de referencia y se definen respecto a una unidad dada. 
+```
+
+La lista completa de unidades absolutas definidas por CSS y su significado:
 
 | **Nombre** | **Significado**        |
 |------------|------------------------|
@@ -467,7 +495,9 @@ En realidad, estas unidades absolutas no lo son hablando estrictamente. Las unid
 
 ### Unidades relativas
 
+```tip
 La unidades relativas, a diferencia de las absolutas, no están completamente definidas, ya que su valor siempre está referenciado respecto a otro valor.
+```
 
 A pesar de su aparente dificultad, son las más utilizadas en el diseño web por la flexibilidad con la que se adaptan a los diferentes medios.
 
@@ -518,7 +548,9 @@ Existe un amplio abanico de propiedades CSS para modificar las características 
 
 ### Familia tipográfica
 
+```tip
 Con esta propiedad, denominada *font-family* , podemos seleccionar cualquier tipografía simplemente escribiendo su nombre.
+```
 
 El tipo de letra del texto se puede indicar de dos formas diferentes:
 
@@ -528,8 +560,6 @@ El tipo de letra del texto se puede indicar de dos formas diferentes:
         h3 {
         font-family: sans-serif;
         }
-
-### Familia tipográfica
 
 Las fuentes específicas sólo se visualizarán **si el usuario las tiene instaladas en su sistema o dispositivo**. En caso contrario, se usará otra tipografía sustituta disponible en el sistema.
 
@@ -543,7 +573,9 @@ Algunas series de fuentes se utilizan tan a menudo que prácticamente se han con
 
 ### Tamaño tipografía
 
+```tip
 La propiedad *font-size* permite especificar el tamaño de la tipografía.
+```
 
 | **Propiedad** | **Valor**                                                       | **Tipo de medida**                |
 |---------------|-----------------------------------------------------------------|-----------------------------------|
@@ -563,7 +595,9 @@ Se pueden indicar tres tipos de valores:
 
 ### Peso de la tipografía
 
+```tip
 El **peso** de la fuente, especificado mediante font-weight, que no es más que el grosor de la misma.
+```
 
 | **Propiedad** | **Valor**                                     | **Significado**                              |
 |---------------|-----------------------------------------------|----------------------------------------------|
@@ -573,7 +607,9 @@ El **peso** de la fuente, especificado mediante font-weight, que no es más que 
 
 ### Estilo de la tipografía
 
-Se puede también aplicar estilos a la tipografía mediante la propiedad font-style
+```tip
+Se puede también aplicar estilos a la tipografía mediante la propiedad *font-style*.
+```
 
 | **Valor** | **Tipo de medida**                                                                       |
 |-----------|------------------------------------------------------------------------------------------|
@@ -585,7 +621,9 @@ Se puede también aplicar estilos a la tipografía mediante la propiedad font-st
 
 ## Colores
 
+```tip
 Para establecer **colores** en CSS se utiliza la propiedad *color*.
+```
 
 Se pueden establecer el valor de un color mediante varias formas diferentes, aunque el método más habitual es el del RGB hexadecimal.
 
@@ -641,7 +679,9 @@ El **RGB hexadecimal** convierte los valores de cada elemento a valor hexadecima
 
 ### RGB con canal alpha
 
-Los canales alpha permiten establecer una **transparencia** parcial en determinados colores. En lugar de rgb() indicamos rgba() para establecer que usaremos un canal alfa. Posteriormente, en lugar de establecer 3 parámetros (rojo, verde, azul), añadiremos uno más, que será el canal **alfa**. Dicho canal alfa será un valor (del 0 al 1 con decimales) o un porcentaje (del 0% al 100%).
+Los canales alpha permiten establecer una **transparencia** parcial en determinados colores. En lugar de rgb() indicamos rgba() para establecer que usaremos un canal alfa. 
+
+Posteriormente, en lugar de establecer 3 parámetros (rojo, verde, azul), añadiremos uno más, que será el canal **alfa**. Dicho canal alfa será un valor (del 0 al 1 con decimales) o un porcentaje (del 0% al 100%).
 
     div { 
     rgba(0 0 0 / 50%);
@@ -683,7 +723,9 @@ Prevalecerá la última, en este caso el azul (blue).
 
 ## Herencia
 
-> 💡 La herencia en CSS es el mecanismo mediante el cual determinadas propiedades de un elemento padre en CSS se transmiten a sus hijos. 
+```note
+💡 La herencia en CSS es el mecanismo mediante el cual determinadas propiedades de un elemento padre en CSS se transmiten a sus hijos. 
+```
 
 
 No todas las propiedades CSS son heredadas, porque algunas de ellas no tendría sentido que lo fueran. Por ejemplo, los márgenes no se heredan porque es poco probable que un elemento hijo necesite los mismos márgenes que su padre.

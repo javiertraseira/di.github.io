@@ -14,7 +14,9 @@ En las guías de estilo se recogen datos como el diseño de la retícula, la gam
 
 ## La retícula
 
+```tip
 La retícula, tal y como ya vimos, se utiliza para establecer una estructura de diseño continua y coherente en soportes que deban alojar todo tipo de contenidos.
+```
 
 Teniendo en cuenta los espacios determinados por la retícula, se generan las áreas principales, en muchas ocasiones diferenciadas por bloques de color o elementos separadores.
 
