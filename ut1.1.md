@@ -3,7 +3,7 @@
 ## Interfaz gráfica de usuario (GUI)
 
 ```note
-La Interfaz gráfica de usuario o **GUI** (*Graphic User Interface*) es el entorno visual de imágenes y objetos mediante el cual una máquina y un usuario interactúan.
+💡 La Interfaz gráfica de usuario o **GUI** (*Graphic User Interface*) es el entorno visual de imágenes y objetos mediante el cual una máquina y un usuario interactúan.
 ```
 
 Casi todos los programas o apps tienen alguna clase de interfaz visual, que sirve al mismo tiempo para mostrar información al usuario y como un mapa de navegación entre diferentes comandos.
@@ -13,7 +13,7 @@ Hay interfaces visuales como las de los smartphones, diseñadas para disminuir a
 ## Interfaz de un sitio web
 
 ```note
-La interfaz de un sitio web, se refiere a todos los gráficos, información y herramientas que aparecen en la pantalla al abrir una página web en un navegador.
+💡 La interfaz de un sitio web, se refiere a todos los gráficos, información y herramientas que aparecen en la pantalla al abrir una página web en un navegador.
 ```
 
 Aunque los elementos específicos de una interfaz web, funcionan de forma similar a cualquier otra interfaz, su diseño suele ser más intuitivo y fácil de usar, pues sería poco práctico que los internautas tuvieran que invertir tiempo aprendiendo a manejar los comandos de cada sitio web que visitan o ajustar entre cada dispositivo desde donde se visitase. Por ello, en el diseño web es crítico crear una interfaz de usuario que facilite al máximo la transmisión de información, la navegabilidad y la interacción.
@@ -305,11 +305,15 @@ Desde aquel momento, se presenta la información al usuario de una manera operat
 
 ## UI y UX
 
->   💡 **UI** (*User Interface*) se corresponde con el diseño visual de una interfaz de usuario.
+```note
+💡 **UI** (*User Interface*) se corresponde con el diseño visual de una interfaz de usuario.
+```
 
 La principal característica del diseño de Interfaces no es enfocarse solamente en crear una aplicación o página, sino crear un diseño que sea usable y satisfactorio.
 
->   💡 **UX** (*User Experience*) hace referencia a las sensaciones de utilizar una interfaz de usuario que experimenta una persona al utilizarla.
+```note
+💡 **UX** (*User Experience*) hace referencia a las sensaciones de utilizar una interfaz de usuario que experimenta una persona al utilizarla.
+```
 
 Los colores, la tipografía, las imágenes son algunos de los elementos con los que trabaja el diseñador UI para hacer que un producto sea atractivo. No obstante, no sirve de nada tener un producto bonito si no satisface las necesidades de los usuarios para los que está pensado. Es por ello que el diseño UX busca resolver las necesidades de los usuarios finales buscando la experiencia de uso.
 
