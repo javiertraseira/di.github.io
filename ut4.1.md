@@ -1,4 +1,4 @@
-# UT4.1 - Lenguajes de descripción basados en XML
+# UT4.1 Lenguajes de descripción basados en XML
 
 📕 [Contenido en presentación PDF](/pdf/UT4.1 - Lenguajes de descripción basados en XML.pdf)
 
