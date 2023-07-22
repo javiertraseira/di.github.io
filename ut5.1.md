@@ -34,8 +34,9 @@ La manera más sencilla de comenzar con *Bootstrap 5* es utilizar un **CDN.** (*
 
 Agregaremos el siguiente código en nuestro esqueleto de la página HTML principal:
 
+```html
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"/>
-
+```
 
 Las ventajas de utilizar esta forma de cargar Bootstrap son:
 
@@ -57,6 +58,7 @@ El sistema de cuadrícula utiliza tres clases CSS principales para crear el dise
 
 En el siguiente ejemplo se crea tres columnas de igual ancho en todos los dispositivos usando las clases anteriores. Esas columnas están centradas en la página con el **.container** principal. Debemos utilizar la clase **row** para indicar el comienzo de una fila. Dentro de la fila dispondremos tantos **div** como columnas tenga dicha fila.
 
+```html
     <div class="container"> 
     <div class="row"> 
         <div class="col"> 
@@ -69,7 +71,7 @@ En el siguiente ejemplo se crea tres columnas de igual ancho en todos los dispos
         Columna 
         </div> 
     </div>
-
+```
 
 ![](media/dcf49a2808ff7e847513eef61ed72271.png)
 
@@ -79,6 +81,7 @@ Para indicar el tamaño de columna debemos utilizar la siguiente sintaxis:
 
 El valor del **\#** será uno entre **1 y 12**. El restante del valor indicado será el que debamos de distribuir entre el resto de columnas (sumando 12).
 
+```html
     <div class="container"> 
     <div class="row"> 
         <div class="col-2"> 
@@ -91,7 +94,7 @@ El valor del **\#** será uno entre **1 y 12**. El restante del valor indicado s
         Columna-6
         </div> 
     </div>
-
+```
 
 ![](media/f0251ebb94bc2cd2b8111462300a4477.png)
 
@@ -115,6 +118,7 @@ De esta manera el prefijo de clases cambiará a *col-{breakpoint}* tal y como se
 
 Usando un solo conjunto de clases *.col-sm-\#,* se puede crear un sistema de cuadrícula básico que comience apilado (por defecto) siempre que sea menor que **sm** y tenga la siguiente distribución de dos filas a partir del breakpoint pequeño (sm).
 
+```html
     <div class="container"> 
     <div class="row"> 
         <div class="col-sm-8">col-sm-8</div> 
@@ -126,7 +130,7 @@ Usando un solo conjunto de clases *.col-sm-\#,* se puede crear un sistema de cua
         <div class="col-sm">col-sm</div> 
     </div> 
     </div>
-
+```
 
 ![](media/a8b552f86b32abd96d4aef75bd822730.png)
 
@@ -134,13 +138,14 @@ Usando un solo conjunto de clases *.col-sm-\#,* se puede crear un sistema de cua
 
 Se pueden hacer combinaciones según diferentes tamaños (para sm y xl) y así obtener:
 
+```html
     <div class="container"> 
       <div class="row"> 
        <div class="col-xl-3 col-sm-5 background">columna1<p> Lorem ipsum dolor sit amet,   consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p></div> 
        <div class="col-xl-9 col-sm-7 background">columna2<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p></div> 
        </div> 
     </div>
-
+```
 
 ![](media/ced415d22cfcc46804995ee57e9d73b9.png)
 
@@ -154,13 +159,14 @@ Para establecer un número columnas predeterminadas, se pueden utilizar las clas
 
 Mientras que las clases .col-\# normales se aplican a las columnas las de columnas de fila se establecen en el **.row** principal.
 
+```html
     <div class="row row-cols-2"> 
      <div class="col">Columna</div> 
      <div class="col">Columna</div> 
      <div class="col">Columna</div> 
      <div class="col">Columna</div>
     </div> 
-
+```
 
 ![](media/4ae22f2c5d837fca6e684cbd4311d7fe.png)
 
@@ -168,6 +174,7 @@ Mientras que las clases .col-\# normales se aplican a las columnas las de column
 
 Para **anidar** el contenido con la cuadrícula predeterminada, se debe agregar un nuevo .row y un conjunto de columnas **.col-\#** dentro de una columna **col-\#** ya existente. Las filas anidadas deben incluir un conjunto de columnas que sumen 12 o menos, aunque no es obligatorio usar las 12 columnas disponibles en los anidamientos.
 
+```html
     <div class="row"> 
     <div class="col-lg-6"> 
     <h1>Columna 2</h1> 
@@ -176,7 +183,7 @@ Para **anidar** el contenido con la cuadrícula predeterminada, se debe agregar 
         <div class="col-lg-6"> <h2>Columna 2b</h2> </div> 
         </div> 
     </div>
-
+```
 
 ![](media/91912598cdc31d4379f0ab62cab2862a.jpeg)
 
@@ -186,6 +193,7 @@ Los **gutters** son el padding horizontal entre las columnas, que se utilizan pa
 
 Las clases **.gx-\#** se pueden usar para controlar los anchos de los gutters horizontales.
 
+```html
     <div class="container px-4"> 
     <div class="row gx-5"> 
     <div class="col"> 
@@ -196,7 +204,7 @@ Las clases **.gx-\#** se pueden usar para controlar los anchos de los gutters ho
     </div> 
     </div> 
     </div>
-
+```
 
 ![](media/b151c102770f1a66c571fda1e6591dc9.png)
 
@@ -206,10 +214,12 @@ Para generar espacios en blanco (*offsets*) podemos utilizar la clase **.offset-
 
 Con dicha clase moveremos las columnas a la derecha tantas posiciones como el número indicado en la clase **.offset-\#**
 
+```html
     <div class="row">
     <div class="col-md-4">.col-md-4</div>
     <div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
     </div>
+```
 
 ![](media/3353c13dd5c87eeb3e676eef29adebcb.png)
 
@@ -264,11 +274,11 @@ Las siguientes clases se utilizan para personalizar la apariencia de **imágenes
 
 ![](media/f1c2bf257b685e4dbd6929f35eadb52c.jpeg)
 
-
+```html
     <img src="..." class="rounded" alt="...">
     <img src="..." class="circle" alt="...">
     <img src="..." class="thumbnail" alt="...">
-
+```
 
 
 
