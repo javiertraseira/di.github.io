@@ -32,6 +32,8 @@ Esto tiene sentido porque si no fuese así, dos párrafos quedarían pegados ent
 
 ![](media/ea3b91b9fbbedbc4d6d6158544ac7a79.png)
 
+🔗 Desde el siguiente enlace podemos repasar y practicar el [modelo de cajas en CSS](https://web.dev/learn/css/box-model/)
+
 ### Zonas de los elementos
 
 En CSS existen ciertas palabras clave para hacer referencia a una zona u orientación concreta sobre un elemento y muy útiles para definir propiedades de los elementos del modelo de cajas:
