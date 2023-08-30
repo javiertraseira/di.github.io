@@ -237,6 +237,8 @@ Ejemplos de especificidad resueltos:
 
 ![](media/ee0766d6f40c44e0c5bf3088fc6e7263.png)
 
+🔗 Desde el siguiente enlace podemos practicar con una [calculadora de especificidad](https://specificity.keegan.st/)
+
 Algunos ejemplos más con su valor de especificidad:
 
 ![](media/fedcefa1a3401723ee352b0ddaea79ee.png) 
@@ -259,6 +261,10 @@ El modo <u>inspector</u> de los navegadores (**F12**) puede ayudar a ver colisio
 ![](media/eef87f22849f6f1c09e2a080c5ddaf19.png)
 
 ---
+
+
+🔗 Desde el siguiente enlace podemos repasar y practicar la [cascada en CSS (importancia orden y especificidad)](https://specificity.keegan.st/)
+
 
 Para resumir, los **3 pilares** de CSS vistos:
 
