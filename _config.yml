@@ -6,6 +6,7 @@ remote_theme: rundocs/jekyll-rtd-theme
 translate:
  note: info
  search: buscar
+ warning: destacado
  search_docs: buscar..
  searching: buscando
  not_found: No encontrado
