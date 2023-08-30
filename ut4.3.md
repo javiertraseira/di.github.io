@@ -264,9 +264,9 @@ El modo <u>inspector</u> de los navegadores (**F12**) puede ayudar a ver colisio
 
 ---
 
-
+```warning
 🔗 Desde el siguiente enlace podemos repasar y practicar la [cascada en CSS (importancia orden y especificidad)](https://specificity.keegan.st/)
-
+```
 
 Para resumir, los **3 pilares** de CSS vistos:
 
