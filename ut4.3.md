@@ -32,7 +32,9 @@ Esto tiene sentido porque si no fuese así, dos párrafos quedarían pegados ent
 
 ![](media/ea3b91b9fbbedbc4d6d6158544ac7a79.png)
 
+```warning
 🔗 Desde el siguiente enlace podemos repasar y practicar el [modelo de cajas en CSS](https://web.dev/learn/css/box-model/)
+```
 
 ### Zonas de los elementos
 
@@ -239,7 +241,9 @@ Ejemplos de especificidad resueltos:
 
 ![](media/ee0766d6f40c44e0c5bf3088fc6e7263.png)
 
+```warning
 🔗 Desde el siguiente enlace podemos practicar con una [calculadora de especificidad](https://specificity.keegan.st/)
+```
 
 Algunos ejemplos más con su valor de especificidad:
 
