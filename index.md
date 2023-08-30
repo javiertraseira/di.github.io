@@ -12,7 +12,7 @@
 - [UT1.2 - Interacción persona-ordenador ](/ut1.2.md)
 - [UT2.1 - Repaso POO, herramientas de desarrollo y metodologías ](/ut2.1.md)
 - [UT2.2 - Java Swing ](/ut2.2.md)
-- [UT3.1 Elementos, clasificación, evolución y funciones de un SO ](/ut3.1.md)
+- [UT3.1 - Elementos, clasificación, evolución y funciones de un SO ](/ut3.1.md)
 - [UT3.2 - Guías de estilo. Retícula, color y fuentes ](/ut3.2.md)
 - [UT3.3 - Imágenes y gráficos ](/ut3.3.md)
 - [UT4.1 - Lenguajes de descripción basados en XML ](/ut4.1.md)
