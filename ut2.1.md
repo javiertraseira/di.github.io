@@ -194,6 +194,111 @@ Una vez creado un componente, se puede empaquetar para poder distribuirlo y reut
 
 ![](media/24d698105172077367b15e743e6399cb.png)El paquete jar debe incluir un fichero de manifiesto (con extensión .MF) que describa su contenido, por ejemplo:
 
+
+### Metodologías de desarrollo ágil
+
+```note
+La **metodología de desarrollo ágil** es un enfoque de desarrollo de software que se basa en principios y valores que promueven la flexibilidad, la colaboración, la adaptabilidad y la entrega continua de software de alta calidad. 
+```
+
+![](media/234234234.png)
+
+
+Se basa en varios pilares fundamentales:
+- **Entrega incremental**: En lugar de esperar hasta que todo el software esté completo, el desarrollo ágil se basa en la entrega de incrementos de funcionalidad en intervalos cortos y regulares, conocidos como iteraciones o sprints.
+- La **colaboración con el cliente** debe estar por encima de la negociación de contratos. El contrato fijará los términos del acuerdo, pero lo realmente importante es trabajar de forma cerca y flexible con el cliente.
+- Se debe responder al **cambio constante**, en vez de seguir un plan estático. El cambio continuo es inevitable y se debe responder de forma cercana y flexible.
+- El software de trabajo y los equipos están por encima de la documentación exaustiva. Documentar es importante, pero el objetivo es desarrollar software y cuidar el talento.
+- Ritmo constante y **mejora continua**: Los equipos ágiles trabajan en ciclos regulares, como sprints de dos a cuatro semanas. Después de cada iteración, se realiza una retrospectiva para evaluar lo que funcionó bien y lo que no.
+
+![](media/435345345642.png)
+
+#### Scrum
+
+Scrum es un proceso en el que se aplican de manera regular un conjunto de buenas prácticas para trabajar colaborativamente, en equipo, y obtener el mejor resultado posible de un proyecto. La metodología scrum consiste en abordar cualquier proyecto dividiéndolo en sprints o partes más pequeñas y abordarlo mediante unos **roles** específicos y sistema de asignación de tareas.
+
+![](media/243456456456sdf.png)
+
+Existen varias implementaciones de sistemas para gestionar el proceso de Scrum, que van desde notas amarillas "post-it" y pizarras hasta paquetes de software. Si se utiliza una pizarra con notas cualquier miembro del equipo podrá ver tres columnas: trabajo pendiente ("To Do"), tareas en curso ("in progress") y hecho ("Done"). De un solo vistazo, una persona puede ver en qué están trabajando los demás en un momento determinado.
+
+##### Roles principales
+
+- Propietario del producto: Perfil del cliente ligado al proyecto, que actúa como su altavoz. Encargado de garantizar que el proyecto sigue los objetivos marcados en todo momento.
+- Scrum Master (facilitador) Es el responsable del cumplimiento de las reglas del marco scrum. Se asegura que estas son entendidas por la organización y de que se realiza el trabajo conforme a ellas. Elimina los obstáculos que impiden que se desarrolle el objetivo del sprint.  
+- Equipo de Desarrolladores: Cada uno de los profesionales que realizan la entrega del incremento de producto. Es recomendable un equipo de 3 a 9 personas.  
+
+###### Eventos
+
+- Sprint: período de tiempo, generalmente de 2 a 4 semanas, durante el cual el equipo trabaja en la implementación de los elementos de trabajo del backlog.
+- Reunión de Planificación del Sprint: Al comienzo del sprint, el equipo se reúne con el Product Owner para seleccionar los elementos de trabajo del backlog que se abordarán durante el Sprint y crear un plan para completarlos.
+- Reuniones Diarias (Scrum Diario): El equipo se reúne diariamente durante el Sprint para compartir el progreso e identificar obstáculos.
+- Revisión del Sprint: Al final de cada Sprint, el equipo demuestra el trabajo completado al Product Owner y otras partes interesadas para obtener retroalimentación.
+- Restrospectiva: analizar futuras mejoras.
+
+![](media/86786dfg45345345s.png)
+
+
+### Metodología Clean code
+
+La metodología Clean Code es una filosofía que refiere a un conjunto de principios y prácticas de programación que tienen como objetivo producir un código fuente claro, legible, estructurado y de fácil mantenimiento. 
+Clean Code se enfoca en mejorar la calidad del código y hacerlo más comprensible para los desarrolladores y otros miembros del equipo.
+Sus principios generales son los siguientes:
+- La secuencia de ejecución del programa tiene una lógica y una estructura lo más sencilla posible
+- La relación entre las diferentes partes del código es claramente visible.
+- La tarea o función de cada clase, función, método y variable es comprensible a primera vista.
+    - Las clases y métodos son reducidos: tienen una única y clara tarea.
+    - Los nombres de las clases y métodos son auto-identificativos de su función.
+
+#### Evitar repeticiones (DRY) 
+
+De acuerdo con el principio *DRY (Don’t Repeat Yourself)*, cada función debe tener una representación única y, por lo tanto, inequívoca dentro del sistema general .
+Ejemplo código redundante y repetido:
+
+```java
+//Variante A
+let username = getUserName();
+let password= getPassword();
+let user = { username, password};
+client.post(user).then(/*Variante A*/);
+
+//Variante B
+let username = getUserName();
+let password= getPassword();
+let user = { username, password};
+client.get(user).then(/*Variante B*/);
+```
+
+Usando el principio DRY quedaría de la siguiente forma:
+
+```java
+function getUser(){
+  return {
+    user:getUserName();
+    password:getPassword();
+  }
+}
+
+//Variante A
+client.post(getUser()).then(/*Variante A*/ );
+
+//Variante B
+client.get(getUser()).then(/*Variante B*/);
+```
+
+#### Código legible
+
+El código no solo debe funcionar y ser interpretado por la máquina que lo ejecuta, sino que también debe ser comprensible para otros desarrolladores, especialmente si se trabaja en proyectos colaborativos. Por lo tanto, en el ámbito del desarrollo de software, la legibilidad del código siempre es más importante que su concisión. 
+Un buen ejemplo de creación de código legible sería nombrar las variables.
+
+Por ejemplo, en lugar de usar la siguiente declaración:
+```java
+int d;
+```
+Usar una en la que se identifique el uso de la variable:
+```java
+int dias_fecha;
+```
+
 ## Patrones de diseño
 
 Los **patrones de diseño de software**, también llamados **arquitectura de software** son la guía o patrón que vamos a utilizar en el desarrollo de nuestro programa.
@@ -203,6 +308,7 @@ Los patrones de diseño son soluciones habituales a problemas que ocurren con fr
 A menudo los patrones se confunden con **algoritmos** porque ambos conceptos describen soluciones típicas a problemas conocidos. Mientras que un algoritmo siempre define un grupo claro de acciones para lograr un objetivo, un patrón es una descripción de más alto nivel de una solución. El código del mismo patrón aplicado a dos programas distintos puede ser diferente.
 
 ![](media/5dafb86f9788e80ddcd0821334d98ae8.png)
+
 
 ### MVC
 
@@ -230,12 +336,14 @@ A diferencia del MVC, la **vista** tiene una referencia al modelo de vista, pero
 
 ![](media/herramientas.png)
 
+```note
 Una **dependencia** es una aplicación o una biblioteca requerida por otro programa para poder funcionar correctamente.
+```
 
 Las dependencias en Java se pueden gestionar de la siguiente forma:
 
 -   Descargar el archivo jar de la biblioteca requerida manualmente desde Internet y añadirlo a nuestro proyecto.
-    -   Escribir un script que descargará automáticamente la biblioteca de una fuente externa a través de la red.
+-   Escribir un script que descargará automáticamente la biblioteca de una fuente externa a través de la red.
 
 Al ser una tarea pesada, pronto aparecieron **herramienta de gestión de dependencias,** las cuales resuelven y gestionan las dependencias que requiera nuestra aplicación.
 
@@ -245,7 +353,7 @@ Las **herramientas de construcción** automatizan la creación de aplicaciones e
 
 Apache Ant es una herramienta de línea de comandos basada en Java que utiliza archivos XML para definir scripts de compilación. Se usa principalmente para compilaciones de Java, pero también se puede usar para el desarrollo de C / C ++. 
 
-Ejemplo del fichero build.xml para la clase principal de holamundo:
+Ejemplo del fichero *build.xml* para la clase principal de holamundo:
 
         <project>
         <target name="clean">
@@ -274,7 +382,7 @@ Ejemplo del fichero build.xml para la clase principal de holamundo:
 
 Maven fue desarrollado para resolver los problemas que enfrentan los scripts basados ​​en Ant e introdujo la **gestión automática de dependencias**, facilitando en gran manera el desarrollo. Además, la estructura de proyectos está estandarizada.
 
-Ejemplo del fichero pom.xml de la clase principal de holamundo del ejemplo anterior:
+Ejemplo del fichero *pom.xml* de la clase principal de holamundo del ejemplo anterior:
 
         <projectxmlns="http://maven.apache.org/POM/4.0.0"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -302,7 +410,7 @@ Gradle combina el poder de Ant y Maven. La primera versión de Gradle se lanzó 
 
 En lugar de XML, Gradle usa el lenguaje Groovy. Como resultado, las secuencias de comandos de compilación en Gradle son más fáciles de escribir y leer.
 
-Ejemplo del fichero build.gradle de la clase principal de holamundo del ejemplo:
+Ejemplo del fichero *build.gradle* de la clase principal de holamundo del ejemplo:
 
         applyplugin: 'java'
         repositories{
@@ -316,13 +424,28 @@ Ejemplo del fichero build.gradle de la clase principal de holamundo del ejemplo:
         testImpl    ementation'junit:junit:4.12'
         }
 
-## Github Classroom
+## Repositorios Github
 
-Acceder con la dirección especificada por el profesor y desde ahí a la tarea que se especifique con las instrucciones de desarrollo requeridas:
+```note
+Un repositorio contiene todos los archivos de un proyecto y el historial de revisiones de cada uno de ellos.
+```
+
+Github es un portal creado para alojar el código de las aplicaciones de cualquier desarrollador, y que fue comprada por Microsoft en junio del 2018. La plataforma está creada para que los desarrolladores suban el código de sus aplicaciones y herramientas, y que como usuario no sólo puedas descargarte la aplicación, sino también entrar a su perfil para leer sobre ella o colaborar con su desarrollo.
+
+![](media/githublogo.png)
+
+Utiliza el sistema de control de versiones Git diseñado por Linus Torvalds. Con dicho sistema de gestión de versiones los desarrolladores pueden administrar su proyecto, trabajando colaborativamente y gestionar las distintas versiones para evitar confusiones.
+
+### Github classroom
+
+Github classroom es una herramienta específica para el trabajo con estudiantes.
+
+Acceder a Github Clasroom y desde ahí a la tarea que se especifique con las instrucciones de desarrollo requeridas:
+
 ![](media/a9676197c22b9ccd12bfd3807227a6d3.jpeg)
 
 
-**Comandos git**
+### Comandos git
 
 ![](media/a368506762f9f3e596e4409f14b23482.png)![](media/981334452a05339b78e1b26cd3e6b0b9.jpeg)
 
@@ -352,6 +475,12 @@ Desde el año pasado es necesario generar un **token de acceso personal** en lug
 
 💡 Los **debugger** son herramientas imprescindibles en la programación, sin las cuales sería muy complicado detectar cualquier problema, desde un mínimo error de síntesis perdido en cientos de rutinas hasta escribir por equivocación un código que genere un bucle infinito para ciertas casuísticas.
 
+En los desarrollos actuales más del 70% del tiempo se dedica al dieseño del modelo y debugeo continuo, con apenas un 25% del tiempo dedicado al desarrollo de código.
+
+![](media/12f45487965423232f.png)
+
+### Debugger
+
 ![](media/b917128d263061d75f14af22d74cf555.jpeg)
 
 
@@ -364,3 +493,13 @@ Desde el año pasado es necesario generar un **token de acceso personal** en lug
 | Run to Cursor (F4)              | Se ejecuta el programa hasta la instrucción donde se encuentre el cursor.                                                                                                                                                      |
 | Continue (F5)                   | La ejecución del programa continúa hasta el siguiente breakpoint. Si no existe un breakpoint se ejecuta hasta el final.                                                                                                        |
 | Finish Debugger                 | Terminar la depuración del programa.                                                                                                                                                                                           |
+
+### Proyectos
+
+Principales carpetas de un proyecto Java creado en Netbeans:
+- Carpeta **src** contiene los archivos fuente codificados para este trabajo en lenguaje Java (extensión .java). Dichos archivos se encuentran distribuidos en carpetas, o paquetes en notación de Java. Además de los archivos fuente, se incluyen imágenes (archivos con extensión .gif) y otros ficheros de texto utilizados.
+- Carpeta **build** es utilizada por NetBeans para almacenar los archivos objeto resultado de la compilación. Estos archivos tienen extensión .class y contienen la traducción de Java a bytecode o lenguaje que entiende la Máquina Virtual de Java.
+-Carpeta **dist** es utilizada por NetBeans para almacenar el archivo con extensión .jar, que no es más que un archivo comprimido en formato ZIP que contiene toda la estructura de archivos de la carpeta build. Este archivo es el que se utiliza para su distribución por Internet.
+- Carpeta **dist\javadoc** es utilizada por NetBeans para presentar la documentación de las clases generada como archivos .html a partir de los comentarios incluidos en los .java.
+- Carpeta **nbproject** es interna a NetBeans e incluye opciones de compilación y generación de la documentación del proyecto.
+- Carpeta **test** se corresponde con la generación de JUnit de Java para pruebas de clases.
