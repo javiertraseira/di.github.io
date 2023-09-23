@@ -178,6 +178,12 @@ Esto se puede conseguir de diferentes formas, pero en el nivel más bajo se encu
 
 ## Empaquetado de componentes
 
+```note
+El empaquetado de componentes y aplicaciones consiste en proporcionar las aplicaciones o sus componentes en forma de paquetes. Estos paquetes están formados por los programas ejecutables de la aplicación, así como por las bibliotecas de las que depende y otros tipos de ficheros (como imágenes, traducciones, etc.), 
+```
+
+Tras realizar el empaquetado de aplicaciones es necesario que las aplicaciones puedan ser instaladas de una manera rápida y sencilla, para lo que se cuenta con los instaladores o paquetes autoinstalables.
+
 Una vez creado un componente, se puede empaquetar para poder distribuirlo y reutilizarlo después. Para ello se necesitará el paquete **jar** que empaqueta en formato ZIP todas las clases que forman el componente:
 
 -   El propio componente
