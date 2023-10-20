@@ -97,6 +97,7 @@ Este método únicamente permite realizar sentencias de actualización de la BD:
 Statement st = conexion.createStatement();
 
 // La consulta es un String con código SQL String sqlselect = "SELECT * FROM cuentas";
+String sqlselect = "SELECT * FROM cuentas";
 ```
 
 ### 3.2 Consultas PreparedStatement
@@ -108,10 +109,10 @@ Otro tipo de consultas son las **PreparedStatement.** Son consultas más eficien
 PreparedStatement pstBuscarCodigo;
 
 // Cadena de asignación y asignación de setters
-String sqlBusqueda = "SELECT codigo FROM cuentas WHERE codigo=?"; pstBuscarCodigo = conexion.prepareStatement(sqlBusqueda); pstBuscarCodigo.setString(1, codigo);
+String sqlBusqueda = "SELECT codigo FROM cuentas WHERE codigo=?"; 
+pstBuscarCodigo = conexion.prepareStatement(sqlBusqueda); 
+pstBuscarCodigo.setString(1, codigo);
 ResultSet rs = pstBuscarCodigo.executeQuery();
-
-
 ```
 
 ## Ejecutar consultas
@@ -123,19 +124,21 @@ Para los dos ejemplos anteriores, que son consultas, veremos como se incluye el 
 La consulta del SQL nos devolverá en un objeto **ResultSet**, que tendrá una serie de campos y un conjunto de registros que se pueden recorrer con next:
 
 ```java
-Statement st = cn.createStatement(); String sql1 = "SELECT * FROM cuentas";
+Statement st = cn.createStatement(); 
+String sql1 = "SELECT * FROM cuentas";
 
 // Ejecuta una consulta que devuelve resultados
-ResultSet rs = st.executeQuery(sql1); while (rs.next()) {
+ResultSet rs = st.executeQuery(sql1); 
+while (rs.next()) {
 System.out.println (rs.getString ("propietario") + " " + rs.getInt(saldo));
 }
 
 PreparedStatement pstBuscarCodigo;
 String sqlBusqueda = "SELECT codigo FROM cuentas WHERE codigo=?";
 
-pstBuscarCodigo = cn.prepareStatement(sqlBusqueda); pstBuscarCodigo.setString(1, codigo);
+pstBuscarCodigo = cn.prepareStatement(sqlBusqueda); 
+pstBuscarCodigo.setString(1, codigo);
 ResultSet rs = pstBuscarCodigo.executeQuery();
-
 ```
 
 ### 4.2 ResulSet
@@ -144,13 +147,18 @@ Cuando un campo de un registro de una tabla no tiene asignado ningún valor, la 
 Esto no sucederá así para los datos numéricos, ya que devuelve el valor 0.
 
 ```java
-String sexo; while(result.next())
+String sexo; 
+while(result.next())
 {
-exp = result.getInt("exp"); System.out.print(exp + "\t");
-nombre = result.getString("nombre"); if (result.wasNull()) {
-System.out.print("Sin nombre asignado");
+exp = result.getInt("exp"); 
+System.out.print(exp + "\t");
+nombre = result.getString("nombre"); 
+if (result.wasNull()) {
+  System.out.print("Sin nombre asignado");
 else
-System.out.print(nombre.trim()); sexo = result.getString("sexo"); System.out.println("\t" + sexo);
+  System.out.print(nombre.trim()); 
+sexo = result.getString("sexo"); 
+System.out.println("\t" + sexo);
 }
 ```
 
@@ -164,7 +172,7 @@ Statement sentencia = conexion.createStatement();
 int filasInsertadas = sentencia.executeUpdate(
    "INSERT INTO contacto (nombre, apellidos, telefono) VALUES " +
    ('Javier','Gomez','111' )");
-int filasModificadas = sentencia.executeUpdate("UPDATE contacto SET telefono='111' WHERE id=3");
+int filasModificadas = sentencia.executeUpdate("UPDATE contacto SET telefono='111' WHERE id=3");
 
 int filasBorradas = sentencia.executeUpdate("DELETE FROM contacto WHERE id=4");
 ```
