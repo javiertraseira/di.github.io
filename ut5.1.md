@@ -12,7 +12,9 @@ Bootstrap se desarrolló inicialmente por Twitter en 2010, para estandarizar las
 
 Inicialmente, se llamó Twitter *Blueprint* y, un poco más tarde, en 2011, se transformó en código abierto y su nombre cambió para Bootstrap. Desde entonces se ha ido actualizado continuamente y ya se encuentra por la **versión 5**, con la que trabajaremos.
 
-Bootstrap combina CSS y JavaScript para estilizar los elementos de una página HTML y proporcionarle interactividad respetando el principio de diseño responsive en todo momento. La documentación está disponible en <https://getbootstrap.com/docs/5.3>
+Bootstrap combina CSS y JavaScript para estilizar los elementos de una página HTML y proporcionarle interactividad respetando el principio de diseño responsive en todo momento. 
+
+La documentación está disponible en <https://getbootstrap.com/docs/5.3>
 
 ![](media/7d6f06c1b29b7b47b3e7fa85e79fac00.png)![](media/1dff958f3fd08966a66844bcf7684baa.jpeg)
 
@@ -25,26 +27,32 @@ Las funciones disponibles en Bootstrap ofrecen una experiencia rica al usuario. 
 Características de Bootstrap:
 
 -   Mobile First
+-   Basado en Flexbox
 -   Sistema Grid responsive
--   Componentes (navbar, card, botones, etc)
--   Javascript plugins
+-   Variedad de componentes propios: navbar, card, botones, formularios, etc
+-   Tipografía receptiva (adaptable según el dispositivo)
+-   Compatibilidad con Javascript nativo y con plugins adicionales.
 -   Compatibilidad con Sass
 
 ## CDN
 
-La manera más sencilla de comenzar con *Bootstrap 5* es utilizar un **CDN.** (*Content Delivery Network*) Consiste por tanto en utilizar un servidor donde se alojan todos los archivos de Bootstrap.
+La manera más sencilla de comenzar con *Bootstrap 5* es utilizar un **CDN.** (*Content Delivery Network*), es decir, un servidor donde se alojan todos los archivos de Bootstrap.
 
-Agregaremos el siguiente código en nuestro esqueleto de la página HTML principal:
+Usaremos el CDN de jsDelivr, apuntando a la versión 5.3.0 de Boostrap. Agregaremos el siguiente código en nuestro esqueleto de la página HTML principal:
+
 
 ```html
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"/>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+
 ```
+💡 Se puede cambiar de versión de la URL según las necesidades.
+
+Para la parte de Javascript también se puede agregar la URL de un CND, pero desde Bootstrap 5 ya no es necesario para funcionalidades básicas.
 
 Las ventajas de utilizar esta forma de cargar Bootstrap son:
 
--   Reducir la carga de nuestros servidores (importante si utilizamos un hosting compartido con recursos limitado)
+-   Reducir la carga de los servidores propios (importante si utilizamos un hosting compartido con recursos limitados)
 -   Facilita que Bootstap 5 quede en caché del navegador y se vuelva a cargar cada vez que se visita una web que lo utilice.
--   Reduce la latencia.
 
 ## Cuadrícula (Grid)
 
@@ -268,7 +276,9 @@ Utilizar este estándar ayuda a que los visitantes se sientan cómodos navegando
 
 Las imágenes en Bootstrap se hacen responsive con **.img-fluid**. Esto aplica un **max-width: 100%** y **height: auto** a la imagen para que se escale con el ancho de su elemento padre.
 
+```html
     <img src="..." class="img-fluid" alt="..."\>
+```
 
 ![](media/452f144515c107e2b8f7552176152d98.png)
 
@@ -282,5 +292,15 @@ Las siguientes clases se utilizan para personalizar la apariencia de **imágenes
     <img src="..." class="thumbnail" alt="...">
 ```
 
+### Alertas
 
+Las alertas están disponibles para cualquier longitud de texto. Para un estilo adecuado, se pueden usar una de las ocho clases contextuales obligatorias. Por ejemplo:
 
+```html
+    <div class="alert alert-primary" role="alert"> Una simple alerta primary </div> 
+    <div class="alert alert-secondary" role="alert"> Una simple alerta secondary </div> 
+    <div class="alert alert-success" role="alert"> Una simple alerta success </div> 
+    <div class="alert alert-danger" role="alert"> Una simple alerta danger</div>
+```
+
+![](media/alerts_bootstrap.png)
