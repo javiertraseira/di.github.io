@@ -1,7 +1,5 @@
 # UT4.4 Posicionamiento y maquetación CSS
 
-📕 [Contenido en presentación PDF](/pdf/UT4.4 - Posicionamiento y maquetación CSS.pdf)
-
 ## Maquetación CSS
 
 Una de las partes más complejas de CSS, probablemente sea la colocación y distribución de los elementos de una página, también conocida como **maquetación**.
@@ -10,7 +8,7 @@ Sin embargo, suele resultar difícil si no se conocen bien todos los detalles pa
 
 ![](media/64b0e22b46f6f70718495e3f48bf1c08.jpeg)
 
-## Etiquetas semánticas en HTML
+### Etiquetas semánticas en HTML
 
 HTML hace uso de **etiquetas semánticas** (*nav, header, aside, footer..)* ya conocidas por nosotros, mediante las cuales describe el significado del contenido, permitiendo que los documentos HTML sean más claros para los desarrolladores y que son la clave para ayudar en el proceso de maquetación de contenidos de cualquier interfaz web.
 
@@ -33,10 +31,10 @@ El posicionamiento de una 'caja' se establece mediante la propiedad *position*, 
 ### Posicionamiento normal (static)
 
 ```tip
-El posicionamiento **normal** o **estático** es el modelo que utilizan por defecto los navegadores para mostrar los elementos de las páginas. En este modelo, sólo se tiene en cuenta si el elemento es de bloque o en línea, sus propiedades *width* y *height* y su contenido y **no** se tienen en cuenta top, right, bottom o left.
+El posicionamiento **normal** o **estático** es el modelo que utilizan por defecto los navegadores para mostrar los elementos de las páginas. En este modelo, sólo se tiene en cuenta si el elemento es de bloque o en línea, sus propiedades *width* y *height* y su contenido y **no se tienen en cuenta** top, right, bottom o left.
 ```
 
-Los elementos de bloque forman lo que CSS denomina contextos de formato de bloque. En este tipo de contextos, las cajas se muestran una debajo de otra comenzando desde el principio del elemento contenedor. La distancia entre las cajas se controla mediante los márgenes verticales.
+Los elementos de **bloque** forman lo que CSS denomina contextos de formato de bloque. En este tipo de contextos, las cajas se muestran una debajo de otra comenzando desde el principio del elemento contenedor. La distancia entre las cajas se controla mediante los márgenes verticales.
 
 ![](media/42344de13b2e58cdd19928d9d4f5f693.png)
 
@@ -48,7 +46,7 @@ En principio, se parte de dos tipos básicos: *inline* y *block*.
 |  inline   |  Elemento en línea  | El elemento se coloca en horizontal (un elemento a continuación del otro). |  \<span\>   |
 |  block    |  Elemento en bloque | El elemento se coloca en vertical (un elemento encima de otro).            |  \<div\>    |
 
-💡 Obsérvese que por defecto, todos los elementos *\<div\>* son elementos de bloque (block) y todos los elementos *\<span\>* son elementos en línea (inline)
+💡 Obsérvese que por defecto, todos los elementos *\<div\>* son elementos de bloque (block) y todos los elementos *\<span\>* son elementos en línea (*inline*)
 
 ### Posicionamiento relativo (relative)
 
@@ -90,7 +88,7 @@ Aunque el usuario haga *scroll* y se desplace hacia abajo en una página web, el
 
 ### Posicionamiento flotante (float)
 
-El posicionamiento **flotante** es un posicionamiento relativamente complejo de entender y problemático de utilizar. Cuando una caja se posiciona con el modelo de posicionamiento flotante, automáticamente se convierte en una caja flotante, lo que significa que se desplaza hasta la zona más a la izquierda o más a la derecha de la posición en la que originalmente se encontraba.
+El posicionamiento **flotante** es un posicionamiento relativamente complejo de entender y problemático de utilizar. Cuando una caja se posiciona con el modelo de posicionamiento flotante, automáticamente se convierte en una **caja flotante**, lo que significa que se desplaza hasta la zona más a la izquierda o más a la derecha de la posición en la que originalmente se encontraba.
 
 ![](media/9ac908eb3833fde8f74d92bd4808fff4.png)![](media/d15f6174f7c5f60bb1821ac86e26c82e.png)
 
@@ -153,7 +151,7 @@ Grid parte de la filosofía y bases de Flebox. Para utilizar Grid CSS necesitare
 
 ## CSS Flexbox
 
-Los elementos básicos de **Flexbox** son los siguientes:
+Los <u>elementos</u> básicos de **Flexbox** son los siguientes:
 
 ![](media/5df2c9532efa31979bb45ec6f2a860b3.jpeg)
 
@@ -239,7 +237,7 @@ Existe una propiedad de atajo (short-hand) llamada **flex-flow**, con la que pod
 
 ![](media/f4845a0ad5e3bafbc500d9fe0e48d3f3.png)
 
-## Alineación: align-content
+### Alineación: align-content
 
 ```tip
 **align-content** alinea las filas interiores respecto el eje vertical. Para poder usarse es necesario tener definido **flex-wrap** como *wrap* o *wrap-reverse* y tener varias líneas.
@@ -619,7 +617,7 @@ Para dejar un espacio intermedio vacío en ciertas áreas, usaremos el comodín 
 ## Responsive web Design
 
 ```note
-El Responsive web design o diseño web adaptativo, es una filosofía de diseño y desarrollo cuyo objetivo es adaptar la apariencia de las páginas web al dispositivo que se esté utilizando para visitarlas.
+El **Responsive web design** o diseño web adaptativo, es una filosofía de diseño y desarrollo cuyo objetivo es adaptar la apariencia de las páginas web al dispositivo que se esté utilizando para visitarlas.
 ```
 
 Mediante el uso de estructuras flexibles que ya hemos visto (como Flexbox o Grid) y las *Media Queries* que veremos a continuación, podemos adaptar a la apariencia de diferentes dispositivos. Las Media Queries sirven para adaptar de forma más concreta un sitio web al dispositivo en el que se vaya abrir, siempre que persistan diferencias entre ellos. No obstante, haciendo un buen uso de CSS pueden conseguirse también resultados similares a las Media Queries que suelen agregar complejidad añadida.
