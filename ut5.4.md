@@ -1,4 +1,4 @@
-# UT3.3 Imágenes y gráficos
+# UT5.4 Imágenes y gráficos usados en interfaces
 
 📕 [Contenido en presentación PDF](/pdf/UT3.3 - Imágenes y gráficos.pdf)
 
