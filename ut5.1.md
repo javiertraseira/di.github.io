@@ -304,3 +304,117 @@ Las alertas están disponibles para cualquier longitud de texto. Para un estilo 
 ```
 
 ![](media/alerts_bootstrap.png)
+
+### Navbar
+
+Un navbar es una barra de navegación superior responsive con menús, submenús, y otros componentes, como una barra de búsqueda entre otros, y que tiene las siguientes características:
+- La barra de navegación es <u>adaptable</u> y fluida de forma predeterminada, lo que significa que se amplía o reduce en función de la anchura del viewport.
+- Las navbars requieren un envoltorio *.navbar* con las clases *.navbar-expand{-sm|-md|-lg|-xl}*, que determinan cuándo se colapsa la barra en un sólo botón.
+- Existen diversas clases para darle color a un navbar como *.bg-light* o *.bg-dark*.
+
+![](media/3242365346345120978978.png)
+
+Podemos crear una barra <u>estándar</u> con *\<nav class="navbar .navbar-expand{tamaño}">*
+
+Para agregar **enlaces** dentro de la barra de navegación, usar el elementos *\<ul>* con la clase *class="navbar-nav"*. Luego agrega elementos *\<li>* con una clase *.nav-item* seguido de un elemento *\<a>* con una clase *.nav-link*:
+
+```html
+<nav class="navbar navbar-expand-sm bg-light"> 
+<div class="container-fluid"> 
+<ul class="navbar-nav"> 
+<li class="nav-item"> <a class="nav-link" href="#">Link 1</a> </li> 
+<li class="nav-item"> <a class="nav-link" href="#">Link 2</a> </li> 
+<li class="nav-item"> <a class="nav-link" href="#">Link 3</a> </li> 
+</ul> 
+</div>
+</nav>
+```
+
+![](media/navbar_bootstrap1.png)
+
+Si eliminamos el *navbar-expand* tendremos un menú de navegación siempre en vertical:
+
+```html
+<nav class="navbar bg-light"> 
+<div class="container-fluid"> 
+<ul class="navbar-nav"> 
+<li class="nav-item"> <a class="nav-link" href="#">Link 1</a> </li> 
+<li class="nav-item"> <a class="nav-link" href="#">Link 2</a> </li> 
+<li class="nav-item"> <a class="nav-link" href="#">Link 3</a> </li> 
+</ul> 
+</div>
+</nav>
+```
+![](media/navbar_bootstrap2.png)
+
+
+Para crear **submenús desplegables** dentro de un elemento de la barra de navegación indicaremos que el elemento es dropdown y dentro anidaremos un elemento ul con la clase dropdown-menú y dentro sus respectivos *\<li>* con sus respectivos enlaces *\<a>*.
+
+```html
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark"> 
+<div class="container-fluid"> 
+    <div class="collapse navbar-collapse" id="collapsibleNavbar"> 
+    <ul class="navbar-nav"> 
+    <li class="nav-item"> <a class="nav-link" href="#">Enlace</a> </li> 
+    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Desplegable</a> 
+    <ul class="dropdown-menu"> 
+        <li><a class="dropdown-item" href="#">Subenlace1</a></li> 
+        <li><a class="dropdown-item" href="#">Subenlace2</a></li> 
+    </ul> 
+    </li> 
+</ul> 
+</div> 
+</div> 
+<nav>
+```
+
+![](media/navbar_bootstrap3.png)
+
+
+## Formularios
+
+Bootstrap aplica estilos a los elementos de tipo formulario para convertirlos en elementos responsive, mejorando su apariencia y permitiendo crear diferentes alineaciones como en el resto de elementos de Bootstrap ya vistos. 
+La estructura básica de un formulario es la siguiente:
+
+```html
+<form> 
+<div class="mb-3"> 
+    <label for="exampleInputEmail1" class="form-label">Correo</label> 
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introduzca correo"> 
+    <label for="inputPassword5" class="form-label">Contraseña</label> 
+    <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock"> 
+    <div id="passwordHelpBlock" class="form-text"> Tu contraseña debe tener entre 8 y 20 caracteres, conteniendo letras y números.
+</div> 
+</form>
+```
+
+![](media/navbar_bootstrap4.png)
+
+### Validaciones
+
+La validación de formularios HTML se aplica a través de dos pseudoclases de CSS, *:invalid* y *:valid*. Se aplica a los elementos *\<input>*, *\<select>* y *\<textarea>*. Para los mensajes de feedback se puede combinar como *valid-feedback* o *invalid-feedback*.
+
+```html
+<form class="row g-3 needs-validation" novalidate> 
+<div class="col-md-6"> 
+    <label for="validationCustom03" class="form-label">Ciudad</label> 
+    <input type="text" class="form-control" id="validationCustom03" required> 
+    <div class="invalid-feedback"> Proporciona una ciudad válida. </div> 
+</div> 
+<div class="col-md-3"> 
+    <label for="validationCustom05" class="form-label">Código postal</label> 
+    <input type="text" class="form-control" id="validationCustom05" required>
+    <div class="invalid-feedback"> Proporciona un código postal válido. </div> 
+</div>
+<div class="col-12"> <div class="form-check"> 
+    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required> 
+    <label class="form-check-label" for="invalidCheck"> Acepta los términos y condiciones </label> 
+    <div class="invalid-feedback"> Debe estar de acuerdo antes de enviar. </div> 
+</div> </div> 
+<div class="col-12"> 
+    <button class="btn btn-primary" type="submit">Enviar formulario</button>
+</div> 
+</form>
+```
+
+![](media/navbar_bootstrap5.png)
