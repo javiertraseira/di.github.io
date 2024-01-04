@@ -1,7 +1,5 @@
 # UT5.1 Bootstrap
 
-📕 [Contenido en presentación PDF](/pdf/UT5.1 - Bootstrap.pdf)
-
 ## Introducción a Bootstrap
 
 ```note
@@ -43,7 +41,6 @@ Usaremos el CDN de jsDelivr, apuntando a la versión 5.3.0 de Boostrap. Agregare
 
 ```html
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" >
-
 ```
 💡 Se puede cambiar de versión de la URL según las necesidades.
 
@@ -53,6 +50,16 @@ Las ventajas de utilizar esta forma de cargar Bootstrap son:
 
 -   Reducir la carga de los servidores propios (importante si utilizamos un hosting compartido con recursos limitados)
 -   Facilita que Bootstap 5 quede en caché del navegador y se vuelva a cargar cada vez que se visita una web que lo utilice.
+
+Recordemos que Bootstrap también es un framework que utiliza multitud de complementos de JavaScript para mejorar el comportamiento de los elementos en nuestra página. Además es plenamente compatible con Javascript nativo. 
+Para la parte de Javascript también se puede agregar la URL de un CND, aunque desde Bootstrap 5 ya no es necesario para la mayoría de funciones básicas.
+
+El código para JS deberá de añadirse al final de la página HTML, justo antes del cierre de la etiqueta body de la página:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+```
+
 
 ## Cuadrícula (Grid)
 
@@ -162,7 +169,7 @@ Se pueden hacer combinaciones según diferentes tamaños (para sm y xl) y así o
 ![](media/c890926478f5a27ac6da167924844936.png)![](media/71ab04427c00d1ea4243046471339027.png) 
 
  
- ### Columnas de fila
+### Columnas de fila
 
 
 Para establecer un número columnas predeterminadas, se pueden utilizar las clases responsive **.row-cols-\#** y así establecer rápidamente la cantidad de columnas que mejor representen el contenido y diseño.
@@ -197,7 +204,7 @@ Para **anidar** el contenido con la cuadrícula predeterminada, se debe agregar 
 
 ![](media/91912598cdc31d4379f0ab62cab2862a.jpeg)
 
-### Glutter
+### Gutter
 
 Los **gutters** son el padding horizontal entre las columnas, que se utilizan para espaciar y alinear de manera responsive el contenido en el sistema de cuadrícula de Bootstrap.
 
@@ -232,6 +239,11 @@ Con dicha clase moveremos las columnas a la derecha tantas posiciones como el n�
 ```
 
 ![](media/3353c13dd5c87eeb3e676eef29adebcb.png)
+
+### Ocultar elementos
+
+Con la clase *.d-{tamaño}-{none|block}* podemos mostrar u ocultar elementos que indiquemos para ciertos tamaños.
+
 
 ### Alineación: align-content
 
@@ -309,7 +321,7 @@ Las alertas están disponibles para cualquier longitud de texto. Para un estilo 
 
 Un navbar es una barra de navegación superior responsive con menús, submenús, y otros componentes, como una barra de búsqueda entre otros, y que tiene las siguientes características:
 - La barra de navegación es <u>adaptable</u> y fluida de forma predeterminada, lo que significa que se amplía o reduce en función de la anchura del viewport.
-- Las navbars requieren un envoltorio *.navbar* con las clases *.navbar-expand{-sm|-md|-lg|-xl}*, que determinan cuándo se colapsa la barra en un sólo botón.
+- Las navbars requieren un envoltorio *\.navbar* con las clases *\.navbar-expand{-sm|-md|-lg|-xl}*, que determinan cuándo se colapsa la barra en un sólo botón.
 - Existen diversas clases para darle color a un navbar como *.bg-light* o *.bg-dark*.
 
 ![](media/3242365346345120978978.png)
