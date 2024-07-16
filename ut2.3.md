@@ -8,7 +8,7 @@
 
 ![](media/05f6a59d63d5d624055d27b98a4ea188.jpeg)
 
-# ![](media/466579ca2a8ab791394e1b635cd9d159.jpeg)JDBC
+![](media/466579ca2a8ab791394e1b635cd9d159.jpeg)
 
 ## JDBC
 
@@ -55,6 +55,9 @@ JDBC ofrece el paquete java.sql, en el que existen **clases** muy útiles para t
 El primer paso es asignar el driver de la base de datos que vamos a utilizar en nuestro IDE (Netbeans), descargando o utilizando un archivo **jar** ya existente que incluiremos en el apartado librerías de nuestro proyecto.
 
 ![](media/5169a4340cf541caf4ec264fc654971b.jpeg)
+
+Para  conectarse y correr con el driver de una BD Derby en nuestro proyecto en Netbeans seguir el siguiente tutorial: [Instrucciones crear un BD de Derby en Netbeans](docu/Instruccionesderbydb.md)
+
 
 ### 2. Establecer conexión con la BD
 

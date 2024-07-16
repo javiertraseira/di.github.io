@@ -1,6 +1,4 @@
-# UT5.4 Imágenes y gráficos usados en interfaces
-
-📕 [Contenido en presentación PDF](/pdf/UT3.3 - Imágenes y gráficos.pdf)
+# UT5.3 Imágenes y gráficos usados en interfaces
 
 ## Imágenes
 
@@ -59,7 +57,7 @@ Por ejemplo, si un dispositivo tiene una resolución de 1920 x 1080 píxeles, si
 
 ![](media/d37b6dbbd542f63af88e477651d20487.jpeg)
 
-Existe una amplia gama de resoluciones estandarizadas por la industria de los monitores/pantallas y gráficas, que tienen los siguientes nombres:
+Existe una amplia gama de resoluciones estandarizadas por la industria de los monitores/pantallas y gráficas, que tienen las siguientes denominaciones:
 
 -  VGA (SD): 640x480
 -  SVGA: 800x600

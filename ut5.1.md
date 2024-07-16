@@ -3,7 +3,7 @@
 ## Introducción a Bootstrap
 
 ```note
-Bootstrap es un framework CSS (y JS) utilizado para el desarrollo de interfaces web de forma estandarizada para que se adapten a cualquier dispositivo.
+**Bootstrap** es un framework CSS (y JS) utilizado para el desarrollo de interfaces web de forma estandarizada para que se adapten a cualquier dispositivo.
 ```
 
 Bootstrap se desarrolló inicialmente por Twitter en 2010, para estandarizar las herramientas de desarrollo de la compañía.
@@ -16,13 +16,15 @@ La documentación está disponible en <https://getbootstrap.com/docs/5.3>
 
 ![](media/7d6f06c1b29b7b47b3e7fa85e79fac00.png)![](media/1dff958f3fd08966a66844bcf7684baa.jpeg)
 
-Bootstrap sigue el concepto de **mobile first**. Esto significa que la preocupación del framework es primero desarrollar una página que funcione perfectamente en dispositivos móviles y luego en el escritorio.
+Bootstrap sigue el concepto de **mobile first**. Esto significa que la preocupación del Framework es primero desarrollar una página que funcione perfectamente en dispositivos móviles y luego en el escritorio.
 
 Bootstrap además está plentamente basado en **Flexbox** y *CSS3*.
 
-Las funciones disponibles en Bootstrap ofrecen una experiencia rica al usuario. Además Bootstrap se basa en las tendencias de diseño utilizadas en este momento.
+Las funciones disponibles en Bootstrap ofrecen una experiencia rica al usuario. Además está plentamente basado en Flexbox y usa las tendencias de diseño del mercado.
 
-Características de Bootstrap:
+Actualmente es el Framework frontend de CSS más usado en 2023 (más de un 25%).
+
+Características de **Bootstrap 5**:
 
 -   Mobile First
 -   Basado en Flexbox
@@ -60,16 +62,13 @@ El código para JS deberá de añadirse al final de la página HTML, justo antes
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 ```
 
-
 ## Cuadrícula (Grid)
 
 Bootstrap incluye un potente sistema de rejillas (grid) para la construcción de diseños de todas las formas y tamaños.
 
-Bootstrap utiliza un modelo de cuadrícula basado en dos tipos de contenedores y una rejilla de hasta **12 columnas** (con Flexbox) con varios niveles que resulta muy flexible, y que como veremos podemos también alterar cuando nos resulte conveniente.
+Bootstrap utiliza un modelo de cuadrícula basado en dos tipos de contenedores y una rejilla de hasta **12 columnas**, basada en Flexbox, con varios niveles que resulta muy práctica, y que como veremos podemos alterar cuando nos resulte conveniente.
 
-El sistema de cuadrícula utiliza tres clases CSS principales para crear el diseño necesario:
-
-.**container**, .**row** y .**col**. El contenedor cubre el diseño completo, luego las filas y luego las columnas.
+El sistema de cuadrícula utiliza <u>tres clases</u> CSS principales para crear el diseño necesario: **.container**, **.row** y **.col**. El contenedor cubre el diseño completo, luego las filas y luego las columnas.
 
 ![](media/bc2e59fb452aa03ae5cedbfb7b61ade4.png)
 
@@ -96,7 +95,7 @@ Para indicar el tamaño de columna debemos utilizar la siguiente sintaxis:
 
     col-\#
 
-El valor del **\#** será uno entre **1 y 12**. El restante del valor indicado será el que debamos de distribuir entre el resto de columnas (sumando 12).
+El valor del **\#** será uno entre **1 y 12**. El restante del valor indicado será el que debamos de distribuir entre el resto de columnas (sumando 12). Si usáramos *col-auto* el tamaño se ajustaría respecto al contenido del elemento.
 
 ```html
     <div class="container"> 
@@ -117,11 +116,9 @@ El valor del **\#** será uno entre **1 y 12**. El restante del valor indicado s
 
 ### Breakpoints
 
-El sistema de cuadrícula de Bootstrap puede a su vez adaptarse a seis **breakpoints**
+El sistema de cuadrícula de Bootstrap puede a su vez adaptarse a seis **breakpoints** predeterminados basados en *media queries*:
 
-predeterminados basados en *media queries*:
-
-![](media/1eccf6eb2820695c682e961fed6ed891.jpeg)
+![](media/breakpoints_bootstrap.png)
 
 De esta manera el prefijo de clases cambiará a *col-{breakpoint}* tal y como se muestra en la siguiente tabla:
 
@@ -166,11 +163,27 @@ Se pueden hacer combinaciones según diferentes tamaños (para sm y xl) y así o
 
 ![](media/ced415d22cfcc46804995ee57e9d73b9.png)
 
-![](media/c890926478f5a27ac6da167924844936.png)![](media/71ab04427c00d1ea4243046471339027.png) 
+![](media/c890926478f5a27ac6da167924844936.png)
+![](media/71ab04427c00d1ea4243046471339027.png) 
+
+### Contenedor
+
+Ya hemos dicho que el contenedor es el elemento de diseño más básico en Bootstrap y es imprescindible para aplicar nuestro sistema de cuadrícula predeterminado. 
+
+El contenedor puede personalizarse de la siguiente forma en su definición:
+
+- *.container* por defecto establece un *max-width* en cada breakpoint responsive.
+- *.container-fluid*  mantiene el ancho 100% de la ventana siempre.
+- *.container-{breakpoint}* mantiene el ancho 100% hasta el breakpoint indicado.
+
+```html
+<div class="container-fluid"> 
+<!-- Contenido fluído aquí --> 
+</div>
+```
 
  
 ### Columnas de fila
-
 
 Para establecer un número columnas predeterminadas, se pueden utilizar las clases responsive **.row-cols-\#** y así establecer rápidamente la cantidad de columnas que mejor representen el contenido y diseño.
 
@@ -240,9 +253,59 @@ Con dicha clase moveremos las columnas a la derecha tantas posiciones como el n�
 
 ![](media/3353c13dd5c87eeb3e676eef29adebcb.png)
 
+### Margin y padding
+
+Bootstrap también tiene clases para controlar el **margin** y el **padding** para no tener que recurrir a CSS, usando para ello el formato siguiente:
+
+    {propiedad}{lados}-{tamaño}
+
+Donde *propiedad* puede ser:
+- m - para clases que establecen margin
+- p - para clases que establecen padding
+
+Y *lados* puede ser:
+- t - para clases que establecen margin-top o padding-top
+- b - para clases que establecen margin-bottom o padding-bottom
+- x - para clases que establecen tanto *-left como *-right
+- y - para clases que establecen tanto *-top como *-bottom
+- (*blanco*) para clases que establecen un margin/padding en los 4 lados del elemento.
+
+Por último, el *tamaño* puede variar entre 0 y 5.
+
+### Ancho respecto los padres
+
+Podemos utilizar también la clase \w-{25%|50%|75%|100%} para dar soporte al ancho respecto al contenedor padre.
+
+Así de esta forma podemos tener:
+
+```html
+<div class="w-25 p-3" style="background-color: #eee;">Width 25%</div> 
+<div class="w-50 p-3" style="background-color: #eee;">Width 50%</div> 
+<div class="w-75 p-3" style="background-color: #eee;">Width 75%</div> 
+<div class="w-100 p-3" style="background-color: #eee;">Width 100%</div> 
+<div class="w-auto p-3" style="background-color: #eee;">Width auto</div>
+```
+
+![](media/4cb7ssfdfwe4rwe4rsdf6756fghe11.png)
+
+
 ### Ocultar elementos
 
-Con la clase *.d-{tamaño}-{none|block}* podemos mostrar u ocultar elementos que indiquemos para ciertos tamaños.
+Con la clase \d-{tamaño}-{none|block} podemos mostrar u ocultar elementos que indiquemos para ciertos tamaños.
+
+| **Efecto** | **Clase**    | 
+|-----------|---------------------|
+|  Ocultar para todos   |  d-none | 
+|  Ocultar solo para xs    |  d-none d-sm-block|flex | 
+|  Ocultar solo para sm    |  d-sm-none d-md-block|flex | 
+|  Ocultar solo para md    |  d-md-none d-lg-block|flex | 
+|  Ocultar solo para lg    |  d-lg-none d-xl-block|flex | 
+|  Ocultar solo para xl    |  d-xl-none d-xxl-block|flex | 
+|  Visible para todos   |  d-block | 
+|  Visible solo para xs   |  d-block d-sm-none | 
+|  Visible solo para sm   |  d-none d-sm-block d-md-none | 
+|  Visible solo para md   |  d-none d-md-block d-lg-none | 
+|  Visible solo para lg   |  d-none d-lg-block d-xl-none | 
 
 
 ### Alineación: align-content
@@ -266,7 +329,8 @@ La propiedad **jusfify-content** funciona al igual que en Flexbox alineando en h
 Con solo utilizar la clase **table** en nuestro código dentro del elemento **table** (\<table class="**table**"\>) podemos obtener lo siguiente directamente:
 
 ![](media/8a8b79f735b2caaad356b1d693af0f20.png)
-![](media/e17b85a6c4c376389b65c805d344f05c.jpeg)
+
+![](media/e17b85a6c4c376389b65c805d344f05c.png)
 
 Las reglas que define Bootstrap 5 permiten mostrar las filas separadas por una línea horizontal, los textos de la cabecera en negrita y la tabla se expandirá por defecto a todo su contenedor.
 
@@ -276,25 +340,38 @@ Pueden utilizarse numerosas clases auxiliares (table-primary, table-secondary, t
 
 ### Botones
 
-Para crear botones en Bootstrap se utilizará "*button*", y alguna de las siguientes **clases**
-
-listadas a continuación con la siguiente apariencia.
+Para crear botones en Bootstrap se utilizará **btn**, y alguna de las siguientes **clases** listadas a continuación con la siguiente apariencia:
 
 ![](media/e8c719bfcfb1828c19d9d693fa04bcf0.jpeg)
 
 Utilizar este estándar ayuda a que los visitantes se sientan cómodos navegando ya que seguramente sus colores/formas les sean familiares de otros sitios/interfaces.
+
+Disponemos de diferentes clases para definir el tamaño de los botones: *.btn-sm*, para botones pequeños y *.btn-lg*, para botones grandes. 
+
+Por ejemplo:
+
+```html
+<button type="button" class="btn btn-sm">btn-sm</button> 
+<button type="button" class="btn btn-lg">btn-lg</button>
+```
+
+Para que un botón aparezca **activado** o **desactivado** utilizamos las clases .active y .disabled. Se pueden usar para botones, inputs y enlaces.
+
+```html
+<button type="button" class="btn btn-lg btn-primary" disabled>Boton primario</button>
+```
 
 ### Imágenes
 
 Las imágenes en Bootstrap se hacen responsive con **.img-fluid**. Esto aplica un **max-width: 100%** y **height: auto** a la imagen para que se escale con el ancho de su elemento padre.
 
 ```html
-    <img src="..." class="img-fluid" alt="..."\>
+    <img src="..." class="img-fluid" alt="...">
 ```
 
 ![](media/452f144515c107e2b8f7552176152d98.png)
 
-Las siguientes clases se utilizan para personalizar la apariencia de **imágenes** en BS:
+Las siguientes clases se utilizan para personalizar la apariencia de **imágenes**:
 
 ![](media/f1c2bf257b685e4dbd6929f35eadb52c.jpeg)
 
@@ -306,7 +383,7 @@ Las siguientes clases se utilizan para personalizar la apariencia de **imágenes
 
 ### Alertas
 
-Las alertas están disponibles para cualquier longitud de texto. Para un estilo adecuado, se pueden usar una de las ocho clases contextuales obligatorias. Por ejemplo:
+Las alertas están disponibles para cualquier longitud de texto. Para un estilo adecuado, se pueden usar una de las ocho clases contextuales existentes. Por ejemplo:
 
 ```html
     <div class="alert alert-primary" role="alert"> Una simple alerta primary </div> 
@@ -319,14 +396,16 @@ Las alertas están disponibles para cualquier longitud de texto. Para un estilo 
 
 ### Navbar
 
-Un navbar es una barra de navegación superior responsive con menús, submenús, y otros componentes, como una barra de búsqueda entre otros, y que tiene las siguientes características:
+Un **navbar** es una barra de navegación superior responsive con menús, submenús, y otros componentes, como una barra de búsqueda entre otros, y que tiene las siguientes características:
 - La barra de navegación es <u>adaptable</u> y fluida de forma predeterminada, lo que significa que se amplía o reduce en función de la anchura del viewport.
 - Las navbars requieren un envoltorio *\.navbar* con las clases *\.navbar-expand{-sm|-md|-lg|-xl}*, que determinan cuándo se colapsa la barra en un sólo botón.
 - Existen diversas clases para darle color a un navbar como *.bg-light* o *.bg-dark*.
 
 ![](media/3242365346345120978978.png)
 
-Podemos crear una barra <u>estándar</u> con *\<nav class="navbar .navbar-expand{tamaño}">*
+Podemos crear una barra <u>estándar</u> con:
+
+    \<nav class="navbar .navbar-expand{tamaño}">
 
 Para agregar **enlaces** dentro de la barra de navegación, usar el elementos *\<ul>* con la clase *class="navbar-nav"*. Luego agrega elementos *\<li>* con una clase *.nav-item* seguido de un elemento *\<a>* con una clase *.nav-link*:
 
@@ -385,8 +464,21 @@ Para crear **submenús desplegables** dentro de un elemento de la barra de naveg
 
 ## Formularios
 
+Bootstrap aplica estilos a los elementos de tipo formulario para convertirlos en elementos responsive, mejorando su apariencia y permitiendo crear diferentes alineaciones como en el resto de elementos de Bootstrap ya conocidos:
+- **Controles de Formulario**: Bootstrap estiliza las entradas de texto y áreas de texto con soporte para múltiples estados.
+- **Select**: Se mejoran los elementos select predeterminados del navegador con una apariencia inicial personalizada.
+- **Checks y radio buttons**: Utiliza botones de radio y checks personalizados para seleccionar opciones de entrada.
+- **Rangos**: Reemplaza las entradas de rango predeterminadas del navegador.
+- **Etiquetas flotantes**: Diseñadas para flotar sobre los campos de entrada.
+- **Layout**: Permite utilizar cuadrículas complejas con los formularios.
+- **Validaciones**: Permite validar formularios con estilos y comportamientos de validación nativos o personalizados.
+
 Bootstrap aplica estilos a los elementos de tipo formulario para convertirlos en elementos responsive, mejorando su apariencia y permitiendo crear diferentes alineaciones como en el resto de elementos de Bootstrap ya vistos. 
-La estructura básica de un formulario es la siguiente:
+
+Básicamente, la estructura general de un formulario sería como la siguiente:
+- Usar *label* for para describir cada control de formulario (para la accesibilidad)
+- No olvidar utilizar el atributo *type* para cada uno de los elementos *input* del formulario (por ejemplo, *email* para las direcciones de correo electrónico o *number* para información numérica)
+
 
 ```html
 <form> 
@@ -402,9 +494,56 @@ La estructura básica de un formulario es la siguiente:
 
 ![](media/navbar_bootstrap4.png)
 
+### Menús select
+
+Los menús de selección se definen mediante la etiqueta *\<select>* y solo necesitan la clase personalizada *form-select* para activar los estilos de Bootstrap. Los estilos están limitados a la apariencia de *\<select>* y no pueden modificar los *\<option>* debido a las limitaciones del navegador.
+
+```html
+<select class="form-select"> 
+<option selected>Abre este menú select</option> 
+<option value="1">Uno</option> 
+<option value="2">Dos</option> 
+<option value="3">Tres</option> 
+</select>
+```
+
+![](media/select_bootstrap.png)
+
+### Checks y radios
+
+Los checks y radio buttons predeterminados del navegador se reemplazan con la ayuda de la clase *\.form-check*, una serie de clases para ambos tipos de entrada que mejoran el diseño y el comportamiento de sus respectivos elementos HTML.
+
+```html
+<div class="form-check"> 
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault"> Casilla de verificación por defecto </label> 
+    </div> 
+    <div class="form-check"> 
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked> 
+    <label class="form-check-label" for="flexCheckChecked"> Casilla de verificación marcada </label> 
+    </div> 
+    <div class="form-check"> 
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"> 
+    <label class="form-check-label" for="flexRadioDefault1"> Radio por defecto </label>
+    </div>
+    <div class="form-check"> 
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked> 
+    <label class="form-check-label" for="flexRadioDefault2"> Radio marcado por defecto </label> 
+</div> 
+```
+
+![](media/checkradios_bootstrap.png)
+
 ### Validaciones
 
-La validación de formularios HTML se aplica a través de dos pseudoclases de CSS, *:invalid* y *:valid*. Se aplica a los elementos *\<input>*, *\<select>* y *\<textarea>*. Para los mensajes de feedback se puede combinar como *valid-feedback* o *invalid-feedback*.
+La validación de formularios puede hacerse de forma estándar mediante el propio **HTML5**. Esto se realiza mediante el uso de atributos de validación en los elementos del formulario. Para ello podremos utilizar en los campos las siguientes propiedades:
+- **required**: Especifica si un campo de formulario debe completarse antes de que se pueda enviar el formulario.
+- **minlength** y **maxlength**: Especifican la longitud mínima y máxima de los datos de texto 
+- **min** y **max** : Valores mínimo y máximo de los tipos de entrada numéricos.
+- **type**: Especifica si los datos deben ser un número, una dirección de correo electrónico o algún otro tipo de preajuste específico.
+- **pattern**: Especifica una expresión regular que define un patrón que los datos que se introduzcan deben seguir.
+
+La validación de formularios HTML puede aplicarse también a través de las pseudoclases de CSS *:invalid* y *:valid*, aunque para ello necesitaremos código Javascript (lo veremos más adelante). Se aplica a los elementos *\<input>*, *\<select>* y *\<textarea>*. Para los mensajes de feedback se puede combinar como *valid-feedback* o *invalid-feedback*.
 
 ```html
 <form class="row g-3 needs-validation" novalidate> 
@@ -430,3 +569,8 @@ La validación de formularios HTML se aplica a través de dos pseudoclases de CS
 ```
 
 ![](media/navbar_bootstrap5.png)
+
+
+### Procesar los datos del formulario
+
+Para procesar los datos enviados por el formulario, necesitarás emplear un lenguaje de programación del lado del **servidor**(backend), como JavaScript, PHP, o cualquier otro de tu elección. El código de procesamiento del formulario se colocará en el atributo action del elemento *\<form>*.

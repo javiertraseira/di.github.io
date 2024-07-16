@@ -19,19 +19,19 @@ HTML hace uso de **etiquetas semánticas** (*nav, header, aside, footer..)* ya c
 ![](media/esquema_posicionamiento.png)
 
 
-El posicionamiento de una 'caja' se establece mediante la propiedad *position*, excepto para el flotante, *flexbox* y *grid* que veremos más adelante:
+El posicionamiento de una 'caja' se establece mediante la propiedad **position**, excepto para el *flotante*, *flexbox* y *grid* que veremos más adelante:
 
 | **Valores** | **Significado**                                                                                                                                                                                                                                                                   |
 |-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | static      | Se corresponde con el posicionamiento normal o estático. Si se utiliza este valor, se ignoran los valores de las propiedades top, right, bottom y left.                                                                                                                           |
-| relative    | En el posicionamiento relativo, el desplazamiento de la caja se controla con las propiedades top, right, bottom y left respecto a su posición original.                                                                                                                           |
-|  absolute   | En el posicionamiento absoluto, el desplazamiento de la caja también se controla con las propiedades top, right, bottom y left, pero su interpretación es más compleja, ya que el origen de coordenadas del desplazamiento depende del posicionamiento de su elemento contenedor. |
-|  fixed      | El desplazamiento se establece de la misma forma que en el posicionamiento absoluto, pero en este caso el elemento permanece inamovible en la pantalla y en relación con la ventana del navegador.                                                                                |
+| relative    | En el posicionamiento relativo, el desplazamiento de la caja se controla con las propiedades top, right, bottom y left respecto a su **posición original**.                                                                                                                           |
+|  absolute   | En el posicionamiento absoluto, el desplazamiento de la caja también se controla con las propiedades top, right, bottom y left, pero su interpretación es más compleja, ya que el origen de coordenadas del desplazamiento depende del posicionamiento de su **elemento contenedor**. |
+|  fixed      | El desplazamiento se establece de la misma forma que en el posicionamiento absoluto, pero en este caso el elemento permanece inamovible en la pantalla y **en relación con la ventana del navegador**.                                                                                |
 
 ### Posicionamiento normal (static)
 
 ```tip
-El posicionamiento **normal** o **estático** es el modelo que utilizan por defecto los navegadores para mostrar los elementos de las páginas. En este modelo, sólo se tiene en cuenta si el elemento es de bloque o en línea, sus propiedades *width* y *height* y su contenido y **no se tienen en cuenta** top, right, bottom o left.
+El posicionamiento **normal** o **estático** es el modelo que utilizan por defecto los navegadores para mostrar los elementos de las páginas. En este modelo, sólo se tiene en cuenta si el elemento es de <u>bloque</u> (block) o en <u>línea</u> (inline), sus propiedades *width*, *height* y su contenido pero **no se tienen en cuenta** top, right, bottom o left.
 ```
 
 Los elementos de **bloque** forman lo que CSS denomina contextos de formato de bloque. En este tipo de contextos, las cajas se muestran una debajo de otra comenzando desde el principio del elemento contenedor. La distancia entre las cajas se controla mediante los márgenes verticales.
@@ -78,7 +78,7 @@ Cuando una caja se posiciona de forma absoluta, el resto de elementos de la pág
 Cuando una caja se posiciona de forma **fija**, la forma de obtener el origen de coordenadas para interpretar su desplazamiento es idéntica al posicionamiento absoluto.
 ```
 
-De hecho, si el usuario no mueve la página HTML en la ventana del navegador, no existe ninguna diferencia entre estos dos modelos de posicionamiento. Se coloca el elemento en relación con la ventana del navegador.
+De hecho, si el usuario no mueve la página HTML en la ventana del navegador, no existe ninguna diferencia entre estos dos modelos de posicionamiento. Se coloca el elemento en relación con la <u>ventana del navegador</u>.
 
 El posicionamiento fijo hace que las cajas no modifiquen su posición ni aunque el usuario suba o baje la página en la ventana de su navegador.
 
@@ -99,8 +99,6 @@ No se usa la propiedad *position*, si no que usaremos las siguientes propiedades
 | float         | **none** \| left \| right         | Cambia el flujo para que el elemento flote a la izquierda o derecha. |
 | clear         | **none** \| left \| right \| both | Impide que los elementos puedan flotar en la orientación indicada.   |
 
-
-### Posicionamiento flotante (float)
 
 Uno de los principales motivos para la creación del posicionamiento flotante fue colocar imágenes alrededor de las cuales fluye el texto. Los elementos que se encuentran alrededor de una caja flotante adaptan sus contenidos para que fluyan alrededor del elemento posicionado.
 
@@ -155,14 +153,14 @@ Los <u>elementos</u> básicos de **Flexbox** son los siguientes:
 
 ![](media/5df2c9532efa31979bb45ec6f2a860b3.jpeg)
 
--   **Contenedor**: Elemento padre que tendrá en su interior cada uno de los ítems flexibles.
+-   **Contenedor**: Elemento padre (creado con un *section class="nombre"*) que tendrá en su interior cada uno de los ítems flexibles.
 -   **Eje principal**: Los contenedores flexibles tendrán una orientación principal específica. Por defecto, es en horizontal (en fila).
 -   **Eje secundario**: De la misma forma, los contenedores flexibles tendrán una orientación secundaria, perpendicular a la principal. Si la principal es en horizontal, la secundaria será en vertical, y viceversa.
 -   **Ítem**: Cada uno de los hijos flexibles que tendrá el contenedor en su interior.
 
 💡 Si queremos utilizar las propiedades de Flexbox tendremos que definirlo mediante la propiedad **display** y su valor **flex** o **flex-inline** dentro del selector que nosotros definamos, que será nuestro elemento padre o contenedor-flex.
 
-💡 La propiedad flex no se hereda desde el contenedor donde es aplicada.
+💡 La propiedad **flex** <u>no se hereda</u> desde el contenedor donde es aplicada.
 
 ```css
 .contendor-padre {
@@ -178,6 +176,10 @@ Los <u>elementos</u> básicos de **Flexbox** son los siguientes:
 **flex-direction** es la propiedad encargada de definir el eje principal y secundario de los elementos hijos. Los ejes pueden ser verticales o ser horizontales formando filas.
 ```
 
+| **Propiedad** | **Valor**                          | **Significado**                                |
+|---------------|------------------------------------|------------------------------------------------|
+| flex-direction     | **row** \| row-reverse \| column \| column-reverse | Cambia la orientación del eje principal. |
+
 ![](media/3a7ca6e6d3b8fe7343b28489733f9ebf.png) 
 
 
@@ -188,7 +190,7 @@ Si **flex-direction:row** entonces el margen inicial del eje principal quedará 
 ### Dirección de los ejes: flex-wrap
 
 ```tip
-Flex trata de disponer de los elementos en una misma línea, si no es el caso, **flex-wrap** tratará de ordenar los elementos en más de una fila o columna.
+Flex trata de disponer de los elementos en una <u>misma línea</u>, si no es el caso, **flex-wrap** tratará de ordenar los elementos en más de una fila o columna.
 ```
 
 | **Propiedad** | **Valor**                          | **Significado**                                |
@@ -202,12 +204,12 @@ Flex trata de disponer de los elementos en una misma línea, si no es el caso, *
 ### Dirección de los ejes: flex-flow
 
 ```tip
-Existe una propiedad de atajo (short-hand) llamada **flex-flow**, con la que podemos resumir los valores de las propiedades **flex-direction** y **flex-wrap** anteriores.
+Existe una propiedad de atajo (short-hand) llamada **flex-flow**, con la que podemos resumir los valores de las otras dos propiedades anteriores (**flex-direction** y **flex-wrap**):
 ```
 
 ```css
     .contenedor {
-    /*flex-flow: <flex-direction> <flex-wrap>;*/
+    /*flex-flow: <flex-direction> <flex-wrap>*/
     flex-flow: row wrap;
     }
 ```
@@ -230,6 +232,7 @@ Existe una propiedad de atajo (short-hand) llamada **flex-flow**, con la que pod
 ```tip
 **align-items** permite distribuir los elementos respecto al eje vertical.
 ```
+Por defecto se usa **stretch**, por lo que si no hay altura definida, los elementos ocuparan el contenedor.
 
 | **Propiedad** | **Valor**                                                   | **Eje**  |
 |---------------|-------------------------------------------------------------|----------|
@@ -266,7 +269,7 @@ Las siguientes propiedades, en vez de sobre los **contenedores**, se aplican sob
 
 ### Propiedades de los hijos: grow, shrink
 
-La propiedad **flex-grow** se utiliza para indicar el factor de crecimiento de los ítems en el caso de que no tengan un ancho específico. Por ejemplo, si con *flex-grow* indicamos un valor 1 a todos sus ítems, todos tendrán el mismo tamaño. Si colocamos un valor de 1 a todos, salvo a uno con el valor 2, ese ítem será más grande que los anteriores. Los ítems a los que no se le especifique ningún valor, tendrán por defecto valor de 0.
+La propiedad **flex-grow** se utiliza para indicar el factor de <u>crecimiento</u> de los ítems en el caso de que no tengan un ancho específico. Por ejemplo, si con *flex-grow* indicamos un valor 1 a todos sus ítems, todos tendrán el mismo tamaño. Si colocamos un valor de 1 a todos, salvo a uno con el valor 2, ese ítem será más grande que los anteriores. Los ítems a los que no se le especifique ningún valor, tendrán por defecto valor de 0.
 
 ![](media/1a8ac9dc5d4c0655a8e39307e71242b2.jpeg)
 
@@ -274,7 +277,7 @@ La propiedad **flex-shrink** es la opuesta a **flex-grow.** Los ítems que tenga
 
 ### Propiedades de los hijos: basis
 
-La propiedad **flex-basis**, define el tamaño por defecto (de base) que tendrán los ítems antes de aplicarle la distribución de espacio. Generalmente, se aplica un tamaño (unidades, porcentajes, etc...), pero también se puede aplicar la palabra clave **content** que ajusta automáticamente el tamaño al contenido del ítem.
+La propiedad **flex-basis**, define el tamaño por defecto <u>de base</u> que tendrán los ítems antes de aplicarle la distribución de espacio. Generalmente, se aplica un tamaño (unidades, porcentajes, etc...), pero también se puede aplicar la palabra clave **content** que ajusta automáticamente el tamaño al contenido del ítem.
 
 Si el valor que se pone a flex-basis es 0, el espacio que haya interno a cada elemento no se respeta, sin embargo cuando es auto, sí y se distribuye.
 
@@ -355,10 +358,10 @@ Es posible crear cuadrículas con un tamaño concreto en Grid. Para ello, sólo 
 
 ![](media/46bb47842f9b2620131bed3130340297.png)
 
-Por ejemplo, dado el siguiente código CSS, se obtendrá la siguiente distribución de la figura:
+Por ejemplo, dado el siguiente código CSS, se obtendrá la siguiente distribución del contenedor como en la figura mostrada:
 
 ```css
-.grid {
+.contenedor-grid {
   display: grid;
   grid-template-columns: 50px 300px;
   grid-template-rows: 200px 75px;
@@ -367,14 +370,25 @@ Por ejemplo, dado el siguiente código CSS, se obtendrá la siguiente distribuci
 
 ![](media/a0adcf7f047e6a4de931fd6bb2ce9dc1.png)
 
+Podemos combinar con las unidades auto y de % que ya conocemos:
+
+```css
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: 200px auto 25%;
+}
+```
+
 Las propiedades **grid-template-rows** y **grid-template-columns** pueden simplificarse en una sola, llamada **grid-template**, usando como separador el **/**
 
 ```css
-.grid {
-  grid-template: 90px 90px 80px / 80px 150px;}
+.contenedor-grid {
+  grid-template: 90px 90px 80px / 80px 150px;
+}
 ```
 
 ![](media/831348f0b5d887567b37e6566631e45c.png)
+
 
 #### Unidad fr
 
@@ -385,7 +399,7 @@ Grid utiliza una unidad de medida especial llamada **fr** (*fraction*), que simb
 Así por ejemplo, el siguiente código CSS, obtendrá la distribución de la figura:
 
 ```css
-.grid {
+.contenedor-grid {
   display: grid;
   grid-template-rows: 2fr 1fr;
   grid-template-columns: 1fr 1fr;
@@ -399,16 +413,16 @@ Así por ejemplo, el siguiente código CSS, obtendrá la distribución de la fig
 Aunque ambas gestionan automáticamente el espacio, tienen algunas diferencias:
 
 -   **fr** significa que se toma una fracción del espacio disponible para las columnas o filas. Todas tienen el mismo tamaño.
--   **auto** lo que hace primero es calcular automáticamente el espacio necesario para cada uno de las columnas para que entre su contenido. Si sobra espacio se reparte por igual entre las filas o columnas, pero a partir del tamaño calculado en función de los contenidos que ya existentes. Por tanto no se adapta siempre equitativamente, ya que dependerá del contenido.
+-   **auto** lo que hace primero es calcular automáticamente el espacio necesario para cada uno de las columnas para que entre su contenido. Si sobra espacio se reparte por igual entre las filas o columnas, pero a partir del tamaño calculado en función de los contenidos que ya existentes. Por tanto no se adapta siempre equitativamente, ya que <u>dependerá del contenido</u>.
 
 #### La función repeat()
 
-Las propiedades que definen el número de filas y columnas en una cuadrícula pueden tomar una función como valor. La función **repeat**() es una de ellas. La función *repeat* () se creó específicamente para CSS Grid.
+Las propiedades que definen el número de filas y columnas en una cuadrícula pueden tomar una **función** como valor. La función **repeat**() es una de ellas. La función *repeat* () se creó específicamente para CSS Grid.
 
 Así por ejemplo podremos sustituir la siguiente línea:
 
 ```css
-.grid {
+.contenedor-grid {
   grid-template-columns: 100px 100px 100px;
 }
 ```
@@ -416,19 +430,19 @@ Así por ejemplo podremos sustituir la siguiente línea:
 Por esta:
 
 ```css
-.grid {
+.contenedor-grid {
   grid-template-columns: repeat(3, 100px);
 }
 ```
 
 #### La función minmax()
 
-Existe otra función útil en Grid, es **minmax**(). Dicha función sirve para definir un valor dentro de un mínimo y un máximo, de la fila o columna afectada.
+Existe otra función útil en Grid, llamada **minmax**(). Dicha función sirve para definir un valor dentro de un mínimo y un máximo, de la fila o columna afectada.
 
 De esta forma dicha fila o columna tendrá siempre un valor mínimo o máximo del que no pueda bajar o subir, aunque se redimensione la ventana.
 
 ```css
-.grid {
+.contenedor-grid {
   grid-template-columns: 200px minmax(100px, 500px);
 }
 ```
@@ -442,7 +456,7 @@ La función **auto-fill** le indica al navegador que inserte el número de colum
 Podríamos escribir la siguiente línea de código:
 
 ```css
-.grid {
+.contenedor-grid {
   grid-template-columns: repeat (auto-fill, minmax (150px, 1fr)
 }
 ```
@@ -469,7 +483,7 @@ Por defecto, la cuadrícula tiene todas sus celdas pegadas a sus celdas contigua
 Por ejemplo:
 
 ```css
-.grid {
+.contenedor-grid {
   column-gap: 10px;
   row-gap: 15px;
 }
@@ -478,7 +492,7 @@ Por ejemplo:
 ![](media/gap_model.png)
 
 ```css
-.grid {
+.contenedor-grid {
   gap: 100px 10px;
 }
 ```
@@ -497,6 +511,50 @@ Para los elementos (**ítems**) dentro del contenedor también podremos utilizar
 | justify-items | start \| end \| center \| **stretch** | Distribuye los elementos en el eje horizontal. |
 | align-items   | start \| end \| center \| **stretch** | Distribuye los elementos en el eje vertical.   |
 
+![](media/posicionamiento_grid_items.png)
+
+#### Grid con filas/columnas numeradas
+
+Cuando declaramos un Grid, a cada línea se le asigna un número índice por defecto:
+
+![](media/1dee96d40b573815124601bc890cf97c.png)
+
+#### Posicionamiento items en grid
+
+Para definir la posición y extensión de un item dentro de un contenedor grid podemos utilizar  las propiedades siguientes:
+
+| **Propiedad**         | **Valor**                             | **Descripción**                                   |
+|-----------------------|---------------------------------------|---------------------------------------------------|
+| grid-column-start | *[columna]*                   | Establece la columna de comienzo |
+| grid-column-end    | *[columna]*                 | Establece la columna de final  |
+| grid-row-start         | *[fila]* |  Establece la fila de comienzo        |
+| grid-row-end         | *[fila]* |  Establece la fila de final        |
+
+Podemos simplificar usando las siguientes propiedades:
+
+| **Propiedad**         | **Valor**                             | **Descripción**                                   |
+|-----------------------|---------------------------------------|---------------------------------------------------|
+| grid-column | inicio/fin                   | Establece la columna de comienzo / final |
+| grid-row    | inicio/fin             | Establece la fila de comienzo / final  |
+
+```css
+.item {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+}
+```
+
+![](media/17582c6aa59524509012189405597967.png)
+
+```css
+.item {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+```
+
+![](media/17582c6aa59524509012189405597968.png)
+
 #### Espacios entre filas/columnas: span
 
 También podemos utilizar la palabra clave **span**, para extender el tamaño de celdas de nuestros ítems en horizontal o vertical.
@@ -512,7 +570,6 @@ Por ejemplo, **span 2** quiere decir que el ítem se extiende exactamente dos ce
 ![](media/a986716f1b3a66958c11c2b844e02430.jpeg)
 
 
-
 ```css
 .item4 {
   grid-column: span 3;
@@ -525,11 +582,7 @@ Por ejemplo, **span 2** quiere decir que el ítem se extiende exactamente dos ce
 
 #### Grid con filas/columnas nombradas
 
-Cuando declaramos un Grid, a cada línea se le asigna un número índice por defecto:
-
-![](media/1dee96d40b573815124601bc890cf97c.png)
-
-No obstante, tenemos la posibilidad de ponerle nombre a las líneas de nuestro sistema Grid. Así por ejemplo nombraremos las posiciones del eje *X0...Xn y* del eje *Y0...Yn*:
+También tenemos la posibilidad de ponerle nombre a las líneas de nuestro sistema Grid. Así por ejemplo nombraremos las posiciones del eje *X0...Xn y* del eje *Y0...Yn*:
 
 ```css
 .grid {
@@ -542,7 +595,7 @@ No obstante, tenemos la posibilidad de ponerle nombre a las líneas de nuestro s
 
 #### Expandir o delimitar zonas
 
-Una vez aplicados nombres, se pueden delimitar que zonas del *grid* queremos que ocupe cada uno de nuestros bloques. Para ello usaremos las propiedades:
+Una vez aplicados nombres, se pueden delimitar que zonas del *grid* queremos que ocupe cada uno de nuestros bloques usando las propiedades:
 
     grid-column-start, grid-column-end y grid-row-start, grid-row-end.
 
@@ -567,14 +620,6 @@ Una vez aplicados nombres, se pueden delimitar que zonas del *grid* queremos que
 
 ![](media/3e58c32eb0c0c29c492112408a87a3b3.png) 
 
-#### Expandir o delimitar zonas
-
-        grid-column-start, grid-column-end se abrevia utilizando grid-column inicio/fin
-        grid-column-start, grid-column-end se abrevia utilizando grid-row  inicio/fin
-
-
-![](media/17582c6aa59524509012189405597967.png)
-![](media/17582c6aa59524509012189405597968.png)
 
 #### Grid por áreas
 

@@ -1,6 +1,4 @@
-# UT5.2 Introducción a Figma
-
-📕 [Contenido en presentación PDF](/pdf/UT5.2 - Introducción a Figma.pdf)
+# UT5.4 Creación de prototipos en Figma
 
 ## Figma
 
@@ -16,7 +14,7 @@ Figma fue diseñada para mejorar **el proceso de UX/UI** y, en general, el dise�
 
 A través de **Figma** se pueden crear variedad de productos digitales como, por ejemplo, diseño de prototipos web y aplicaciones, diseño de interfaces, generación de código de la interfaz y otras funciones ampliadas por sus plugins.
 
-En septiembre de 2022, Adobe anunció que había llegado a un acuerdo para adquirir Figma por unos 20.000 millones de dólares. Esta compra se criticó mucho en redes por motivos antimonopolio (en un intento de suplantar a su propio competidor Adobe XD) y por estar posiblemente sobrevalorada.
+En septiembre de 2022, Adobe anunció que había llegado a un acuerdo para adquirir Figma por unos 20.000 millones de dólares, aunque la fusión no se ha materializado. Esta compra se criticó mucho en redes por motivos antimonopolio (en un intento de suplantar a su propio competidor Adobe XD) y por estar posiblemente sobrevalorada.
 
 ![](media/b78f29ae183f6d863368dd8ae1d78e86.jpeg)
 
@@ -31,11 +29,11 @@ Características de Figma:
 -   Exportación de código CSS de los componentes.
 -   Figma permite ampliar funcionalidades mediante sus variados **plugins**.
 
-![](media/6e4bcd5a9c1564fac2c8c011770cbea5.jpeg)
+![](media/6e4bcd5a9c1564fac2c8c011770cbea5.jpg)
 
 La interfaz de **Figma** es muy sencilla y trabajaremos con ella a continuación:
 
-![](media/20be922b4f3461c215f369edc02437f1.jpeg)
+![](media/20be922b4f3461c215f369edc02437f1.jpg)
 
 Podemos encontrar ayuda y documentación en <https://help.figma.com/hc/en-us/categories/>
 
@@ -47,7 +45,7 @@ Desde la pantalla de la interfaz principal podremos acceder a nuestros proyectos
 
 ### Interfaz de diseño
 
-![](media/d85d43cf7ad41e296e84a5e903b82671.jpeg) 
+![](media/d85d43cf7ad41e296e84a5e903b82671.jpg) 
 
 ### Tamaño nuevos frames
 
@@ -60,20 +58,23 @@ A la hora de crear un nuevo **frame** tenemos los siguientes tamaños predefinid
 
 Por defecto las **guías** (*rules*) no vienen activadas y conviene activarlas ya que nos pueden ser útiles para alinear y ajustar los diseños. Se arrastran a continuación como líneas rojas desde la regla de pixels izquierda o desde la la superior.
 
-![](media/454b5d09add54f1ae71c2bdf1a1af43b.jpeg)![](media/5e8aae78e857f1af46e262bcdb6701fd.jpeg)
+![](media/454b5d09add54f1ae71c2bdf1a1af43b.jpeg)
+![](media/5e8aae78e857f1af46e262bcdb6701fd.jpeg)
 
 ### Interactividad
 
 Para añadir **interactividad** de navegación entre frames de un prototipo de interfaz hay que dejar marcada la pestaña **Prototype** de la derecha y *Creating a connection.* Luego deberemos hacer clic en el elemento desde el que añadir interactividad y a su derecha aparecerá un signo **+** y una flecha indicando el destino de la navegación.
 
 ![](media/9589b1f2301de6e432ba679ea2fe2327.png)
-![](media/d824c337612691a269c0e0f4db844d9d.jpeg)![](media/bf8708055cb1528db52844649261b271.jpeg)
+![](media/d824c337612691a269c0e0f4db844d9d.jpeg)
+![](media/bf8708055cb1528db52844649261b271.jpeg)
 
 ### Visualizar prototipo
 
-Para visualizar el resultado de nuestro prototipo en el navegador o emulador de dispositivo, deberemos hacer clic en **play** en el menú de la derecha.
+Para visualizar el resultado de nuestro prototipo en el navegador o emulador de dispositivo, deberemos hacer clic en **preview** en el menú de la derecha.
 
-![](media/ee9a3f12664e9b8172b16e60d7914b4a.jpeg)![](media/2f4e7e90eb04c23841f6a9f307bb37be.jpeg)
+![](media/ee9a3f12664e9b8172b16e60d7914b4a.jpeg)
+![](media/2f4e7e90eb04c23841f6a9f307bb37be.jpeg)
 
 ### Exportación de elementos
 
@@ -81,11 +82,17 @@ Los dibujos importados o gráficos vectoriales creados en Figma pueden **exporta
 
 ![](media/49c79eee7144019f457d34f6d84d2c99.png)
 
+### Modo desarrollador
+
+En el modo desarrollador (botón dev mode) podemos cambiar la interfaz de figma para ver la ventana de código de nuestros objetos. La información que podremos sacar son las propiedades de cada elemento seleccionado y su traducción a código CSS.
+
+![](media/dev_mode.png)
+
 ### Pluggins
 
 Existe un amplio abanico de **plugins** disponibles para instalar desde el menú principal de Figma.
 
-![](media/e1235b8bed526edf2909f10c1acce14e.jpeg)Varios plugins destacables:
+Varios plugins destacables:
 
 -   [Lorem Ipsum](https://www.figma.com/community/plugin/736000994034548392/Lorem-Ipsum)
 -   [UI Gradients](https://www.figma.com/community/plugin/744909029427810418/uiGradients)
@@ -95,6 +102,8 @@ Existe un amplio abanico de **plugins** disponibles para instalar desde el menú
 -   [Content Reel](https://www.figma.com/community/plugin/731627216655469013/Content-Reel)
 -   [Image Palette](https://www.figma.com/community/plugin/731841207668879837/Image-Palette)
 -   [Figma to HTML and CSS](https://www.figma.com/community/plugin/1128731099343788397/Figma-to-HTML-and-CSS)
+
+![](media/e1235b8bed526edf2909f10c1acce14e.jpeg)
 
 ## Recursos web útiles
 

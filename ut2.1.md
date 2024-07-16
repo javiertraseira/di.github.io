@@ -1,7 +1,5 @@
 # UT2.1 Repaso POO en Java y conceptos de desarrollo
 
-📕 [Contenido en presentación PDF](/pdf/UT2.1 - Repaso POO, herramientas de desarrollo y metodologías.pdf)
-
 ## Introducción
 
 El desarrollo de **interfaces gráficas** permite la creación del canal de comunicación entre el usuario y la aplicación, por esta razón requiere de especial atención en su diseño.
