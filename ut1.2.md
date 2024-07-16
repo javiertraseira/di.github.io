@@ -290,3 +290,52 @@ Se conocen como **tipografía digital** las fuentes desarrollados exclusivamente
 
 ![](media/typography210922.jpg)
 
+## Interfaces naturales de usuario (NUI)
+
+```note
+Las interfaces naturales de usuario, denominadas NUI (Natural User Interface), son interfaces de usuario que se caracterizan por ser intuitivas y no necesitar aprendizaje previo. 
+```
+
+Las interfaces naturales de usuario buscan que los usuarios interactúen con el mundo digital de la misma forma que lo hacen con el mundo real. La característica principal de las NUI son la habilidad de interactuar con las máquinas utilizando únicamente el cuerpo humano, esto es, mediante el tacto, los gestos, la voz y otros métodos naturales de comunicación.
+
+La palabra natural es utilizada, porque al contrario que la gran mayoría de interfaces, no usan dispositivos de control artificiales, como pueden ser un teclado o un ratón, sino controles que permiten desarrollar una experiencia natural e intuitiva utilizando sensores de audio, acelerómetros, infrarrojos, dispositivos multitouch, cámaras, etc.
+
+![](media/98afa4c28433fdde606b3389524f3af4.jpeg)
+
+![](media/988c3fbc8eb91d87dd7049a483789c75.jpeg)
+
+### Reconocimiento táctil
+
+La interacción a través de pantallas táctiles es uno de los ejemplos más comunes de NUI. Los smartphones fueron los primeros dispositivos en implementar este tipo de  interfaces naturales de usuario en sus sistemas operativos.
+
+Los usuarios pueden navegar, ampliar o reducir imágenes, y escribir directamente sobre la pantalla con movimientos simples y naturales. Además se han ido universalizando muchos gestos en pantallas como ampliar, reducir o mover elementos.
+
+
+![](media/7a3f0ea16d1467e67adbd89b4d3456e9.jpeg)
+
+### Reconocimiento del habla
+
+El reconocimiento del habla es otro interfaz natural de usuario de las más desarrolladas, permitiendo la comunicación hablada entre persona y sistema.
+
+![](media/voice_recognition_schema.png)
+
+Se maneja diferentes tipos de información, como:
+
+-   Acústica
+-   Fonética
+-   Léxica
+-   Sintáctica
+-   Semántica
+
+Los **asistentes virtuales** como Siri, Google Assistant y Alexa de Amazon permiten a los usuarios realizar tareas mediante comandos de voz.
+
+### Reconocimiento gestual
+
+El reconocimiento gestual es una tecnología clave dentro del ámbito de las interfaces naturales de usuario (NUI) que permite a los dispositivos interpretar y responder a los movimientos del cuerpo humano, principalmente de las manos y los brazos. Este sistema se basa en el uso de sensores, cámaras y algoritmos avanzados de procesamiento de imagen para detectar, seguir y comprender gestos específicos realizados por el usuario.
+
+![](media/408e887ef046b98c445c8e517c4354c0.jpeg) 
+![](media/0408e307637db8f43514bf8dc1927069.jpeg) 
+![](media/aa51cc86939be641c687b640039be08d.jpeg)
+
+
+
