@@ -1,4 +1,4 @@
-# UT2.1 Repaso POO en Java y conceptos de desarrollo
+# UT2.1 Repaso POO, conceptos y metodología
 
 ## Introducción
 
@@ -182,15 +182,17 @@ El empaquetado de componentes y aplicaciones consiste en proporcionar las aplica
 
 Tras realizar el empaquetado de aplicaciones es necesario que las aplicaciones puedan ser instaladas de una manera rápida y sencilla, para lo que se cuenta con los instaladores o paquetes autoinstalables.
 
-Una vez creado un componente, se puede empaquetar para poder distribuirlo y reutilizarlo después. Para ello se necesitará el paquete **jar** que empaqueta en formato ZIP todas las clases que forman el componente:
+Una vez creado un componente, se puede empaquetar para poder distribuirlo y reutilizarlo después. En el caso de aplicaciones en Java será necesario crear un paquete **jar** que empaqueta en formato ZIP todas las clases que forman el componente:
 
 -   El propio componente
-    -   Objetos Customizer
-    -   Clases de utilidad o recursos que requiera el componente, etc.
+-   Objetos Customizer
+-   Clases de utilidad o recursos que requiera el componente, etc.
+
+El paquete jar debe incluir un fichero de manifiesto (con extensión .MF) que describa su contenido, por ejemplo:
 
 ![](media/f6ff59ccf257d1379f8308cba257d9f3.png)
 
-![](media/24d698105172077367b15e743e6399cb.png)El paquete jar debe incluir un fichero de manifiesto (con extensión .MF) que describa su contenido, por ejemplo:
+![](media/24d698105172077367b15e743e6399cb.png)
 
 
 ### Metodologías de desarrollo ágil
@@ -198,6 +200,9 @@ Una vez creado un componente, se puede empaquetar para poder distribuirlo y reut
 ```note
 La **metodología de desarrollo ágil** es un enfoque de desarrollo de software que se basa en principios y valores que promueven la flexibilidad, la colaboración, la adaptabilidad y la entrega continua de software de alta calidad. 
 ```
+
+Este enfoque se ha convertido en una alternativa popular a los métodos de desarrollo de software más tradicionales que se usaban hasta hace no tanto.
+
 
 ![](media/234234234.png)
 
@@ -238,7 +243,7 @@ Existen varias implementaciones de sistemas para gestionar el proceso de Scrum, 
 
 ### Metodología Clean code
 
-La metodología Clean Code es una filosofía que refiere a un conjunto de principios y prácticas de programación que tienen como objetivo producir un código fuente claro, legible, estructurado y de fácil mantenimiento. 
+La metodología **Clean Code** es una filosofía que refiere a un conjunto de principios y prácticas de programación que tienen como objetivo producir un código fuente claro, legible, estructurado y de fácil mantenimiento. 
 Clean Code se enfoca en mejorar la calidad del código y hacerlo más comprensible para los desarrolladores y otros miembros del equipo.
 Sus principios generales son los siguientes:
 - La secuencia de ejecución del programa tiene una lógica y una estructura lo más sencilla posible
@@ -285,8 +290,8 @@ client.get(getUser()).then(/*Variante B*/);
 
 #### Código legible
 
-El código no solo debe funcionar y ser interpretado por la máquina que lo ejecuta, sino que también debe ser comprensible para otros desarrolladores, especialmente si se trabaja en proyectos colaborativos. Por lo tanto, en el ámbito del desarrollo de software, la legibilidad del código siempre es más importante que su concisión. 
-Un buen ejemplo de creación de código legible sería nombrar las variables.
+El código no solo debe funcionar y ser interpretado por la máquina que lo ejecuta, sino que también **debe ser comprensible para otros desarrolladores**, especialmente si se trabaja en proyectos colaborativos. Por lo tanto, en el ámbito del desarrollo de software, la legibilidad del código siempre es más importante que su concisión. 
+Un buen ejemplo de creación de código legible es siempre  nombrar las variables.
 
 Por ejemplo, en lugar de usar la siguiente declaración:
 ```java
@@ -324,180 +329,6 @@ El Modelo Vista Controlador (MVC) es un patrón de diseño teórico que separa l
 
 El Modelo Vista Vista-Modelo (MVVM) es parecido al MVC pero en este caso se sustituye al **controlador** por **Vista-Modelo** o Modelo de Vista (*ViewModel*).
 
-A diferencia del MVC, la **vista** tiene una referencia al modelo de vista, pero el **vista- modelo** no sabe nada de la vista. La vista tampoco recibe información del modelo, ya que el vista-modelo hace la función de proveedor de datos.
+A diferencia del MVC, la **vista** tiene una referencia al modelo de vista, pero el **vista-modelo** no sabe nada de la vista. La vista tampoco recibe información del modelo, ya que el vista-modelo hace la función de proveedor de datos.
 
 ![](media/mvvm.png)
-
-## Herramientas de construcción de proyectos
-
-**Ant**, **Maven**, y **Gradle** son herramientas de automatización en la construcción de proyectos y básicamente se emplean para compilar proyectos. No son compatibles entre sí y de su elección depende el desarrollo inicial de nuestro proyecto.
-
-![](media/herramientas.png)
-
-```note
-Una **dependencia** es una aplicación o una biblioteca requerida por otro programa para poder funcionar correctamente.
-```
-
-Las dependencias en Java se pueden gestionar de la siguiente forma:
-
--   Descargar el archivo jar de la biblioteca requerida manualmente desde Internet y añadirlo a nuestro proyecto.
--   Escribir un script que descargará automáticamente la biblioteca de una fuente externa a través de la red.
-
-Al ser una tarea pesada, pronto aparecieron **herramienta de gestión de dependencias,** las cuales resuelven y gestionan las dependencias que requiera nuestra aplicación.
-
-Las **herramientas de construcción** automatizan la creación de aplicaciones ejecutables a partir del código fuente. La construcción incorpora la compilación, el enlace y el empaquetado del código en una forma utilizable o ejecutable.
-
-### Ant
-
-Apache Ant es una herramienta de línea de comandos basada en Java que utiliza archivos XML para definir scripts de compilación. Se usa principalmente para compilaciones de Java, pero también se puede usar para el desarrollo de C / C ++. 
-
-Ejemplo del fichero *build.xml* para la clase principal de holamundo:
-
-        <project>
-        <target name="clean">
-            <deletedir="classes" />
-        </target>
-        <target name="compile" depends="clean">
-            <mkdirdir="classes" />
-            <javacsrcdir="src" destdir="classes" />
-        </target>
-        <target name="jar" depends="compile">
-        <mkdirdir="jar" />
-        <jardestfile="jar/HelloWorld.jar" basedir="classes">
-            <manifest>
-                <attributename="Main-Class"
-                value="antExample.HelloWorld" />
-            </manifest>
-        </jar>
-        </target>
-        <target name="run" depends="jar">
-            <java jar="jar/HelloWorld.jar" fork="true" />
-        </target>
-        </project>
-
-
-### Maven
-
-Maven fue desarrollado para resolver los problemas que enfrentan los scripts basados ​​en Ant e introdujo la **gestión automática de dependencias**, facilitando en gran manera el desarrollo. Además, la estructura de proyectos está estandarizada.
-
-Ejemplo del fichero *pom.xml* de la clase principal de holamundo del ejemplo anterior:
-
-        <projectxmlns="http://maven.apache.org/POM/4.0.0"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-        http://maven.apache.org/xsd/maven-4.0.0.xsd">
-        <modelVersion>4.0.0</modelVersion>
-        <groupId>baeldung</groupId>
-        <artifactId>mavenExample</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-        <description>Mavenexample</description>
-
-        <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-        </dependencies>
-        </project>
-
-### Gradle
-
-Gradle combina el poder de Ant y Maven. La primera versión de Gradle se lanzó en 2012. Se está adoptando rápidamente. Google lo está usando actualmente para el sistema operativo Android.
-
-En lugar de XML, Gradle usa el lenguaje Groovy. Como resultado, las secuencias de comandos de compilación en Gradle son más fáciles de escribir y leer.
-
-Ejemplo del fichero *build.gradle* de la clase principal de holamundo del ejemplo:
-
-        applyplugin: 'java'
-        repositories{
-            mavenCentral()
-        }
-        jar{
-            baseName= 'gradleExample'
-            version= '0.0.1-SNAPSHOT'
-        }
-        dependencies{
-        testImpl    ementation'junit:junit:4.12'
-        }
-
-## Repositorios Github
-
-```note
-Un repositorio contiene todos los archivos de un proyecto y el historial de revisiones de cada uno de ellos.
-```
-
-Github es un portal creado para alojar el código de las aplicaciones de cualquier desarrollador, y que fue comprada por Microsoft en junio del 2018. La plataforma está creada para que los desarrolladores suban el código de sus aplicaciones y herramientas, y que como usuario no sólo puedas descargarte la aplicación, sino también entrar a su perfil para leer sobre ella o colaborar con su desarrollo.
-
-![](media/githublogo.png)
-
-Utiliza el sistema de control de versiones Git diseñado por Linus Torvalds. Con dicho sistema de gestión de versiones los desarrolladores pueden administrar su proyecto, trabajando colaborativamente y gestionar las distintas versiones para evitar confusiones.
-
-### Github classroom
-
-Github classroom es una herramienta específica para el trabajo con estudiantes.
-
-Acceder a Github Clasroom y desde ahí a la tarea que se especifique con las instrucciones de desarrollo requeridas:
-
-![](media/a9676197c22b9ccd12bfd3807227a6d3.jpeg)
-
-
-### Comandos git
-
-![](media/a368506762f9f3e596e4409f14b23482.png)![](media/981334452a05339b78e1b26cd3e6b0b9.jpeg)
-
-
-### Integración con Netbeans
-
-Una vez abierto el proyecto en Netbeans habrá que inicializarlo haciendo clic en
-
-\*Versioning\>\***Initialize Git Repository** y dejar la ruta donde está alojado el proyecto.
-
-![](media/16639bd1b425f4039f2d381897a83be2.jpeg)
-
-A continuación se hará un **Commit** del proyecto actual en *git\>Commit* y se le dará una descripción. El *Commit* guardará los datos en el repositorio local antes de actualizarse.
-
-![](media/e89aa3acd626dde6f464766f150374f2.jpeg)
-
-
-Para guardar los cambios en el repositorio remoto de Github habrá que hacer un **push**. Para ello ir a *Git\>Remote\>push* e introducir nuestras credenciales de Github en *Specify Git Repository Location*.
-
-![](media/4e666ecd5d55119376cfd015ea632ca1.jpeg)
-
-![](media/f5e9b94250acb8a758bc9c91404bde70.png)
-
-Desde el año pasado es necesario generar un **token de acceso personal** en lugar de contraseña. Para ello habrá que acceder a *Github.com\>settings\>Developer Settings* y en *Personal access tokens*
-
-## Netbeans
-
-💡 Los **debugger** son herramientas imprescindibles en la programación, sin las cuales sería muy complicado detectar cualquier problema, desde un mínimo error de síntesis perdido en cientos de rutinas hasta escribir por equivocación un código que genere un bucle infinito para ciertas casuísticas.
-
-En los desarrollos actuales más del 70% del tiempo se dedica al dieseño del modelo y debugeo continuo, con apenas un 25% del tiempo dedicado al desarrollo de código.
-
-![](media/12f45487965423232f.png)
-
-### Debugger
-
-![](media/b917128d263061d75f14af22d74cf555.jpeg)
-
-
-
-| **Step Over (F8)**              | Ejecuta una línea de código. Si la instrucción es una llamada a un método, ejecuta el método sin entrar dentro del código del método.                                                                                          |
-|---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Step Over Expression (Mayus+F8) | Ejecuta una llamada de método en una expresión. Si una expresión tiene varias llamadas a métodos, se puede usar para recorrer la expresión y ver el valor de cada llamada a método en la expresión en la ventana de variables. |
-| **Step Into (F7)**              | Ejecuta una línea de código. Si la instrucción es una llamada a un método, salta al método y continúa la ejecución por la primera línea del método.                                                                            |
-| Step Out (Ctrl + F7)            | Si la línea de código actual se encuentra dentro de un método, se ejecutarán todas las instrucciones que queden del método y se volverá a la instrucción desde la que se llamó al método.                                      |
-| Run to Cursor (F4)              | Se ejecuta el programa hasta la instrucción donde se encuentre el cursor.                                                                                                                                                      |
-| Continue (F5)                   | La ejecución del programa continúa hasta el siguiente breakpoint. Si no existe un breakpoint se ejecuta hasta el final.                                                                                                        |
-| Finish Debugger                 | Terminar la depuración del programa.                                                                                                                                                                                           |
-
-### Proyectos
-
-Principales carpetas de un proyecto Java creado en Netbeans:
-- Carpeta **src** contiene los archivos fuente codificados para este trabajo en lenguaje Java (extensión .java). Dichos archivos se encuentran distribuidos en carpetas, o paquetes en notación de Java. Además de los archivos fuente, se incluyen imágenes (archivos con extensión .gif) y otros ficheros de texto utilizados.
-- Carpeta **build** es utilizada por NetBeans para almacenar los archivos objeto resultado de la compilación. Estos archivos tienen extensión .class y contienen la traducción de Java a bytecode o lenguaje que entiende la Máquina Virtual de Java.
--Carpeta **dist** es utilizada por NetBeans para almacenar el archivo con extensión .jar, que no es más que un archivo comprimido en formato ZIP que contiene toda la estructura de archivos de la carpeta build. Este archivo es el que se utiliza para su distribución por Internet.
-- Carpeta **dist\javadoc** es utilizada por NetBeans para presentar la documentación de las clases generada como archivos .html a partir de los comentarios incluidos en los .java.
-- Carpeta **nbproject** es interna a NetBeans e incluye opciones de compilación y generación de la documentación del proyecto.
-- Carpeta **test** se corresponde con la generación de JUnit de Java para pruebas de clases.
