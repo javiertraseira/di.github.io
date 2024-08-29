@@ -232,3 +232,41 @@ La **tabla de casos de prueba** que se presenta a continuación es una herramien
 | 011                      | Verificación de la funcionalidad de cargar datos        | 1. Ejecutar el programa. 2. Hacer clic en "Cargar".                     | N/A                                                | Los datos se cargan correctamente.                           | OK/No cumple  |
 | 012                      | Prueba de redimensionamiento de la ventana              | 1. Ejecutar el programa. 2. Redimensionar la ventana.                   | N/A                                                | La interfaz se ajusta correctamente al tamaño de la ventana. | OK/No cumple  |
 
+## Markdown
+
+Markdown es un lenguaje de marcado ligero y sencillo que se utiliza para dar formato a texto en la web. Fue creado por John Gruber en 2004, con el objetivo de ser fácil de leer y escribir, y de convertir a HTML de manera sencilla.
+
+Markdown es ampliamente utilizado en plataformas como GitHub, foros, blogs, y sistemas de documentación.
+
+![](media/95e3e869a452be131b8c0301baa5268d.png)
+
+Las principales características de Markdown son las siguientes:
+
+-   Simplicidad: El texto en Markdown es fácil de leer, incluso en su formato sin procesar.
+    -   Portabilidad: Los archivos de texto en Markdown pueden ser convertidos a otros formatos como HTML, PDF, DOCX, entre otros.
+    -   Enfocado en el contenido: Markdown permite a los autores centrarse en el contenido, ya que la sintaxis es mínima y no intrusiva.
+
+
+
+### Sintaxis de Markdown
+
+La sintaxis de markdown es muy sencilla:
+
+| **Elemento**       | **Sintaxis**                         | **Ejemplo**                                       |
+|--------------------|--------------------------------------|---------------------------------------------------|
+|  Cabecera          | \# H1 \#\# H2 \#\#\# H3              |   ![](media/816abb738f4fdf3ad9c4f9603bf2261e.png)                                                |
+| Negrita            | \*\*texto en negrita\*\*             |   ![](media/11629d321f2f473c8e52e19a19baec26.png)                                                |
+| Cursiva            | \*texto en cursiva\*                 |   ![](media/b7200b04d69b0017fcb408f333943de1.png)                                                |
+| Citas              | \> blockquote                        |   ![](media/254eac5a81b62fef7cacc5ece059f090.png)                                                |
+|  Lista ordenada    | Primer item Segundo item Tercer item |   ![](media/a7d723f96f27db55c70e2a97ec368eee.png)                                           |
+|  Lista desordenada | Primer item Segundo item Tercer item |   ![](media/a7f1307ff7573f1a3143e6d044201f96.png)                                             |
+|  Código            |  \`línea de código\`                 |   ![](media/6ff803466f8e5de95a840737c54c4cd0.png) |
+
+| **Elemento**      | **Sintaxis**                                                                                       | **Ejemplo**                                      |
+|-------------------|----------------------------------------------------------------------------------------------------|--------------------------------------------------|
+|  Líneas de código | \`\`\`java int lang="es"; Objeto obj = new Objeto(); \`\`\`                                        |  ![](media/6467826089621a65efd3c245a09cb077.png) |
+| Línea horizontal  | ---                                                                                                |  ![](media/849ac63ba0be1a6081bb28fa0602e0d7.png) |
+| Enlace            | [enlace](https://www.example.com)                                                                  |  ![](media/3f8865d4827b970654b4965a91bd8698.png) |
+| Imagen            | ![alt text](imagen.png)                                                                            |                                                  |
+|  Tabla            | \| Sintaxis \| Descripción \| \| ----------- \| \| \| Cabecera \| Titulo \| \| Párrafo \| Texto \| | ![](media/e6f91595e7b8531494a880d94e999b1d.png)  |
+|  Lista de tareas  | [x] Realizar commit [ ] Actualizar website [ ] Cargar medios                                       |  ![](media/322936d8666ac830a995cc875c43dc26.png) |
