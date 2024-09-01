@@ -1,14 +1,12 @@
 title: DI
 lang: es
 description: Desarrollo de Interfaces (2ºDAM)
-
-remote_theme: https://github.com/JV-conseil/jekyll-theme-read-the-docs
+remote_theme: rundocs/jekyll-rtd-theme
 
 translate:
- previous: Anterior
- Next: Siguiente
  note: info
  search: buscar
+ warning: destacado
  search_docs: buscar..
  searching: buscando
  not_found: No encontrado
@@ -20,7 +18,4 @@ plugins:
   - jemoji
   - jekyll-avatar
   - jekyll-mentions
-  - jekyll-feed
-  - jekyll-include-cache
-  - jekyll-remote-theme
 
