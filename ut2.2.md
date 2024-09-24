@@ -138,25 +138,55 @@ git push --force # Ignorar los cambios locales y hacer push
 
 ![](media/981334452a05339b78e1b26cd3e6b0b9.jpeg)
 
+### Clonar y guardar cambios
 
-### Integración con Netbeans
+Utilizar el siguiente comando para clonar un nuevo repositorio:
 
-Una vez abierto el proyecto en Netbeans habrá que inicializarlo haciendo clic en *Versioning>Initialize Git Repository* y dejar la ruta donde está alojado el proyecto.
+```
+git clone [url-repository]  # Crear un repositorio basado en un repositorio remoto
+```
 
-![](media/16639bd1b425f4039f2d381897a83be2.jpeg)
+Una vez llevado a cambios en un fichero, se deben de agregar los ficheros modificados:
 
-A continuación se hará un **Commit** del proyecto actual en *git\>Commit* y se le dará una descripción. El *Commit* guardará los datos en el repositorio local antes de actualizarse.
+```
+git add .  # Agregar todos los archivos modificados al stage
+```
 
-![](media/e89aa3acd626dde6f464766f150374f2.jpeg)
+A continuación, para confirmar los cambios se hará un commit:
 
+```
+git commit -m "Mensaje describiendo los cambios realizados"
+```
 
-Para guardar los cambios en el repositorio remoto de Github habrá que hacer un **push**. Para ello ir a *Git\>Remote\>push* e introducir nuestras credenciales de Github en *Specify Git Repository Location*.
+### Subir cambios a Github
 
-![](media/4e666ecd5d55119376cfd015ea632ca1.jpeg)
+Para subir los cambios a la rama principal (*main*) del repositorio, usar el comando **push**:
 
-![](media/f5e9b94250acb8a758bc9c91404bde70.png)
+```
+git push origin [main] # Subir al repositorio los cambios de la rama [branch]
+```
+Si queremos *revertir* los cambios deberemos utilizar el comando **reset**, para lo que necesitaremos el commit id que se hizo previamente:
 
-Desde el año pasado es necesario generar un **token de acceso personal** en lugar de contraseña. Para ello habrá que acceder a *Github.com\>settings\>Developer Settings* y en *Personal access tokens*
+```
+git reset --hard <commit-id>
+```
+
+### Actualizar cambios desde Github
+
+Para actualizar un repositorio local con los últimos cambios del repositorio remoto hay que utilizar el comando **pull**:
+
+```
+git pull origin [branch] # Trae los cambios del repositorio a local
+```
+
+### Github desktop
+
+GitHub Desktop es una aplicación gratuita de código abierto que te ayuda a trabajar con código hospedado en GitHub u otros servicios de hospedaje de Git. Con GitHub Desktop, puedes realizar comandos de Git, como confirmar e insertar cambios, en una interfaz gráfica de usuario, en lugar de mediante la línea de comandos. 
+
+Además de Github desktop, es recomendable instalar git para poder utilizar los comandos desde una terminal.
+
+![](media/github_desktop.png)
+
 
 ## Proyectos y debugging en Netbeans
 
@@ -234,9 +264,11 @@ La **tabla de casos de prueba** que se presenta a continuación es una herramien
 
 ## Markdown
 
+```note
 Markdown es un lenguaje de marcado ligero y sencillo que se utiliza para dar formato a texto en la web. Fue creado por John Gruber en 2004, con el objetivo de ser fácil de leer y escribir, y de convertir a HTML de manera sencilla.
+```
 
-Markdown es ampliamente utilizado en plataformas como GitHub, foros, blogs, y sistemas de documentación.
+Markdown es ampliamente utilizado en plataformas como GitHub, foros, blogs, y la mayoría de sistemas de documentación.
 
 ![](media/95e3e869a452be131b8c0301baa5268d.png)
 
@@ -245,7 +277,6 @@ Las principales características de Markdown son las siguientes:
 -   Simplicidad: El texto en Markdown es fácil de leer, incluso en su formato sin procesar.
     -   Portabilidad: Los archivos de texto en Markdown pueden ser convertidos a otros formatos como HTML, PDF, DOCX, entre otros.
     -   Enfocado en el contenido: Markdown permite a los autores centrarse en el contenido, ya que la sintaxis es mínima y no intrusiva.
-
 
 
 ### Sintaxis de Markdown
