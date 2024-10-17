@@ -36,13 +36,17 @@ JDBC ofrece el paquete java.sql, en el que existen **clases** muy útiles para t
 
 1. Registrar o asignar driver
 
-2. Establecer conexión con la BD
+2. Configurar la conectividad
 
-3. Crear sentencia de consulta
+3. Establecer conexión con la BD
 
-4. Ejecutar consultas o modificaciones
+4. Generar consultas
 
-5. Cerrar las conexiones
+5. Ejecutar consultas
+
+6. Ejecutar insercciones o modificaciones
+
+7. Cerrar las conexiones
 
 
 # ![](media/75ff74bab85bc04c32b390df995b20a1.png) 
@@ -50,18 +54,43 @@ JDBC ofrece el paquete java.sql, en el que existen **clases** muy útiles para t
 
 ## Pasos de conectividad
 
+### 0. Asignar driver de conexión
+
+- Conector MySQL: Si vas a usar MySQL, primero descarga el conector JDBC desde https://dev.mysql.com/downloads/connector/j/
+- Conector Derby: Aunque viene integrado en varias distribuciones de Netbeans ,se puede descargar desde https://db.apache.org/derby/derby_downloads.html
+- Conector MariaDB: Se puede descargar desde https://mariadb.com/kb/es/acerca-de-mariadb-connectorj/
+
+
 ### 1. Asignar driver de conexión
 
-El primer paso es asignar el driver de la base de datos que vamos a utilizar en nuestro IDE (Netbeans), descargando o utilizando un archivo **jar** ya existente que incluiremos en el apartado librerías de nuestro proyecto.
+El primer paso es asignar el driver de la base de datos que vamos a utilizar en nuestro IDE (Netbeans), utilizando el archivo **JAR** descargado previamente en el apartado librerías de nuestro proyecto o desde la carpeta *Libraries*.
+
 
 ![](media/5169a4340cf541caf4ec264fc654971b.jpeg)
 
-Para  conectarse y correr con el driver de una BD Derby en nuestro proyecto en Netbeans seguir el siguiente tutorial: [Instrucciones crear un BD de Derby en Netbeans](docu/Instruccionesderbydb.md)
+NetBeans puede reconocer automáticamente conectores instalados:
+- En la pestaña lateral Servicios (o en Ventana > Servicios).
+- En el árbol de opciones, seleccionar Bases de datos.
+- Hacer clic derecho sobre Drivers (Controladores) y selecciona el nuevo controlador.
+- Navegar hacia el archivo JAR del conector (MySQL o Derby).
+- Completa la información del controlador, como la URL, clase de conexión, etc., 
+
+### 2. Configurar la conectividad
+
+Ir a la pestaña Servicios de nuevo.
+
+Crear una nueva conexión:
+- Haz clic derecho en Bases de datos y seleccionar Nueva conexión.
+- En el menú desplegable, seleccionar el controlador (como MySQL o Derby).
+- Proporcionar la URL de la base de datos, el nombre de usuario y la contraseña.
+- Testear la conexión para asegurarte de que esté funcionando correctamente.
 
 
-### 2. Establecer conexión con la BD
+### 3. Establecer conexión con la BD
 
-El siguiente paso es establecer una conexión con la base de datos. Hay dos opciones para establecer una conexión:
+El siguiente paso es establecer una conexión con la base de datos. 
+
+Hay dos opciones para establecer una conexión:
 
 -  Crear una nueva conexión con la base de datos.
 -  Obtener la conexión de un pool de conexiones ya creado previamente. Se trata de una opción más eficiente ya que no hace falta estar abriendo y cerrando conexiones continuamente.
@@ -87,7 +116,7 @@ En donde:
 
 ## Generar consultas
 
-### 3.1 Consultas Statement
+### 4.1 Consultas Statement
 
 El tipo de consulta más sencillo. Para obtener datos almacenados en la BD podemos realizar una consulta SQL (*query*). Podemos ejecutar la consulta usando el objeto **Statement.**
 
@@ -103,7 +132,7 @@ Statement st = conexion.createStatement();
 String sqlselect = "SELECT * FROM cuentas";
 ```
 
-### 3.2 Consultas PreparedStatement
+### 4.2 Consultas PreparedStatement
 
 Otro tipo de consultas son las **PreparedStatement.** Son consultas más eficientes y facilitan la tarea de escribir las consultas SQL ya que en lugar de tener que estar concatenando las distintas variables con el código SQL, lo que se hace es sustituir en este las variables por **?** y posteriormente se introducen los datos concretos mediante *setters*.
 
@@ -120,7 +149,7 @@ ResultSet rs = pstBuscarCodigo.executeQuery();
 
 ## Ejecutar consultas
 
-### 4.1 ExecuteQuery
+### 5.1 ExecuteQuery
 
 Para los dos ejemplos anteriores, que son consultas, veremos como se incluye el código de la ejecución de la consulta mediante el método **executeQuery**.
 
@@ -144,7 +173,7 @@ pstBuscarCodigo.setString(1, codigo);
 ResultSet rs = pstBuscarCodigo.executeQuery();
 ```
 
-### 4.2 ResulSet
+### 5.2 ResulSet
 
 Cuando un campo de un registro de una tabla no tiene asignado ningún valor, la consulta de ese valor devuelve *NULL*. Esta situación puede dar problemas al intentar manejar ese dato. La clase **ResultSet** dispone de un método *wasNull* que llamado después de acceder a un registro nos dice si el valor devuelto fue NULL.
 Esto no sucederá así para los datos numéricos, ya que devuelve el valor 0.
@@ -165,6 +194,10 @@ System.out.println("\t" + sexo);
 }
 ```
 
+## Ejecutar insercciones o modificaciones
+
+### 6. executeUpdate
+
 Tanto INSERT, como UPDATE o DELETE realizan modificaciones en la base de datos, con lo que deben llamarse utilizando el método **executeUpdate()**. Este método devolverá el número de filas afectadas (número de filas borradas, modificadas o insertadas).
 
 Un ejemplo con los tres tipos:
@@ -181,8 +214,6 @@ int filasBorradas = sentencia.executeUpdate("DELETE FROM contacto WHERE id=4");
 ```
 
 ## Cerrar la conexión
-
-### 5. Cerrar conexiones
 
 Después de hacer las operaciones en la BD que se necesite se deberá **cerrar** la conexión para liberar los recursos. Para ello se utiliza el método close(). Se pueden cerrar también el *Resulset* y el *Statement* de forma manual, pero cerrando la conexión se cierran los otros dos porque están creados a partir de la conexión. Del mismo modo al cerrar el *Statement* también se liberan los recursos del *Resulset*.
 
