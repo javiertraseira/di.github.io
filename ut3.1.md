@@ -253,16 +253,16 @@ Un listado de posibles criterios de evaluación de la **usabilidad** podría ser
 9.  Presenta iconos y menús con títulos y textos concisos y explicativos. 10.Los iconos utilizados son comprensibles.
 10. Dimensiones óptimas de la página.
 11. Se observa correctamente con diferentes resoluciones de pantalla.
-1.  Se aprovecha equilibradamente el espacio visual de la página para evitar la sobresaturación de elementos, con espacios en blanco (libres) entre el contenido, para descansar la vista.
-2.  Estructura organizada con criterio de perfil de usuario.
-3.  Tiempo de descarga adecuado.
-4.  Ausencia de ventanas emergentes (pop-ups).
-5.  Fuente de texto de tamaño y forma adecuados.
-6.  Ausencia de menús desplegables, texto móvil, marquesinas, texto flotante,...
-7.  Opción de búsqueda avanzada y cuadro de búsqueda en la parte superior de la página.
-8.  No necesidad de *plugins* para visualizar la página.
-9.  El manejo de errores presentado es el adecuado.
-10. Independencia del navegador y su versión.
+12.  Se aprovecha equilibradamente el espacio visual de la página para evitar la sobresaturación de elementos, con espacios en blanco (libres) entre el contenido, para descansar la vista.
+13.  Estructura organizada con criterio de perfil de usuario.
+14.  Tiempo de descarga adecuado.
+15.  Ausencia de ventanas emergentes (pop-ups).
+16.  Fuente de texto de tamaño y forma adecuados.
+17.  Ausencia de menús desplegables, texto móvil, marquesinas, texto flotante,...
+18.  Opción de búsqueda avanzada y cuadro de búsqueda en la parte superior de la página.
+19.  No necesidad de *plugins* para visualizar la página.
+20.  El manejo de errores presentado es el adecuado.
+21. Independencia del navegador y su versión.
 
 ## Estándares de usabilidad
 
