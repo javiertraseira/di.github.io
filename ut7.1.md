@@ -20,54 +20,10 @@ Características de JavaFX:
 -   Se puede integrar un módulo con compatibilidad web (*webview*)
 -   Proporciona un motor de Javascript.
 -   Incluido hasta la versión del Java JDK 8 (A partir de entonces, se debe integrar como una librería aparte)
+na versión del Java JDK que mantenga la compatibilidad con JavaFX.
+d.educa.madrid.org/index.php/s/QcezPFVTPKdejsC)
+ichero *netbeans.conf* en la carpeta etc de la instalación de Netbeans.
 
-
-### Proyectos en ANT
-
-A la hora de construir nuestros proyectos JavaFX en *ANT* en Netbeans deberemos de utilizar una versión del Java JDK que mantenga la compatibilidad con JavaFX.
-
-Descargar un **java JDK** compatible desde el siguiente enlace el [jdk_1.8.0_111](http://cloud.educa.madrid.org/index.php/s/QcezPFVTPKdejsC)
-
-En Netbeans deberemos de establecer por defecto este JDK para lo que habrá que modificar el fichero *netbeans.conf* en la carpeta etc de la instalación de Netbeans.
-
-![](media/e885ab95f56241f8ec4a8021c6512391.png)
-
-Asegurarse en el apartado *Java Plaform Manager* y asignárselo a nuestros proyectos.
-
-![](media/1d02ab617ae5206735fd624a82774810.jpeg)
-
-### Proyectos en Maven
-
-En Netbeans puede crearse un proyecto en Maven directamente instalando su implementación.
-
-![](media/3099bd5fa92d9d06fb3c02111b539893.jpeg)
-
-Si queremos trabajar directamente con Maven en el fichero *pom.xml* deberemos de verificar que se agregan las siguientes líneas para usar el plugin de JavaFX:
-
-```xml
-<plugins>
-    <plugin>
-        <groupId>org.openjfx</groupId>
-        <artifactId>javafx-maven-plugin</artifactId>
-        <version>0.0.8</version>
-        <configuration>
-            <mainClass>HelloFX</mainClass>
-        </configuration>
-    </plugin>
-</plugins>
-```
-
-Y las dependencias de Maven:
-
-```xml
-<dependencies>
-  <dependency>
-    <groupId>org.openjfx</groupId>
-    <artifactId>javafx-controls</artifactId>
-    <version>21.0.2</version>
-  </dependency>
-</dependencies>
-```
 
 ### OpenJFX
 
@@ -217,6 +173,26 @@ En la aplicación *JavaFX Scene Builder* disponemos de una amplia paleta de cont
 
 ![](media/56d632c50d5091a81ad44c0ca4b796b1.jpeg)
 
+
+### Partes de Scene Builder
+
+
+![](media/scene_builder_main.jpg)
+
+1. Contenedores, controles, menus..
+2. Jerarquía de componentes
+3. Controlador: El campo Controller Class hace referencia a la clase controladora que se debe autogenerar una vez guardados los cambios en IntelliJ o Netbeans.
+4. Propiedades del diseño de componentes y código JavaFX CSS: En este campo se pueden aplicar las propiedades de JavaFX CSS o adjuntar una hoja de estilos externa.
+5. Code: Se debe de dar un nombre interno o fx:id a cada componente para luego poder referenciarlo en la clase controladora.
+
+### Actualizar controlador en IntelliJ
+
+Una vez se han hecho cambios en la vista es necesario que dicho código se actualice en el controlador de nuestro proyecto en IntelliJ IDEA.
+
+Para hacerlo de forma automática deberemos de instalar la extensión llamada FXMLManager desde el apartado *Settings>Plugins*.
+
+Una vez instalada, usaremos la opción contextual Update controller from XML para actualizar el código del controlador.
+
 ### Contenedores (layouts)
 
 | **Layout**   | **Forma y descripción**                                                                                                                                                                         |
@@ -318,7 +294,7 @@ Los <u>>elementos</u> por tanto que utilizaremos para crear aplicaciones en Java
 | FXML         | Define el diseño de la vista (nodos de la vista)                                                                                       |
 | CSS          | Define el estilo adicional de la vista                                                                                                 |
 
-## Cuadros de diálogo en JavaFX
+## Cuadros de diálogo adicionales en JavaFX
 
 ### Clase Alert
 
@@ -358,7 +334,7 @@ private void mostrarAlertInfo(ActionEvent event) {
 
 ### FileChooser
 
-El selector de ficheros *FileChooser* funciona igual que cualquier componente en Swing, con lo que podremos utilizarlo de igual forma:
+El selector de ficheros *FileChooser* funciona como su homólogo en Java Swing, con lo que podremos utilizarlo de forma similar a cómo lo hacíamos:
 
 ```java
 public void initialize(URL url, ResourceBundle rb) {
@@ -378,6 +354,14 @@ Si quisiéramos utilizarlo para abrir varias imágenes usaríamos el siguiente c
 File imgFile = fileChooser.showOpenDialog(stage) 
 List<File> list = fileChooser.showOpenMultipleDialog(stage);
 ```
+
+ **Función**                     | **Método**                        | **Descripción**                                      | **Ejemplo de uso** |
+|----------------------------------|----------------------------------|------------------------------------------------------|--------------------|
+| **Abrir un archivo**            | `showOpenDialog(Stage owner)`   | Muestra un cuadro de diálogo para seleccionar un archivo. | `File file = fileChooser.showOpenDialog(new Stage());` |
+| **Abrir múltiples archivos**     | `showOpenMultipleDialog(Stage owner)` | Permite seleccionar varios archivos. | `List<File> files = fileChooser.showOpenMultipleDialog(new Stage());` |
+| **Guardar un archivo**          | `showSaveDialog(Stage owner)`   | Muestra un cuadro de diálogo para guardar un archivo. | `File file = fileChooser.showSaveDialog(new Stage());` |
+| **Configurar filtros**          | `setExtensionFilters(List<FileChooser.ExtensionFilter>)` | Restringe los tipos de archivos visibles en el cuadro de diálogo. | `fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Archivos de texto", "*.txt"));` |
+| **Seleccionar un directorio**   | `DirectoryChooser().showDialog(Stage owner)` | Permite elegir una carpeta en lugar de un archivo. | `File dir = new DirectoryChooser().showDialog(new Stage());` |
 
 Usar cuadros de diálogo, o una ventana Stage más compleja, dependerá de la información que queramos mostrar al usuario y el desarrollo de nuestra aplicación:
 

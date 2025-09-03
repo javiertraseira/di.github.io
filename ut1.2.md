@@ -56,7 +56,7 @@ Atendiendo a cómo el usuario puede interactuar con una interfaz, ya hemos visto
 ## El factor humano
 
 ```note
-💡 La **cognición** es el proceso por el que los humanos adquirimos conocimientos e interactuamos con el entorno.
+La **cognición** es el proceso por el que los humanos adquirimos conocimientos e interactuamos con el entorno.
 ```
 
 Sobre los usuarios es importante entender cuáles son sus capacidades y los procesos de **cognición** involucrados durante el desempeño de tareas a través del computador: la memoria, la visión, el oído o el tacto, son factores que determinan cómo manipulan y hace uso efectivo de la tecnología computacional, radicando allí la importancia del factor humano para optimizar su interacción.
@@ -290,3 +290,44 @@ Se conocen como **tipografía digital** las fuentes desarrollados exclusivamente
 
 ![](media/typography210922.jpg)
 
+
+## Interfaces naturales de usuario (NUI)
+
+```note
+Las **interfaces naturales de usuario**, denominadas NUI (Natural User Interface), son interfaces de usuario que se caracterizan por ser intuitivas y no necesitar aprendizaje previo. 
+```
+
+Las interfaces naturales de usuario buscan que los usuarios interactúen con el mundo digital de la misma forma que lo hacen con el mundo real. La característica principal de las NUI son la habilidad de interactuar con las máquinas utilizando únicamente el cuerpo humano, esto es, mediante el tacto, los gestos, la voz y otros métodos naturales de comunicación.
+
+La palabra natural es utilizada, porque al contrario que la gran mayoría de interfaces, no usan dispositivos de control artificiales, como pueden ser un teclado o un ratón, sino controles que permiten desarrollar una experiencia natural e intuitiva utilizando sensores de audio, acelerómetros, infrarrojos, dispositivos multitouch, cámaras, etc. 
+
+
+![](media/nui_schema.png)
+
+
+### Reconocimiento táctil
+
+- La interacción a través de pantallas táctiles es uno de los ejemplos más comunes de NUI. Los smartphones fueron los primeros dispositivos en implementar este tipo de  interfaces naturales de usuario en sus sistemas operativos.
+- Los usuarios pueden navegar, ampliar o reducir imágenes, y escribir directamente sobre la pantalla con movimientos simples y naturales. Además, se han ido universalizando muchos gestos en pantallas como ampliar, reducir o mover elementos.
+
+    ![](media/tactil.png)
+
+
+### Reconocimiento del habla
+
+El reconocimiento del habla es otro interfaz natural de usuario de las más desarrollada, permitiendo la comunicación hablada entre persona y sistema.
+
+Se maneja diferentes tipos de información, como:
+- Acústica
+- Fonética
+- Léxica
+- Sintáctica
+- Semántica
+
+Los asistentes virtuales como Siri, Google Assistant y Alexa de Amazon permiten a los usuarios realizar tareas mediante comandos de voz.
+
+### Reconocimiento gestual
+
+El reconocimiento gestual es una tecnología clave dentro del ámbito de las interfaces naturales de usuario (NUI) que permite a los dispositivos interpretar y responder a los movimientos del cuerpo humano, principalmente de las manos y los brazos. Este sistema se basa en el uso de sensores, cámaras y algoritmos avanzados de procesamiento de imagen para detectar, seguir y comprender gestos específicos realizados por el usuario.
+
+![](media/gestual_nui.jpg)

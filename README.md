@@ -1,4 +1,4 @@
-# Módulo de Sistemas Operativos Monopuesto (1º SMR)
+# Módulo de Desarrollo de Interfaces (2º DAM)
 
 
 

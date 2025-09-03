@@ -261,16 +261,23 @@ Android fue lanzado en 2007 y su primera versión en septiembre de 2008. En un p
 
 ![](media/3b4e05789f2eb45b73c1e7a7159616e8.jpeg)
 
-Un hito del GUI de Android fue Material Design, anunciado en 2014, junto con el lanzamiento de la versión 5.0 de Android Lollipop. Desde entonces se ha ido implementando en cada uno de sus aplicaciones para crear un sistema que ofrezca la misma experiencia de usuario en todas las plataformas y dispositivos. Matías Duarte, diseñador de interfaces y vicepresidente de diseño de Google, es uno de los impulsores de este sistema de diseño que ha transformado la IU y UX del entorno web y móvil en la actualidad.
+Un hito del GUI de Android fue Material Design, anunciado en 2014, junto con el lanzamiento de la versión 5.0 de Android Lollipop. Desde entonces se ha ido implementando en cada una de sus aplicaciones para crear un sistema que ofrezca la misma experiencia de usuario en todas las plataformas y dispositivos. Matías Duarte, diseñador de interfaces y vicepresidente de diseño de Google, es uno de los impulsores de este sistema de diseño que ha transformado la IU y UX del entorno web y móvil en la actualidad. En 2021 Material design ha evolucionado a **Material You**.
 
 ![](media/2e6250b9e6301f055fab207655aee92b.png)
 
-Android es considerado como uno de los modelos de negocio más exitosos, pues su desarrollo estratégico contempla los factores que más se tienen en cuenta dentro de las herramientas y metodologías desarrollados por expertos en negocios. No obstante los problemas de monopolio y privacidad comienzan hacer mella en su marca.
+Android es considerado como uno de los modelos de negocio más exitosos, pues su desarrollo estratégico contempla los factores que más se tienen en cuenta dentro de las herramientas y metodologías desarrollados por expertos en negocios. No obstante, los problemas de monopolio y privacidad comienzan a hacer mella en su marca.
 
 El núcleo de Android se desarrolla de forma abierta y se puede por tanto acceder tanto a su código fuente. No obstante, los servicios de Google siguen siendo propietarios.
 
 ![](media/cf86b04bc352dd92587d849e2fc55999.jpeg) 
 
+### Interfaces naturales
+
+Las interfaces naturales comunicarse con el usuario usando para ello medios como la voz, los gestos o la mirada.  El lanzamiento del iPhone en 2007, con su interfaz multitáctil, y la introducción de Kinect o Nintendo Wii que permitía la interacción mediante gestos, marcaron hitos importantes en el desarrollo de estas interfaces.
+
+En la actualidad existen desarrollos en realidad aumentada (AR) y la realidad virtual (VR), donde los usuarios interactúan con entornos digitales mediante movimientos corporales y comandos de voz. Los asistentes virtuales como Siri, Alexa y Google Assistant han llevado el reconocimiento de voz a millones de personas y la comunicación con las nuevas IA generativas también es posible.
+
+![](media/natural_assistants.png) 
 
 ## Evolución histórica de la web
 

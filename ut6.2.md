@@ -1,4 +1,4 @@
-# UT6.2 Aplicaciones para la acesibilidad web
+# UT6.2 Estrategias para la acesibilidad web
 
 ## Contenido accesible
 
@@ -7,11 +7,17 @@ El **contenido** hace referencia a la información contenida en una página o en
 En las directrices de Accesibilidad para el Contenido (WCAG 2.x) hay varias de ellas que nombran directamente al **contenido**:
 
 1.1 Proporciona alternativas textuales para todo contenido no textual de modo que se pueda convertir a otros formatos que las personas necesiten, tales como textos ampliados, braille, voz, símbolos o en un lenguaje más simple.
+
 1.3 Crea contenido que pueda presentarse de diferentes formas (por ejemplo, con una disposición más simple) sin perder información o estructura.
+
 1.4 Facilita a los usuarios ver y oír el contenido.
+
 2.2 Proporciona a los usuarios el tiempo suficiente para leer y usar el contenido.
+
 2.3. No diseñar contenido que se sepa podría provocar ataques o convulsiones.
+
 2.4. Proporcionar medios para ayudar a los usuarios a navegar, encontrar contenido y determinar dónde se encuentran.
+
 3.1 Hacer que los contenidos textuales resulten legibles y comprensibles.
 
 En el siguiente gráfico se puede comprobar que el tiempo necesario para la **comprobación** de algunas de las directrices o criterios de conformidad del primer principio son muy superiores al resto de criterios, consumiendo 4 de ellos el 25% del tiempo de análisis:
@@ -260,7 +266,7 @@ Los encabezados se especifican en las **WCAG 2.x** en las directivas **2.4** y e
 
     La información estructura y relaciones comunicadas a través de la presentación pueden ser determinadas por software o están disponibles como texto.
 
-Para conseguir todos los criterios de accesibilidad es por tanto crucial usar los elementos **semánticos** adecuados para marcar la estructura; en el caso del *HTML* usando H1, H2, H3, H4, H5 y H6 y no estilos propios en CSS que simulen ser encabezados. Además es crítico el **anidarlos** correctamente.
+Para conseguir todos los criterios de accesibilidad es por tanto crucial usar los elementos **semánticos** adecuados para marcar la estructura; en el caso del *HTML* usando H1, H2, H3, H4, H5 y H6 y no estilos propios en CSS que simulen ser encabezados. Por ello, es crítico el el **anidarlos** y estructurarlos correctamente.
 
 ![](media/b0ec7ef917bcdc16cd5df656342d1c3f.png) 
 
@@ -274,7 +280,8 @@ Los **párrafos** son otro elemento estructural básico en HTML: \<p\>\</p\>
 
 ### Tablas
 
-Las **tablas** sirven exclusivamente para mostrar información tabular, aunque antiguamente se han llegado a utilizar como elemento para el diseño.
+Las **tablas** sirven exclusivamente para mostrar información tabular, aunque antiguamente se han llegado a utilizar como elemento para el diseño. 
+> Por tanto, no se deben utilizar nunca tablas para maquetar contenido.
 
 -  Ejemplo de tabla **no accesible**:
 
@@ -437,7 +444,7 @@ El valor **row** indica el valor para los encabezados de fila:
 
 La fila *9:30-10:30* provee información de encabezado horizontal para las celdas HTML y 15, y la columna *11:00-13:30* para las celdas CSS y 20.
 
-## H43 Usar atributos id y headers para asociar las celdas de datos con las celdas de encabezado en las tablas de datos.
+#### H43 Usar atributos id y headers para asociar las celdas de datos con las celdas de encabezado en las tablas de datos.
 
 Se trata de otra forma de asociar celdas de encabezado a celdas:
 -   **id** se usa en las celdas de encabezado \<th\> para proporcionar un identificador único
@@ -498,6 +505,25 @@ De forma parecida se debería actuar con los **radio buttons**:
 ```
 
 ![](media/719b4db86792f8e13108d61b9f7ed1c7.png)
+
+
+### Botones
+
+Se debe de utilizar \<button\> siempre con texto descriptivo:
+
+```html
+<button type="submit">Enviar formulario</button>
+```
+> Se deben evitar botones sin texto o solo con iconos.
+
+Si solo hay un icono, se debe de usar *aria-label*:
+
+```html
+<button type="submit" aria-label="Enviar formulario"> 
+   <img src="enviar-icono.svg" alt=""> 
+</button>
+```
+
 
 ### Documentos electrónicos adjuntos
 

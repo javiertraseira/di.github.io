@@ -1,576 +1,292 @@
-# UT5.1 Bootstrap
+# UT5.1 Proceso del diseño de interfaces. Imágenes y gráficos 
 
-## Introducción a Bootstrap
+## Imágenes
+
+El uso de imágenes es muy importante en el diseño de cualquier tipo de interfaz, puesto que estas contribuyen favorablemente a la experiencia del usuario, siempre y cuando se adecuen al contenido que se está trabajando.
+
+Además de cumplir ciertos requisitos de calidad y formato, se debe tener en cuenta la autoría de las imágenes o derechos de autor para ciertos trabajos.
+
+Una de las características más importantes que tener en cuenta es el formato de las imágenes, puesto que de esta forma se define la calidad visual frente al peso de las ilustraciones.
+
+![](media/f2d9ecbbf0c624fe93fabd9eaf058e6f.jpeg)
+
+## Imágenes de mapa de bits
 
 ```note
-**Bootstrap** es un framework CSS (y JS) utilizado para el desarrollo de interfaces web de forma estandarizada para que se adapten a cualquier dispositivo.
+Estas imágenes, también llamadas de **raster**, son aquellas formadas por un conjunto de puntos, llamados **píxeles**, donde cada uno de estos puntos contiene un conjunto de valores que define un color.
 ```
 
-Bootstrap se desarrolló inicialmente por Twitter en 2010, para estandarizar las herramientas de desarrollo de la compañía.
+Por esta razón, son indicadas para aquellas imágenes en las que es deseable mostrar una gama de colores muy amplia y con variaciones precisas de color y luminosidad.
 
-Inicialmente, se llamó Twitter *Blueprint* y, un poco más tarde, en 2011, se transformó en código abierto y su nombre cambió para Bootstrap. Desde entonces se ha ido actualizado continuamente y ya se encuentra por la **versión 5**, con la que trabajaremos.
+La calidad de estas imágenes depende de la cantidad de píxeles utilizados en su representación (PPP). Una de las desventajas principales de las imágenes bitmap es que no permiten un cambio de escala significativo, puesto que aparece el llamado **pixelado**.
 
-Bootstrap combina CSS y JavaScript para estilizar los elementos de una página HTML y proporcionarle interactividad respetando el principio de diseño responsive en todo momento. 
+![](media/44bacf59c527a4e8202252462fb075f8.jpeg)
 
-La documentación está disponible en <https://getbootstrap.com/docs/5.3>
+## Imágenes vectorizadas
 
-![](media/7d6f06c1b29b7b47b3e7fa85e79fac00.png)![](media/1dff958f3fd08966a66844bcf7684baa.jpeg)
-
-Bootstrap sigue el concepto de **mobile first**. Esto significa que la preocupación del Framework es primero desarrollar una página que funcione perfectamente en dispositivos móviles y luego en el escritorio.
-
-Bootstrap además está plentamente basado en **Flexbox** y *CSS3*.
-
-Las funciones disponibles en Bootstrap ofrecen una experiencia rica al usuario. Además está plentamente basado en Flexbox y usa las tendencias de diseño del mercado.
-
-Actualmente es el Framework frontend de CSS más usado en 2023 (más de un 25%).
-
-Características de **Bootstrap 5**:
-
--   Mobile First
--   Basado en Flexbox
--   Sistema Grid responsive
--   Variedad de componentes propios: navbar, card, botones, formularios, etc
--   Tipografía receptiva (adaptable según el dispositivo)
--   Compatibilidad con Javascript nativo y con plugins adicionales.
--   Compatibilidad con Sass
-
-## CDN
-
-La manera más sencilla de comenzar con *Bootstrap 5* es utilizar un **CDN.** (*Content Delivery Network*), es decir, un servidor donde se alojan todos los archivos de Bootstrap.
-
-Usaremos el CDN de jsDelivr, apuntando a la versión 5.3.0 de Boostrap. Agregaremos el siguiente código en nuestro esqueleto de la página HTML principal:
-
-
-```html
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" >
-```
-💡 Se puede cambiar de versión de la URL según las necesidades.
-
-Para la parte de Javascript también se puede agregar la URL de un CND, pero desde Bootstrap 5 ya no es necesario para funcionalidades básicas.
-
-Las ventajas de utilizar esta forma de cargar Bootstrap son:
-
--   Reducir la carga de los servidores propios (importante si utilizamos un hosting compartido con recursos limitados)
--   Facilita que Bootstap 5 quede en caché del navegador y se vuelva a cargar cada vez que se visita una web que lo utilice.
-
-Recordemos que Bootstrap también es un framework que utiliza multitud de complementos de JavaScript para mejorar el comportamiento de los elementos en nuestra página. Además es plenamente compatible con Javascript nativo. 
-Para la parte de Javascript también se puede agregar la URL de un CND, aunque desde Bootstrap 5 ya no es necesario para la mayoría de funciones básicas.
-
-El código para JS deberá de añadirse al final de la página HTML, justo antes del cierre de la etiqueta body de la página:
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+```note
+Representan, a través de **fórmulas matemáticas**, entidades geométricas simples (puntos, segmentos, rectángulos, círculos), sus parámetros principales: grosor, posición inicial, final, etc. El procesador es el encargado de traducir esta información matemática a la tarjeta gráfica.
 ```
 
-## Cuadrícula (Grid)
+Las imágenes vectoriales mantendrán su forma independientemente de cuán grande o pequeño sea su tamaño. Esto significa que no se mostrarán píxeles cuando amplíe. La calidad de estos diseños seguirá siendo la misma.
 
-Bootstrap incluye un potente sistema de rejillas (grid) para la construcción de diseños de todas las formas y tamaños.
+No son adecuados para describir imágenes demasiado irregulares (un paisaje de fotografía real), ya que necesitaría millones de fórmulas para ello.
 
-Bootstrap utiliza un modelo de cuadrícula basado en dos tipos de contenedores y una rejilla de hasta **12 columnas**, basada en Flexbox, con varios niveles que resulta muy práctica, y que como veremos podemos alterar cuando nos resulte conveniente.
 
-El sistema de cuadrícula utiliza <u>tres clases</u> CSS principales para crear el diseño necesario: **.container**, **.row** y **.col**. El contenedor cubre el diseño completo, luego las filas y luego las columnas.
+![](media/903d2825fdafee86ed713f6b19b2426f.png) 
+![](media/972ffbf86726b595c60295f066c8c519.png) 
+![](media/08c97e391ed1ac5137f31b9967e70acd.jpeg)
 
-![](media/bc2e59fb452aa03ae5cedbfb7b61ade4.png)
+## Bitmap vs vector
 
-En el siguiente ejemplo se crea tres columnas de igual ancho en todos los dispositivos usando las clases anteriores. Esas columnas están centradas en la página con el **.container** principal. Debemos utilizar la clase **row** para indicar el comienzo de una fila. Dentro de la fila dispondremos tantos **div** como columnas tenga dicha fila.
+![](media/30db5216e3a7187e109649b69050afae.png)
 
-```html
-    <div class="container"> 
-    <div class="row"> 
-        <div class="col"> 
-        Columna 
-        </div> 
-        <div class="col"> 
-        Columna 
-        </div> 
-        <div class="col"> 
-        Columna 
-        </div> 
-    </div>
+## Resolución
+
+```note
+La resolución de una imagen consiste en el grado de detalle o calidad de una imagen digital. Este valor se expresa en **ppp** (píxeles por pulgada) o en **dpi** (dots per inch).
 ```
 
-![](media/dcf49a2808ff7e847513eef61ed72271.png)
+Cuantos más píxeles contenga una imagen por pulgada lineal, mayor será su calidad. Por ejemplo, cuando hablamos de la resolución de un monitor, estamos haciendo referencia al número de píxeles por pulgada que es capaz de mostrar. Por otro lado, en un medio de impresión se habla del número de puntos por pulgada (ppp) que se puede imprimir.
 
-Para indicar el tamaño de columna debemos utilizar la siguiente sintaxis:
+![](media/93bb31de004f7666ac282be97bfb9eb3.png)
 
-    col-\#
+La resolución en un monitor o pantalla hace referencia al número de píxeles que éste será capaz de mostrar, expresada en función de su anchura y su altura.
 
-El valor del **\#** será uno entre **1 y 12**. El restante del valor indicado será el que debamos de distribuir entre el resto de columnas (sumando 12). Si usáramos *col-auto* el tamaño se ajustaría respecto al contenido del elemento.
+Por ejemplo, si un dispositivo tiene una resolución de 1920 x 1080 píxeles, significa que tendrá 1920 píxeles de anchura y con 1080 píxeles de altura
 
-```html
-    <div class="container"> 
-    <div class="row"> 
-        <div class="col-2"> 
-        Columna-2 
-        </div> 
-        <div class="col-4"> 
-        Columna-4
-        </div> 
-        <div class="col-6"> 
-        Columna-6
-        </div> 
-    </div>
+![](media/d37b6dbbd542f63af88e477651d20487.jpeg)
+
+Existe una amplia gama de resoluciones estandarizadas por la industria de los monitores/pantallas y gráficas, que tienen las siguientes denominaciones:
+
+-  VGA (SD): 640x480
+-  SVGA: 800x600
+-  720p (HD): 1280x720
+-  1080p (FHD): 1920x1080
+-  2K: 2048x1080
+-  1440p (QHD): 2560x1440
+-  4K (UHD): 3840x2160
+-  8K
+
+![](media/7ca32f1549a152a7680b691d3dcb67fd.png)
+
+## Profundidad de color
+
+Una imagen en mapa de bits está formada por un conjunto de píxeles, donde cada uno de ellos presenta un determinado color, el archivo donde está almacenada la imagen, también contendrá la información de color de cada uno de los píxeles.
+
+```note
+La **profundidad de color** se refiere al número de bits necesarios para codificar y guardar la información de color de cada píxel en una imagen. Un bit es una posición de memoria que puede tener el valor 0 o 1. Cuanto mayor sea la profundidad de color en bits, la imagen dispondrá de una paleta de colores más amplia.
 ```
 
-![](media/f0251ebb94bc2cd2b8111462300a4477.png)
+| **Profundidad** | **Nº de colores** |
+|-----------------|-------------------|
+| 1               | 2                 |
+| 4               | 16                |
+| 8               | 256               |
+| 16              | 65536             |
+| 32              | 4294967296        |
 
-### Breakpoints
+## Modos de color
 
-El sistema de cuadrícula de Bootstrap puede a su vez adaptarse a seis **breakpoints** predeterminados basados en *media queries*:
-
-![](media/breakpoints_bootstrap.png)
-
-De esta manera el prefijo de clases cambiará a *col-{breakpoint}* tal y como se muestra en la siguiente tabla:
-
-|                      |  **\<576px** | **sm** **≥576px** | **md** **≥768px** | **lg** **≥992px** | **xl** **≥1200px** | **xxl** **≥1400px** |
-|----------------------|--------------|-------------------|-------------------|-------------------|--------------------|---------------------|
-| Contenedor max-width | Por defecto  | 576px             | 768px             | 992px             | 1200px             | 1400px              |
-| Prefijo de clase     | **.col-\#**  | **.col-sm-\#**    | **.col-md-\#**    | **.col-lg-\#**    | **.col-xl-\#**     | **.col-xxl-\#**     |
-| \# de columnas       | 12           |                   |                   |                   |                    |                     |
-
-![](media/2ce1b4a87101d252ec2f699e4d56f4dc.png)
-
-Usando un solo conjunto de clases *.col-sm-\#,* se puede crear un sistema de cuadrícula básico que comience apilado (por defecto) siempre que sea menor que **sm** y tenga la siguiente distribución de dos filas a partir del breakpoint pequeño (sm).
-
-```html
-    <div class="container"> 
-    <div class="row"> 
-        <div class="col-sm-8">col-sm-8</div> 
-        <div class="col-sm-4">col-sm-4</div> 
-    </div> 
-    <div class="row"> 
-        <div class="col-sm">col-sm</div> 
-        <div class="col-sm">col-sm</div> 
-        <div class="col-sm">col-sm</div> 
-    </div> 
-    </div>
+```note
+Llamamos modo de color al sistema de coordenadas que nos permiten describir el color de cada píxel utilizando valores numéricos.
 ```
 
-![](media/a8b552f86b32abd96d4aef75bd822730.png)
+### Modo monocromático
 
-![](media/6020e7c34502d79529b3737167b08e7f.png)
+![](media/51147d2609f9cf16f293fc53bb627013.png)
 
-Se pueden hacer combinaciones según diferentes tamaños (para sm y xl) y así obtener:
+Se corresponde con una profundidad de color de 1 bit. La imagen está formada por píxeles blancos o píxeles negros puros.
 
-```html
-    <div class="container"> 
-      <div class="row"> 
-       <div class="col-xl-3 col-sm-5 background">columna1<p> Lorem ipsum dolor sit amet,   consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p></div> 
-       <div class="col-xl-9 col-sm-7 background">columna2<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p></div> 
-       </div> 
-    </div>
-```
+### Modo Escala de Grises
 
-![](media/ced415d22cfcc46804995ee57e9d73b9.png)
+![](media/31aa438cdcf1a474ca539768317f1f77.png)
 
-![](media/c890926478f5a27ac6da167924844936.png)
-![](media/71ab04427c00d1ea4243046471339027.png) 
+Maneja el canal negro y permite 256 tonos de gris entre el blanco y negro puros.
 
-### Contenedor
+### Modo indexado
 
-Ya hemos dicho que el contenedor es el elemento de diseño más básico en Bootstrap y es imprescindible para aplicar nuestro sistema de cuadrícula predeterminado. 
+![](media/03956473c3d0992d48dd38dd8bf3b4d9.jpeg)
 
-El contenedor puede personalizarse de la siguiente forma en su definición:
+Utiliza un canal de color indexado de 8 bits pudiendo obtener con ello hasta un máximo de 256 colores
 
-- *.container* por defecto establece un *max-width* en cada breakpoint responsive.
-- *.container-fluid*  mantiene el ancho 100% de la ventana siempre.
-- *.container-{breakpoint}* mantiene el ancho 100% hasta el breakpoint indicado.
+### Modo RGB
 
-```html
-<div class="container-fluid"> 
-<!-- Contenido fluído aquí --> 
-</div>
-```
+![](media/79c015f93418d029d6e60f1e83e237e3.jpeg)
 
- 
-### Columnas de fila
+Cada color se forma por combinación de tres canales. Cada canal se corresponde con un color primario:
 
-Para establecer un número columnas predeterminadas, se pueden utilizar las clases responsive **.row-cols-\#** y así establecer rápidamente la cantidad de columnas que mejor representen el contenido y diseño.
+Red (rojo), Green (verde), y Blue (azul). Asigna un valor de intensidad a cada color que oscila entre 0 y 255.
 
-Mientras que las clases .col-\# normales se aplican a las columnas las de columnas de fila se establecen en el **.row** principal.
+De la combinación surgen hasta 16,7 millones de colores.
 
-```html
-    <div class="row row-cols-2"> 
-     <div class="col">Columna</div> 
-     <div class="col">Columna</div> 
-     <div class="col">Columna</div> 
-     <div class="col">Columna</div>
-    </div> 
-```
+### Modo HSB
 
-![](media/4ae22f2c5d837fca6e684cbd4311d7fe.png)
+Cada color surge de los valores de estos tres parámetros que veremos: HSB
 
-### Anidamientos
+**H**ue (Tono) que es el valor del color: rojo, azul, verde, etc.
 
-Para **anidar** el contenido con la cuadrícula predeterminada, se debe agregar un nuevo .row y un conjunto de columnas **.col-\#** dentro de una columna **col-\#** ya existente. Las filas anidadas deben incluir un conjunto de columnas que sumen 12 o menos, aunque no es obligatorio usar las 12 columnas disponibles en los anidamientos.
+**S**aturation (Saturación) que se refiere a la pureza del color y va del 0% al 100%. 
 
-```html
-    <div class="row"> 
-    <div class="col-lg-6"> 
-    <h1>Columna 2</h1> 
-    <div class="row"> 
-        <div class="col-lg-6"> <h2>Columna 2a</h2> </div> 
-        <div class="col-lg-6"> <h2>Columna 2b</h2> </div> 
-        </div> 
-    </div>
-```
+**B**rightness (Brillo) referencia la intensidad de luz del color, es decir, la cantidad de negro o blanco que contiene estando su valor entre 0 (negro) y 100 (blanco).
 
-![](media/91912598cdc31d4379f0ab62cab2862a.jpeg)
+Ejemplo: El color rojo puro tiene un código RGB como (255,0,0) y también un código HSB (0,100,100). En la mayoría de programas de tratamiento de imágenes se puede elegir un color introduciendo su RGB o su código HSB. En ambos casos la imagen maneja una paleta de colores de 24 bits.
 
-### Gutter
+![](media/bb9bf9d6acd25a81a8397c4688d9c217.png)
 
-Los **gutters** son el padding horizontal entre las columnas, que se utilizan para espaciar y alinear de manera responsive el contenido en el sistema de cuadrícula de Bootstrap.
+## Compresión de imágenes
 
-Las clases **.gx-\#** se pueden usar para controlar los anchos de los gutters horizontales.
+Uno de los factores más importantes a la hora de escoger las imágenes que formarán parte del diseño de una interfaz, es el **tamaño** de archivo de imagen, puesto que de esto dependerá la velocidad de la transferencia.
 
-```html
-    <div class="container px-4"> 
-    <div class="row gx-5"> 
-    <div class="col"> 
-    <div class="p-3 border bg-light">Padding de columna personalizado</div>
-    </div>
-    <div class="col"> 
-    <div class="p-3 border bg-light">Padding de columna personalizado</div> 
-    </div> 
-    </div> 
-    </div>
-```
+La **compresión** de una imagen es la reducción de los datos digitales que no resultan necesarios e importantes. Esta compresión permite almacenar mayor número de imágenes al conseguir que los archivos resultantes no ocupen mucho espacio.
 
-![](media/b151c102770f1a66c571fda1e6591dc9.png)
+!(media/968e5353b17b85e1b502b015ad023dc3.jpeg)
 
-### Espacios en blanco (offset)
+Hay dos clases principales de compresión, la **compresión con pérdida**, conocida también como *Lossy* en inglés o la **compresión sin pérdida** o *Lossless*.
 
-Para generar espacios en blanco (*offsets*) podemos utilizar la clase **.offset-\#**
+![](media/b6d66da386eb4149ea422beb46b7a90f.jpeg)
 
-Con dicha clase moveremos las columnas a la derecha tantas posiciones como el número indicado en la clase **.offset-\#**
+Si una imagen es demasiado pesada, es recomendable utilizar formatos con compresión que veremos próximamente, como JPEG o HEIF.
 
-```html
-    <div class="row">
-    <div class="col-md-4">.col-md-4</div>
-    <div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
-    </div>
-```
+Existen otras ocasiones en las que es deseable que el tamaño de la imagen sea elevado, lo que supondrá una mejor calidad, es el caso de la impresión fotográfica.
 
-![](media/3353c13dd5c87eeb3e676eef29adebcb.png)
+## Formatos de imagen
 
-### Margin y padding
+Como se ha visto en el apartado anterior, existen dos tipos de imágenes digitales, las cuales presentan varias diferencias, entre ellas el **formato** en el que deben almacenarse para su posterior reproducción. Este formato aparece reflejado en la parte del nombre del fichero conocida como extensión. La elección de un tipo u otro, se puede basar en tres factores importantes:
 
-Bootstrap también tiene clases para controlar el **margin** y el **padding** para no tener que recurrir a CSS, usando para ello el formato siguiente:
+- El contenido de la imagen (foto, dibujo, logotipo).
+- La calidad que se desea obtener en función del sitio y finalidad de la publicación (publicación en web, impresión).
+- El tamaño que tendrá el archivo resultante.
 
-    {propiedad}{lados}-{tamaño}
+Una de las principales decisiones a la hora de incluir gráficos en cualquier tipo de interfaz es elegir el formato correcto para cada tipo de imagen de manera que se consiga una correcta relación entre la calidad visual y su tamaño, es decir, su peso.
 
-Donde *propiedad* puede ser:
-- m - para clases que establecen margin
-- p - para clases que establecen padding
+### De mapa de bits
 
-Y *lados* puede ser:
-- t - para clases que establecen margin-top o padding-top
-- b - para clases que establecen margin-bottom o padding-bottom
-- x - para clases que establecen tanto *-left como *-right
-- y - para clases que establecen tanto *-top como *-bottom
-- (*blanco*) para clases que establecen un margin/padding en los 4 lados del elemento.
+#### BMP
 
-Por último, el *tamaño* puede variar entre 0 y 5.
+Formato introducido por Microsoft y usado originariamente por Windows para guardar sus imágenes sin pérdida. Al no tener compresión este formato ocupa mucho tamaño.
 
-### Ancho respecto los padres
+#### GIF (Graphic Image File Format)
 
-Podemos utilizar también la clase \w-{25%|50%|75%|100%} para dar soporte al ancho respecto al contenedor padre.
+Se trata realmente de un formato antiguo desarrollado por *Compuserve* con el fin de conseguir archivos de tamaño reducido. No es adecuado para imágenes fotográficas, dado que solo permite *256* colores. Permite animaciones sencillas. Si se almacena una imagen que tiene más de esos colores en formato GIF, se utiliza un algoritmo que aproxima los colores de la imagen a una paleta limitada por 256 colores.
 
-Así de esta forma podemos tener:
+Sus características son por tanto:
 
-```html
-<div class="w-25 p-3" style="background-color: #eee;">Width 25%</div> 
-<div class="w-50 p-3" style="background-color: #eee;">Width 50%</div> 
-<div class="w-75 p-3" style="background-color: #eee;">Width 75%</div> 
-<div class="w-100 p-3" style="background-color: #eee;">Width 100%</div> 
-<div class="w-auto p-3" style="background-color: #eee;">Width auto</div>
-```
+- Para imágenes de 256 colores o menos
+- Compresión de imágenes sin pérdida
+- Permite animaciones cortas y simples.
 
-![](media/4cb7ssfdfwe4rwe4rsdf6756fghe11.png)
+#### JPEG (Joint Photographic Experts Group).
 
+Se trata de uno de los formatos más utilizados para tratar fotografías digitales, gracias al amplio abanico de colores que admite. JPEG admite distintos niveles de compresión, y de esta forma consigue modificar el tamaño en función del trabajo que se desee, presentando como contraprestación la disminución de la calidad. Cuanto menor sea la compresión de la imagen, mayor será la calidad, pero el tamaño de los archivos será mayor. Por el contrario, si se utiliza un nivel de compresión mayor, esta produce pérdidas y afecta a la calidad de imagen, para llevar a cabo esta reducción de tamaño, JPEG elimina la información que el ojo humano no es capaz de distinguir.
 
-### Ocultar elementos
+Las características de este formato son:
 
-Con la clase \d-{tamaño}-{none|block} podemos mostrar u ocultar elementos que indiquemos para ciertos tamaños.
+-  Número de colores: 24 bits color u 8 bits B/N.
+-  Formato de compresión con pérdida.
+-  No permite la animación.
+-  Indicado para aquellas imágenes que sean fotografías.
 
-| **Efecto** | **Clase**    | 
-|-----------|---------------------|
-|  Ocultar para todos   |  d-none | 
-|  Ocultar solo para xs    |  d-none d-sm-block|flex | 
-|  Ocultar solo para sm    |  d-sm-none d-md-block|flex | 
-|  Ocultar solo para md    |  d-md-none d-lg-block|flex | 
-|  Ocultar solo para lg    |  d-lg-none d-xl-block|flex | 
-|  Ocultar solo para xl    |  d-xl-none d-xxl-block|flex | 
-|  Visible para todos   |  d-block | 
-|  Visible solo para xs   |  d-block d-sm-none | 
-|  Visible solo para sm   |  d-none d-sm-block d-md-none | 
-|  Visible solo para md   |  d-none d-md-block d-lg-none | 
-|  Visible solo para lg   |  d-none d-lg-block d-xl-none | 
+#### PNG (Portable Network Graphics).
 
+Formato creado en su momento sustituir las imágenes de formato GIF. Se trata de un sistema de compresión sin pérdida, además, permite una compresión reversible y por tanto la imagen que se recupera es exacta a la original. Este formato puede tener hasta 8 bits de información adicionales en cada píxel, lo que nos permite crear gráficos traslúcidos independientemente del color de fondo. Eso sí, hablamos de imágenes que ocupan más KB y, por lo tanto, de archivos de mayor tamaño.
 
-### Alineación: align-content
+Dentro de los formatos de imágenes sin compresión, este es el más utilizado hoy en día en web. Es muy útil para fondos de la web, iconos o gráficos que no son fotografías.
 
-Bootstrap trae también la posibilidad de alinear las columnas en forma vertical con las regla de estilo que provee **Flexbox** CSS en el que está basado, el **align-content**.
+Las características de este formato son:
 
-![](media/b3681310a4804be679a16275e5eb5975.jpeg)
-![](media/d0688bf8d1525eab6e76ced7e83ef334.jpeg)
-![](media/c0487af2afb48885383387816f448f30.jpeg) 
+-  Color indexado hasta 256 colores y True-color hasta 48 bits por píxel.
+-  Permite capas traslúcidas
+-  Compresión sin pérdida.
+-  No permite animación.
 
-### Alineación: justify-content
+#### WEBP
 
-La propiedad **jusfify-content** funciona al igual que en Flexbox alineando en horizontal:
+Es un formato de imagen recién llegado y que ha venido a revolucionar el mundo de la compresión de imágenes. Desarrollado por *Google* y recomendado en su herramienta de optimización web *PageSpeed Insights*. Sus inicios datan del 2010 como una iniciativa de código abierto que consigue compresiones tanto en imágenes estáticas como animaciones del 30%. Permite compresión con y sin pérdida.
 
-![](media/afd2cdf555224cb9fd3fb71efeaf5478.jpeg)
+El único problema es precisamente que debido a su reciente salida no todos los navegadores lo soportan. Lo podemos encontrar en Google Chrome, Opera y Safari.
 
-## Contenido
+#### TIFF
 
-### La clase table
+TIFF es un formato de imagen de tramas versátil y flexible desarrollado en 1986 e independiente de la plataforma. Permite capas y compresión con pérdidas, aunque genera ficheros muy pesados. Es ideal para la impresión, pero en práctico desuso en la actualidad para el uso de interfaces
 
-Con solo utilizar la clase **table** en nuestro código dentro del elemento **table** (\<table class="**table**"\>) podemos obtener lo siguiente directamente:
+#### HEIF (High Efficiency Image File)
 
-![](media/8a8b79f735b2caaad356b1d693af0f20.png)
+HEIF es el nuevo formato estándar que busca sustituir al tradicional JPEG y al PNG. Admite incluso secuencias de imágenes como los GIF y hasta audio. Con HEIF se almacenan las imágenes fijas codificadas con el formato de vídeo HVEC (H.265). Otra de las ventajas de HEIF es que incluye colores de 16 bits, mientras el JPG solo soporta 8.
 
-![](media/e17b85a6c4c376389b65c805d344f05c.png)
+Los archivos generados son también más pequeños que los JPEG, sin sacrificar calidad de imagen, por lo que en muchos casos, ofrecen una calidad ligeramente superior. Es un formato reciente que se está abriendo paso, y en el que todavía persisten dispositivos poco potentes no compatibles.
 
-Las reglas que define Bootstrap 5 permiten mostrar las filas separadas por una línea horizontal, los textos de la cabecera en negrita y la tabla se expandirá por defecto a todo su contenedor.
+![](media/8e49860b8e7f13ee6534dc36c1a2ee7f.jpeg)
 
-Pueden utilizarse numerosas clases auxiliares (table-primary, table-secondary, table-danger) para darle formato a color a las filas o columnas de una **table** y que pueden consultarse en la página de documentación de Bootstrap.
+| **Formato** | **Tamaño**    | **Colores** | **Compresión** | **Compatibilidad** | **Ideal Para**       | **Optimo en web** |
+|-------------|---------------|-------------|----------------|--------------------|----------------------|-------------------|
+| **JPEG**    | Pequeño/medio | Muy bueno   | Pérdida        | Alta               | Fotografías          | 🟢🟢              |
+| **GIF**     | Muy pequeño   | Pobre       | Pérdida        | Alta               | Gráficos/animaciones | 🟢🟢              |
+| **PNG**     | Grande        | Muy bueno   | Sin pérdida    | Alta               | Todo                 | 🟢🟢              |
+| **BMP**     | El más grande | Muy bueno   | Sin pérdida    | Alta               | Fotografías          | 🔴🔴              |
+| **TIFF**    | Muy grande    | Muy bueno   | Pérdida        | Alta               | Fotografías          | 🔴🔴              |
+| **HEIF**    | Pequeño       | Excepcional | Pérdida        | Media              | Todo                 | 🟢🟢              |
+| **WEBP**    | Pequeño/medio | Muy bueno   | Ambas          | Baja               | Gráficos/animaciones | 🟢🟢              |
 
-![](media/5be5694ebdf2cda878e9dd2e82b4fcea.png)
 
-### Botones
+### Vectoriales
 
-Para crear botones en Bootstrap se utilizará **btn**, y alguna de las siguientes **clases** listadas a continuación con la siguiente apariencia:
+#### AI
 
-![](media/e8c719bfcfb1828c19d9d693fa04bcf0.jpeg)
+Es uno de los formatos vectoriales más usados y la opción por defecto del programa Adobe Illustrator. Permite escalado sin pérdida y guardado de transparencias en los diseños.
 
-Utilizar este estándar ayuda a que los visitantes se sientan cómodos navegando ya que seguramente sus colores/formas les sean familiares de otros sitios/interfaces.
+#### EPS
 
-Disponemos de diferentes clases para definir el tamaño de los botones: *.btn-sm*, para botones pequeños y *.btn-lg*, para botones grandes. 
+Formato antiguo de archivos vectoriales. A diferencia del formato AI no permite transparencias.
 
-Por ejemplo:
+#### SVG
 
-```html
-<button type="button" class="btn btn-sm">btn-sm</button> 
-<button type="button" class="btn btn-lg">btn-lg</button>
-```
+Es un formato basado en XML muy extendido en el diseño web ya que está optimizado como lenguaje de programación y puede ser indexado, por eso suele utilizarse para logotipos, botones y otros elementos web.
 
-Para que un botón aparezca **activado** o **desactivado** utilizamos las clases .active y .disabled. Se pueden usar para botones, inputs y enlaces.
+#### PDF
 
-```html
-<button type="button" class="btn btn-lg btn-primary" disabled>Boton primario</button>
-```
+Aunque no es el formato vectorial por excelencia, un archivo .PDF también puede usarse como vectorial. La gran ventaja es que se trata del formato más universal y puede abrirse con software específico de edición, así como con programas de solo lectura o en cualquier navegador web. Además, es muy útil a la hora de enviar archivos a imprimir, ya que contiene toda la información necesaria del diseño y no suele provocar problemas de compatibilidad.
 
-### Imágenes
+![](media/1befb46991576e22b16caf36f2b51861.png)
 
-Las imágenes en Bootstrap se hacen responsive con **.img-fluid**. Esto aplica un **max-width: 100%** y **height: auto** a la imagen para que se escale con el ancho de su elemento padre.
+## Licencias de imágenes
 
-```html
-    <img src="..." class="img-fluid" alt="...">
-```
+Las imágenes que se utilizan en cualquier tipo de diseño deben ser correctamente obtenidas, es decir, o bien son de elaboración propia y tenemos sus derechos de uso, o si utilizamos otras deberán de estar correctamente referenciadas.
 
-![](media/452f144515c107e2b8f7552176152d98.png)
+Los **derechos de autor** defienden la propiedad intelectual, es decir, cualquier creación (música, películas, imágenes) realizada por la mente humana.
 
-Las siguientes clases se utilizan para personalizar la apariencia de **imágenes**:
+Existen tres tipos de **licencias** de imágenes que podemos encontrar en Internet:
 
-![](media/f1c2bf257b685e4dbd6929f35eadb52c.jpeg)
+-  Imágenes con derechos de autor (**copyright**)
+-  Imágenes Creative Commons (**CC**)
+-  Imágenes de **Dominio público**
 
-```html
-    <img src="..." class="rounded" alt="...">
-    <img src="..." class="circle" alt="...">
-    <img src="..." class="thumbnail" alt="...">
-```
+#### Con derechos de autor (copyright)
 
-### Alertas
+Protege el contenido en su totalidad, que pertenece al autor o al cesionario (al que se le ha cedido su explotación).
 
-Las alertas están disponibles para cualquier longitud de texto. Para un estilo adecuado, se pueden usar una de las ocho clases contextuales existentes. Por ejemplo:
+Los derechos de autor surgen al crear una obra. No requieren ningún tipo de registro previo. Por ejemplo, si un diseñador gráfico crea una imagen y la sube a su web, puede distinguir su imagen mediante una ©.
 
-```html
-    <div class="alert alert-primary" role="alert"> Una simple alerta primary </div> 
-    <div class="alert alert-secondary" role="alert"> Una simple alerta secondary </div> 
-    <div class="alert alert-success" role="alert"> Una simple alerta success </div> 
-    <div class="alert alert-danger" role="alert"> Una simple alerta danger</div>
-```
+#### Creative Commons (CC)
 
-![](media/alerts_bootstrap.png)
+Es un tipo de licencia creada especialmente para Internet. Es compatible con los derechos de autor, pero ofrece ciertos derechos a terceras personas, que varían en función de las condiciones de cada imagen.
 
-### Navbar
+Las licencias Creative Commons no se generan por sí mismas, sino que requieren la intervención del autor.
 
-Un **navbar** es una barra de navegación superior responsive con menús, submenús, y otros componentes, como una barra de búsqueda entre otros, y que tiene las siguientes características:
-- La barra de navegación es <u>adaptable</u> y fluida de forma predeterminada, lo que significa que se amplía o reduce en función de la anchura del viewport.
-- Las navbars requieren un envoltorio *\.navbar* con las clases *\.navbar-expand{-sm|-md|-lg|-xl}*, que determinan cuándo se colapsa la barra en un sólo botón.
-- Existen diversas clases para darle color a un navbar como *.bg-light* o *.bg-dark*.
+![](media/6d203c1420009d31fccb237803e0ac5a.jpeg)
 
-![](media/3242365346345120978978.png)
+La licencias CC posibilitan un modelo legal de distribución y uso de contenidos basada en 4 condiciones principales que pueden ser combinadas para hacer licencias mixtas según las características:
 
-Podemos crear una barra <u>estándar</u> con:
+-  **Atribución (BY)** - Se conceden derechos de copia, distribución, exhibición y derivación siempre y cuando se reconozca y cite la obra de la forma especificada por el autor o el licenciante.
+-  **No Comercial (NC)** - Se puede copiar, distribuir, exhibir y representar la obra y hacer obras derivadas pero sin fines comerciales.
+-  **No Derivadas (ND)** - En este caso podemos copiar, distribuir, exhibir y representar copias literales de la obra pero no producir obras derivadas.
+-  **Compartir Igual (SA) -** El usuario tiene el derecho de distribuir obras derivadas pero siempre con una licencia idéntica a la de la obra original.
+-  **Dominio público (CC0) -** Liberar una obra renunciando a todos sus derechos.
 
-    \<nav class="navbar .navbar-expand{tamaño}">
+#### De dominio público
 
-Para agregar **enlaces** dentro de la barra de navegación, usar el elementos *\<ul>* con la clase *class="navbar-nav"*. Luego agrega elementos *\<li>* con una clase *.nav-item* seguido de un elemento *\<a>* con una clase *.nav-link*:
+Por último, quedan en este estado todas aquellas creaciones e imágenes cuyo periodo de protección de derechos de autor ha expirado o cuyo autor las libera de dicha forma para su utilización general.
 
-```html
-<nav class="navbar navbar-expand-sm bg-light"> 
-<div class="container-fluid"> 
-<ul class="navbar-nav"> 
-<li class="nav-item"> <a class="nav-link" href="#">Link 1</a> </li> 
-<li class="nav-item"> <a class="nav-link" href="#">Link 2</a> </li> 
-<li class="nav-item"> <a class="nav-link" href="#">Link 3</a> </li> 
-</ul> 
-</div>
-</nav>
-```
+No se requiere ningún permiso o licencia para usar trabajos del dominio público, así como aquellos con un copyright expirado.
 
-![](media/navbar_bootstrap1.png)
-
-Si eliminamos el *navbar-expand* tendremos un menú de navegación siempre en vertical:
-
-```html
-<nav class="navbar bg-light"> 
-<div class="container-fluid"> 
-<ul class="navbar-nav"> 
-<li class="nav-item"> <a class="nav-link" href="#">Link 1</a> </li> 
-<li class="nav-item"> <a class="nav-link" href="#">Link 2</a> </li> 
-<li class="nav-item"> <a class="nav-link" href="#">Link 3</a> </li> 
-</ul> 
-</div>
-</nav>
-```
-![](media/navbar_bootstrap2.png)
-
-
-Para crear **submenús desplegables** dentro de un elemento de la barra de navegación indicaremos que el elemento es dropdown y dentro anidaremos un elemento ul con la clase dropdown-menú y dentro sus respectivos *\<li>* con sus respectivos enlaces *\<a>*.
-
-```html
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark"> 
-<div class="container-fluid"> 
-    <div class="collapse navbar-collapse" id="collapsibleNavbar"> 
-    <ul class="navbar-nav"> 
-    <li class="nav-item"> <a class="nav-link" href="#">Enlace</a> </li> 
-    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Desplegable</a> 
-    <ul class="dropdown-menu"> 
-        <li><a class="dropdown-item" href="#">Subenlace1</a></li> 
-        <li><a class="dropdown-item" href="#">Subenlace2</a></li> 
-    </ul> 
-    </li> 
-</ul> 
-</div> 
-</div> 
-<nav>
-```
-
-![](media/navbar_bootstrap3.png)
-
-
-## Formularios
-
-Bootstrap aplica estilos a los elementos de tipo formulario para convertirlos en elementos responsive, mejorando su apariencia y permitiendo crear diferentes alineaciones como en el resto de elementos de Bootstrap ya conocidos:
-- **Controles de Formulario**: Bootstrap estiliza las entradas de texto y áreas de texto con soporte para múltiples estados.
-- **Select**: Se mejoran los elementos select predeterminados del navegador con una apariencia inicial personalizada.
-- **Checks y radio buttons**: Utiliza botones de radio y checks personalizados para seleccionar opciones de entrada.
-- **Rangos**: Reemplaza las entradas de rango predeterminadas del navegador.
-- **Etiquetas flotantes**: Diseñadas para flotar sobre los campos de entrada.
-- **Layout**: Permite utilizar cuadrículas complejas con los formularios.
-- **Validaciones**: Permite validar formularios con estilos y comportamientos de validación nativos o personalizados.
-
-Bootstrap aplica estilos a los elementos de tipo formulario para convertirlos en elementos responsive, mejorando su apariencia y permitiendo crear diferentes alineaciones como en el resto de elementos de Bootstrap ya vistos. 
-
-Básicamente, la estructura general de un formulario sería como la siguiente:
-- Usar *label* for para describir cada control de formulario (para la accesibilidad)
-- No olvidar utilizar el atributo *type* para cada uno de los elementos *input* del formulario (por ejemplo, *email* para las direcciones de correo electrónico o *number* para información numérica)
-
-
-```html
-<form> 
-<div class="mb-3"> 
-    <label for="exampleInputEmail1" class="form-label">Correo</label> 
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introduzca correo"> 
-    <label for="inputPassword5" class="form-label">Contraseña</label> 
-    <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock"> 
-    <div id="passwordHelpBlock" class="form-text"> Tu contraseña debe tener entre 8 y 20 caracteres, conteniendo letras y números.
-</div> 
-</form>
-```
-
-![](media/navbar_bootstrap4.png)
-
-### Menús select
-
-Los menús de selección se definen mediante la etiqueta *\<select>* y solo necesitan la clase personalizada *form-select* para activar los estilos de Bootstrap. Los estilos están limitados a la apariencia de *\<select>* y no pueden modificar los *\<option>* debido a las limitaciones del navegador.
-
-```html
-<select class="form-select"> 
-<option selected>Abre este menú select</option> 
-<option value="1">Uno</option> 
-<option value="2">Dos</option> 
-<option value="3">Tres</option> 
-</select>
-```
-
-![](media/select_bootstrap.png)
-
-### Checks y radios
-
-Los checks y radio buttons predeterminados del navegador se reemplazan con la ayuda de la clase *\.form-check*, una serie de clases para ambos tipos de entrada que mejoran el diseño y el comportamiento de sus respectivos elementos HTML.
-
-```html
-<div class="form-check"> 
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-    <label class="form-check-label" for="flexCheckDefault"> Casilla de verificación por defecto </label> 
-    </div> 
-    <div class="form-check"> 
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked> 
-    <label class="form-check-label" for="flexCheckChecked"> Casilla de verificación marcada </label> 
-    </div> 
-    <div class="form-check"> 
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"> 
-    <label class="form-check-label" for="flexRadioDefault1"> Radio por defecto </label>
-    </div>
-    <div class="form-check"> 
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked> 
-    <label class="form-check-label" for="flexRadioDefault2"> Radio marcado por defecto </label> 
-</div> 
-```
-
-![](media/checkradios_bootstrap.png)
-
-### Validaciones
-
-La validación de formularios puede hacerse de forma estándar mediante el propio **HTML5**. Esto se realiza mediante el uso de atributos de validación en los elementos del formulario. Para ello podremos utilizar en los campos las siguientes propiedades:
-- **required**: Especifica si un campo de formulario debe completarse antes de que se pueda enviar el formulario.
-- **minlength** y **maxlength**: Especifican la longitud mínima y máxima de los datos de texto 
-- **min** y **max** : Valores mínimo y máximo de los tipos de entrada numéricos.
-- **type**: Especifica si los datos deben ser un número, una dirección de correo electrónico o algún otro tipo de preajuste específico.
-- **pattern**: Especifica una expresión regular que define un patrón que los datos que se introduzcan deben seguir.
-
-La validación de formularios HTML puede aplicarse también a través de las pseudoclases de CSS *:invalid* y *:valid*, aunque para ello necesitaremos código Javascript (lo veremos más adelante). Se aplica a los elementos *\<input>*, *\<select>* y *\<textarea>*. Para los mensajes de feedback se puede combinar como *valid-feedback* o *invalid-feedback*.
-
-```html
-<form class="row g-3 needs-validation" novalidate> 
-<div class="col-md-6"> 
-    <label for="validationCustom03" class="form-label">Ciudad</label> 
-    <input type="text" class="form-control" id="validationCustom03" required> 
-    <div class="invalid-feedback"> Proporciona una ciudad válida. </div> 
-</div> 
-<div class="col-md-3"> 
-    <label for="validationCustom05" class="form-label">Código postal</label> 
-    <input type="text" class="form-control" id="validationCustom05" required>
-    <div class="invalid-feedback"> Proporciona un código postal válido. </div> 
-</div>
-<div class="col-12"> <div class="form-check"> 
-    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required> 
-    <label class="form-check-label" for="invalidCheck"> Acepta los términos y condiciones </label> 
-    <div class="invalid-feedback"> Debe estar de acuerdo antes de enviar. </div> 
-</div> </div> 
-<div class="col-12"> 
-    <button class="btn btn-primary" type="submit">Enviar formulario</button>
-</div> 
-</form>
-```
-
-![](media/navbar_bootstrap5.png)
-
-
-### Procesar los datos del formulario
-
-Para procesar los datos enviados por el formulario, necesitarás emplear un lenguaje de programación del lado del **servidor**(backend), como JavaScript, PHP, o cualquier otro de tu elección. El código de procesamiento del formulario se colocará en el atributo action del elemento *\<form>*.
+![](media/986ed41efd72225fb2cdbe2c6dcc759f.png)

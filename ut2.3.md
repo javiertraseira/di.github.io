@@ -283,9 +283,18 @@ Por defecto, *JFileChooser* solo nos permite elegir ficheros, si queremos elegir
 
 ### JList
 
-Este componente nos permite presentar una lista de selección donde podemos escoger uno o varios elementos. **Jlist** permite la separación del modelo y la vista
+Este componente nos permite presentar una lista de selección donde podemos escoger uno o varios elementos. **JList** utiliza la separación del modelo y la vista.
 
-La mejor forma de agregar elementos a un **Jlist** es declarar un objeto de tipo *DefaultListModel* y por medio del método *addElement*, agregar elementos a nuestro modelo. Posteriormente dicho modelo se asociará al JList con el que trabajemos para ver los cambios llevados a cabo en el modelo.
+> El JList no guarda los elementos por sí mismo, sino que utiliza un modelo de datos para almacenar y gestionar esos elementos.
+
+**Creación del Contenedor de datos:**
+
+El *DefaultListModel* es el lugar donde se guardan los elementos que el JList va a mostrar. Por medio del método addElement, se agregan elementos a nuestro modelo.
+
+**Asociación al Jlist:**
+
+El *JList* se asocia al DefaultListModel. Esto significa que cuando el modelo cambia (por ejemplo, al agregar elementos), el JList cambiará para reflejar esos cambios.
+
 
     JListlista=new JList();
     DefaultListModelmodelo = new DefaultListModel();

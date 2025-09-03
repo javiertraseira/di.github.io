@@ -185,7 +185,7 @@ private void nueva_ventana(ActionEvent event) throws IOException {
      stageWindow.showandwait(); //espera hasta que se cierre el hilo de la ventana secundaria
      //si hubiera que recuperar datos de la ventana hija a la ventana padre, irían aquí
 ```
-El método *showandwait()* espera hasta que se cierre la ventana secundaria y se continúe con el hilo de la llamada, por si hubiera que actualizar datos devueltos.
+> El método *showandwait()* espera hasta que se cierre la ventana secundaria y se continúe con el hilo de la llamada, por si hubiera que actualizar datos devueltos.
 
 ### Método en controlador ventana hija
 
@@ -268,23 +268,29 @@ public class main extends Application {
 
 ### TableView
 
-El caso de un TableView es más complejo ya que se debe de tratar de forma individual con cada una de sus columnas, de tipo TableColumn.
-El método setCellValueFactory se utilizará para establecer cómo se deben obtener los valores que se mostrarán en las celdas de una columna en un TableView. Este método es crucial para <u>vincular</u> los datos del modelo con las celdas de la tabla.
+El caso de un **TableView** es más complejo ya que se debe de tratar de forma individual con cada una de sus columnas, de tipo *TableColumn*.
+
+En Scene Builder debemos de agregar un elemento de tipo TableView y agregarle columnas en el editor de tipo TableColumn a las cuales deberemos de dar un nombre interno en apartado *fx:id*
+
+![](media/table_view.png)
+
+El método *setCellValueFactory* se utilizará para establecer cómo se deben obtener los valores que se mostrarán en las celdas de una columna en un TableView. Este método es crucial para <u>vincular</u> los datos del modelo con las celdas de la tabla.
+
 Usaremos una expresión Lambda para asignar las variables a cada columna usando la propiedad *StringProperty* que veremos posteriormente:
 
 
 ```java
 @FXML
 private void initialize() {
-// Initialize la tabla personas con dos columnas.
+// Initialize de la tabla personas con dos columnas.
 firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
 lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
 }
 ```
 
-Posteriormente agregaremos los **datos** al TableView usando sus métodos concretos.
+> Posteriormente agregaremos los **datos** al TableView usando sus métodos concretos.
 
-En la clase <u>Modelo</u> que utilicemos es necesario utilizar la clase **StringProperty** para hacer un seguimiento en los cambios de las variables de cadena de texto que hayamos definido para utilizar en nuestra tabla:
+En la clase <u>Modelo</u> que utilicemos, podemos utilizar la clase **StringProperty** para hacer un seguimiento en los cambios de las variables de cadena de texto que hayamos definido para utilizar en nuestra tabla:
 
 ```java
 public Persona(String nombre, String apellidos) {

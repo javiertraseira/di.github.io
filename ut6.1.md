@@ -32,14 +32,16 @@ En el mundo real resulta casi imposible crear aplicaciones que sean universalmen
 
 Aun así, diseñadores y programadores deben ser conscientes de la necesidad de adaptarse a las pautas de accesibilidad, para que la aplicación sea usable por el mayor número de usuarios posible.
 
+### Objetivos de la accesibilidad
+
 Existen cuatro objetivos clave que deben tenerse siempre presentes:
 
-1.  Garantizar que toda la información presentada en el dispositivo puede ser percibida.
-2.  Asegurar que el usuario puede operar con el dispositivo, incluso si está usándolo en condiciones con limitaciones.
-3.  Facilitar la capacidad del usuario de navegar a través de la información y controles, incluso si está usándolo con limitaciones.
-4.  Favorecer su capacidad para entender el contenido.
+-  Garantizar que toda la información presentada en el dispositivo pueda ser percibida.
+-  Asegurar que el usuario puede operar con el dispositivo, incluso si está usándolo en condiciones con limitaciones.
+-  Facilitar la capacidad del usuario de navegar a través de la información y controles, incluso si está usándolo con limitaciones.
+-  Favorecer su capacidad para entender el contenido. Es importante favorecer la capacidad del usuario para entender el contenido presentado en el dispositivo.
 
-**Mitos** sobre la accesibilidad:
+### Mitos de la accesibilidad
 
 -   Las personas con discapacidad no utilizan la web: Más bien es todo lo contrario, ya que las nuevas tecnologías e Internet ha permitido a un gran numero de personas con discapacidad llevar una vida autónoma e independiente.
 -   Las páginas web con <u>solo texto</u> son accesibles: No es cierto, ya que las páginas web que sólo contienen texto pueden ser difíciles de entender por personas con discapacidad cognitiva o con dificultades con el lenguaje como las personas sordas.
@@ -49,6 +51,8 @@ Existen cuatro objetivos clave que deben tenerse siempre presentes:
 -   La accesibilidad es sólo para las personas con discapacidad: En realidad se beneficia todo el mundo, ya que ayuda a cualquier usuario que se encuentre en circunstancias especiales como puede ser entornos con baja iluminación, ambientes ruidosos, acceso a Internet con conexiones y equipos con capacidades limitadas, etc.
 
 ![](media/0a9538bd7f6e4ea15131019f400bda8a.png)
+
+### Ventajas de la accesibilidad
 
 Una **ventaja** importante de la accesibilidad es el potencial de ganancia financiera directas e indirectas por un mayor uso del sitio o aplicación. En el caso de la accesibilidad web puede hacer que sea más fácil para las personas encontrar un sitio web, acceder a él y utilizarlo con éxito, lo que resulta en una mayor audiencia (más usuarios) y una mayor eficacia (mayor uso).
 
@@ -221,17 +225,15 @@ A finales del año 2007 también se publicó la **Ley 49/2007**, de 26 de diciem
 
 **Sanciones** recogidas en el artículo 4:
 
-1.  Las infracciones serán sancionadas con multas que irán desde un mínimo de 301
-    euros hasta un máximo de 1.000.000 de euros.
-2.  Para las infracciones leves, la sanción no excederá en ningún caso de los 30.000
-    euros.
+1.  Las infracciones serán sancionadas con multas que irán desde un mínimo de 301euros hasta un máximo de 1.000.000 de euros.
+2.  Para las infracciones leves, la sanción no excederá en ningún caso de los 30.000 euros.
 3.  Para las infracciones graves, la sanción no excederá en ningún caso de los 90.000 euros.
 
-Además, la legislación anterior también establece que las páginas de Internet de las empresas que presten servicios al público en general de **especial trascendencia económica** así como las **redes sociales**, deberán satisfacer como mínimo, el nivel medio de los criterios de accesibilidad al contenido generalmente reconocidos.
+Además, la legislación anterior también establece que las páginas de Internet de las empresas que presten servicios al público en general de **especial trascendencia económica**, así como las **redes sociales**, deberán satisfacer como mínimo, el nivel medio de los criterios de accesibilidad al contenido generalmente reconocidos.
 
 ## Empresas de especial trascendencia económica
 
-Para que una empresa tenga esta consideración, debe tener más de cien trabajadores, o su volumen anual de operaciones deberá exceder los 6 millones de euros. Además deberá operar en alguno de los siguientes sectores:
+Para que una empresa tenga esta consideración, debe tener más de cien trabajadores, o su volumen anual de operaciones deberá exceder los 6 millones de euros. Además, deberá operar en alguno de los siguientes sectores:
 -   Servicios de comunicaciones electrónicas a consumidores.
 -   Servicios financieros destinados a consumidores.
 -   Servicios de suministro de agua a consumidores.
@@ -240,7 +242,7 @@ Para que una empresa tenga esta consideración, debe tener más de cien trabajad
 -   Servicios de transporte de viajeros por carretera, ferrocarril, vía marítima o aérea.
 -   Actividades de comercio al por menor.
 
-## Pautas de accesibilidad
+## Pautas de accesibilidad WCAG
 
 Desde hace años existen numerosas pautas que ayudan a los desarrolladores a crear sitios y aplicaciones accesibles. Las más famosas son las Pautas de Accesibilidad al Contenido Web (**Web Content Accessibility Guidelines**) desarrolladas por el grupo *Web Accessibility Initiative* del **W3C**.
 
@@ -250,8 +252,6 @@ Las pautas del W3C son consideradas como estándares internacionales de accesibi
 
 No obstante, aunque las pautas ayudan a detectar posibles errores, su uso no garantiza completamente que un sitio web sea totalmente accesible.
 
-## Pautas de accesibilidad WCAG
-
 Para optimizar la accesibilidad del contenido de los sitios web, el Consorcio World Wide
 Web (**W3C**) ha desarrollado las **Pautas de accesibilidad al contenido en la web**.
 
@@ -260,9 +260,9 @@ Las pautas WCAG (*WCAG 1.0 y WCAG 2.x*) contienen una serie de puntos de verific
 Cada uno de los puntos de verificación está asignado a uno de los 3 **niveles de**
 **prioridad**, basado en su impacto en la accesibilidad:
 
-- **Prioridad 1**: Garantiza un nivel mínimo de accesibilidad. Puede aplicarse a todo el contenido del sitio web.
-- **Prioridad 2**: Garantiza un nivel óptimo de accesibilidad. Puede aplicarse a todo el contenido del sitio web.
-- **Prioridad 3**: Garantiza un nivel avanzado de accesibilidad. No es necesario aplicarlo a todo el sitio web.
+- **Prioridad 1 básica**: Garantiza un nivel mínimo de accesibilidad. Puede aplicarse a todo el contenido del sitio web.
+- **Prioridad 2 intermedia/recomendada**: Garantiza un nivel óptimo de accesibilidad. Puede aplicarse a todo el contenido del sitio web.
+- **Prioridad 3 avanzado/opcional**: Garantiza un nivel avanzado de accesibilidad. No es necesario aplicarlo a todo el sitio web.
 
 ![](media/bdfa0f501e12c669743a4da12a6970e8.jpeg)
 
@@ -336,22 +336,29 @@ El contenido deber ser suficientemente robusto para que pueda ser bien interpret
 -   *Directriz 4.1.* **Compatible**: Maximizar la compatibilidad de los contenidos con las
     tecnologías actuales y futuras, incluyendo tecnologías de asistencia.
 
-## Niveles de conformidad WCAG
+### Niveles de conformidad WCAG
 
 Para comprobar el nivel de accesibilidad de un sitio web, se establecen los **niveles de conformidad**, que corresponden a la medida en que se satisfacen los puntos de verificación WCAG (WCAG 1.0 y 2.0), teniendo en cuenta los niveles de prioridad.
 
 Los **niveles de conformidad** son tres:
--   Nivel de conformidad **A**. Corresponde al nivel en que se
-    satisfacen todos los puntos de verificación de **prioridad 1**.
+-   Nivel de conformidad **A**. Corresponde al nivel en que se satisfacen todos los puntos de verificación de **prioridad 1**.
 -   Nivel de conformidad **AA**. Corresponde al nivel en que se satisfacen todos los puntos de verificación de **prioridad 1 y 2**.
 -   Nivel de conformidad **AAA**. Corresponde al nivel en que se satisfacen todos los puntos de verificación de **prioridad 1 y 2**, y al menos el **50%** del nivel de **prioridad 3**.
+
+
+| Nivel de Prioridad         | Descripción                                                                 | Ejemplos de Requisitos                                               | Recomendado para                                                           |
+|----------------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------|----------------------------------------------------------------------------|
+| **A (Básico - Obligatorio)**  | Requisitos mínimos para garantizar que algunas personas con discapacidad puedan acceder al contenido. | - Texto alternativo en imágenes.  <br> - No depender solo del color para transmitir información.  <br> - Navegación accesible con teclado. | Todos los sitios web para evitar barreras básicas de accesibilidad.       |
+| **AA (Intermedio - Recomendado)** | Mejora la accesibilidad para un mayor grupo de personas con discapacidad. Es el nivel más recomendado por las normativas legales. | - Contraste adecuado (4.5:1).  <br> - Formularios con etiquetas claras.  <br> - Compatibilidad con orientación vertical y horizontal. | Sitios web gubernamentales, corporativos, de comercio electrónico y cualquier web con estándares de accesibilidad. |
+| **AAA (Avanzado - Opcional)** | El más alto nivel de accesibilidad, pensado para personas con discapacidades severas. No suele ser obligatorio. | - Contraste mejorado (7:1).  <br> - Descripciones de audio en videos.  <br> - Evitar bloques largos de texto. | Webs de servicios esenciales como sanidad, educación y accesibilidad gubernamental. |
+
 
 ![](media/1c28b22817ee4755e8f5aa256df6affb.jpeg)
 
 
 ![](media/55b20b99c8a09e3073978ae4e593144c.jpeg)
 
-## Objetivos de la WAI
+### Iniciativa WAI
 
 El máximo organismo dentro de la jerarquía de Internet que se encarga de promover la accesibilidad es el **W3C**, en especial su grupo de trabajo **WAI**.
 
