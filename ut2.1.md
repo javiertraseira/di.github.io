@@ -2,31 +2,31 @@
 
 ## Introducción
 
+```note
+Una interfaz gráfica es el puente entre el usuario y la aplicación. Los componentes tienen estado, responden a eventos y pueden empaquetarse para su reutilización.
+```
+
 El desarrollo de **interfaces gráficas** permite la creación del canal de comunicación entre el usuario y la aplicación, por esta razón requiere de especial atención en su diseño.
 
 En la actualidad, las herramientas de desarrollo permiten la implementación del código relativo a una interfaz a través de vistas diseño que facilitan y hacen más intuitivo el proceso de creación. La programación orientada a objetos permite utilizar entidades o componentes que tienen su propia identidad y comportamiento.
-
-![Free icon \&quot;Layout 3 icon&quot;](media/14683c68c38e0f4e98bb5577b7ba1cb4.png)
 
 En este unidad se verán en detalle los principales tipos de componentes de diferentes librerías así como sus características más importantes.
 
 La distribución de este tipo de elementos depende de los llamados **layout**, los cuales permiten situar los elementos en la interfaz.
 
-Una misma aplicación puede presentar más de un tipo de ventana, principal o de diálogo. Las ventanas de diálogo definen los llamados diálogos modales o no modales, elementos destacados en el desarrollo de interfaces. La combinación de tipos de ventanas y elementos de diseño es infinita.
+![Free icon \&quot;Layout 3 icon&quot;](media/14683c68c38e0f4e98bb5577b7ba1cb4.png)
 
 ```tip
-Un **componente software** está formado por **clases** creadas para ser reutilizadas y que puede ser manipulada por una herramienta de desarrollo de aplicaciones visual.
+Un **componente software** está formado por **clases** creadas para ser reutilizadas con sus *propiedades* y que puede ser manipulada por una herramienta de desarrollo de aplicaciones visual.
 ```
 
-Se define por su **estado** que se almacena en un conjunto de propiedades, las cuales pueden ser modificadas para adaptar el componente al programa en el que se inserte. También tiene un comportamiento que se define por los **eventos** ante los que responde y los **métodos** que ejecuta ante dichos eventos.
+Se define por su **estado** que se almacena en un conjunto de propiedades, las cuales pueden ser modificadas para adaptar el componente al programa en el que se inserte. También tiene un comportamiento que se define por los **eventos** ante los que responde y los **métodos** que ejecuta ante dichos eventos. 
 
-Un subconjunto de los atributos y los métodos forman la **interfaz** del componente.
-
-Para que pueda ser distribuida se **empaqueta** con todo lo necesario para su correcto funcionamiento, quedando independiente de otras bibliotecas o componentes.
+Para que una aplicación pueda ser distribuida se **empaqueta** con todo lo necesario para su correcto funcionamiento, quedando independiente de otras bibliotecas o componentes.
 
 ![](media/4b1a7037165a4a4ff7e26f7a1d219f3c.png)
 
-## Programación Orientada a Objetos (POO)
+## Repaso programación Orientada a Objetos (POO)
 
 En POO los objetos son entidades que tienen un determinado estado, comportamiento (método) e identidad:
 
@@ -136,7 +136,14 @@ Para que una clase sea considerada un **componente** debe cumplir ciertas normas
 
     ![](media/00814fd29c42b93c70af85d7ac9ad945.png)
 
-## Programación de eventos
+## Programación orienteda a eventos
+
+```note
+La programación orientada a eventos es el corazón de las interfaces gráficas modernas. Cuando el usuario pulsa un botón (evento), se ejecuta un método (acción asociada).
+```
+
+![](media/poo_events.png)
+
 
 ```note
 💡 Los **eventos** son acciones o sucesos que se generan en aplicaciones gráficas definidas en los componentes y ocasionado por los usuarios, como presionar un botón, ingresar un texto, cambiar de color, etc.
@@ -145,6 +152,10 @@ Para que una clase sea considerada un **componente** debe cumplir ciertas normas
 -   Los eventos le corresponden a las interacciones del usuario con los componentes
 -   Los componentes están asociados a distintos tipos de eventos
 -   Un evento será un objeto que representa un mensaje asíncrono que tiene otro objeto como destinatario
+
+
+### Pasos de implementación 
+
 
 ![](media/c51573d4890a3b31dff8125bb0b96317.jpeg)
 
@@ -166,21 +177,20 @@ Para que el componente pueda reconocer el **evento** y responder ante el tendrá
 
 -   Finalmente, recorrer la estructura de datos interna llamando a la operación de procesamiento del evento de todos los oyentes registrados.
 
-## Introspección y reflexión
-
-La **introspección** es una característica que permite a las herramientas de programación visual arrastrar y soltar un componente en la zona de diseño de una aplicación y determinar dinámicamente qué métodos de interfaz, propiedades y eventos del componente están disponibles.
-
-Esto se puede conseguir de diferentes formas, pero en el nivel más bajo se encuentra una característica denominada **reflexión**, que busca aquellos métodos definidos como públicos que empiezan por get o set, es decir, se basa en el uso de **patrones de diseño**, o sea, en establecer reglas en la construcción de la clase de forma que mediante el uso de una nomenclatura específica se permita a la herramienta encontrar la interfaz de un componente.
-
-![](media/10dc2b2006666bb3ea391e9c786b5d4c.png)
-
 ## Empaquetado de componentes
 
 ```note
 El empaquetado de componentes y aplicaciones consiste en proporcionar las aplicaciones o sus componentes en forma de paquetes. Estos paquetes están formados por los programas ejecutables de la aplicación, así como por las bibliotecas de las que depende y otros tipos de ficheros (como imágenes, traducciones, etc.), 
 ```
 
-Tras realizar el empaquetado de aplicaciones es necesario que las aplicaciones puedan ser instaladas de una manera rápida y sencilla, para lo que se cuenta con los instaladores o paquetes autoinstalables.
+### Empaquetado en Java 
+
+- Reunir clases y recursos: Recopilar todos los archivos .class, imágenes, configuraciones y bibliotecas necesarias.
+
+- Incluir un manifiesto: Crear el archivo MANIFEST.MF con los metadatos del Proyecto.
+
+- Generar un fichero .jar: Compilar todo en un archivo Java ARchive distribuible.
+
 
 Una vez creado un componente, se puede empaquetar para poder distribuirlo y reutilizarlo después. En el caso de aplicaciones en Java será necesario crear un paquete **jar** que empaqueta en formato ZIP todas las clases que forman el componente:
 
@@ -195,7 +205,7 @@ El paquete jar debe incluir un fichero de manifiesto (con extensión .MF) que de
 ![](media/24d698105172077367b15e743e6399cb.png)
 
 
-### Metodologías de desarrollo ágil
+## Metodologías de desarrollo ágil
 
 ```note
 La **metodología de desarrollo ágil** es un enfoque de desarrollo de software que se basa en principios y valores que promueven la flexibilidad, la colaboración, la adaptabilidad y la entrega continua de software de alta calidad. 
@@ -207,11 +217,16 @@ Este enfoque se ha convertido en una alternativa popular a los métodos de desar
 ![](media/234234234.png)
 
 
-Se basa en varios pilares fundamentales:
+### Características 
+
 - **Entrega incremental**: En lugar de esperar hasta que todo el software esté completo, el desarrollo ágil se basa en la entrega de incrementos de funcionalidad en intervalos cortos y regulares, conocidos como iteraciones o sprints.
+
 - La **colaboración con el cliente** debe estar por encima de la negociación de contratos. El contrato fijará los términos del acuerdo, pero lo realmente importante es trabajar de forma cerca y flexible con el cliente.
+
 - Se debe responder al **cambio constante**, en vez de seguir un plan estático. El cambio continuo es inevitable y se debe responder de forma cercana y flexible.
+
 - El software de trabajo y los equipos están por encima de la documentación exaustiva. Documentar es importante, pero el objetivo es desarrollar software y cuidar el talento.
+
 - Ritmo constante y **mejora continua**: Los equipos ágiles trabajan en ciclos regulares, como sprints de dos a cuatro semanas. Después de cada iteración, se realiza una retrospectiva para evaluar lo que funcionó bien y lo que no.
 
 ![](media/435345345642.png)
@@ -241,7 +256,7 @@ Existen varias implementaciones de sistemas para gestionar el proceso de Scrum, 
 ![](media/86786dfg45345345s.png)
 
 
-### Metodología Clean code
+## Metodologías Clean code
 
 La metodología **Clean Code** es una filosofía que refiere a un conjunto de principios y prácticas de programación que tienen como objetivo producir un código fuente claro, legible, estructurado y de fácil mantenimiento. 
 Clean Code se enfoca en mejorar la calidad del código y hacerlo más comprensible para los desarrolladores y otros miembros del equipo.
@@ -252,7 +267,24 @@ Sus principios generales son los siguientes:
     - Las clases y métodos son reducidos: tienen una única y clara tarea.
     - Los nombres de las clases y métodos son auto-identificativos de su función.
 
-#### Evitar repeticiones (DRY) 
+### Código legible
+
+- **Variables y constantes**: nombres que revelan intención. Evita abreviaturas crípticas.
+
+        ❌ int d;
+        ✅ int díasHastaVencimiento;
+
+- **Funciones/métodos**: debe poder leerse en voz alta como una acción: calcularTotal(), cargarUsuarios(), validarFormulario().
+- **Clases**: sustantivos que describen su responsabilidad: RepositorioPedidos, CalculadoraImpuestos.
+- **Convenciones de uso**: 
+
+      camelCase > para variables/métodos
+      NombreClase > para clases
+      MAX_INTENTOS > definición de constantes en mayúsculas
+
+
+
+### Evitar repeticiones (DRY) 
 
 De acuerdo con el principio *DRY (Don’t Repeat Yourself)*, cada función debe tener una representación única y, por lo tanto, inequívoca dentro del sistema general .
 Ejemplo código redundante y repetido:
@@ -288,19 +320,51 @@ client.post(getUser()).then(/*Variante A*/ );
 client.get(getUser()).then(/*Variante B*/);
 ```
 
-#### Código legible
+### Evitar anidaciones profundas 
 
-El código no solo debe funcionar y ser interpretado por la máquina que lo ejecuta, sino que también **debe ser comprensible para otros desarrolladores**, especialmente si se trabaja en proyectos colaborativos. Por lo tanto, en el ámbito del desarrollo de software, la legibilidad del código siempre es más importante que su concisión. 
-Un buen ejemplo de creación de código legible es siempre  nombrar las variables.
+Utilizar otras estructuras en lugar del *if-else* anidado profundo difícil de entender. 
 
-Por ejemplo, en lugar de usar la siguiente declaración:
+
+Ejemplo código redundante y repetido:
+
 ```java
-int d;
+if (cliente != null) {
+    if (cliente.esVip()) {
+        return 0.1;
+    } else {
+        return 0;
+    }
+} else {
+    return 0;
+}
+
 ```
-Usar una en la que se identifique el uso de la variable:
+
+Sustituir por:
+
 ```java
-int dias_fecha;
+public double calcularDescuento(Cliente cliente) {
+    if (cliente == null) {
+        return 0; // se sale inmediatamente
+    }
+    if (!cliente.esVip()) {
+        return 0;
+    }
+    return 0.1; // 10% de descuento solo a VIP
+}
 ```
+Se pueden usar enum, breaks, throws e incluso otras estructuras como maps:
+
+```java
+enum Operacion {
+    SUMA { public int aplicar(int a, int b) { return a + b; } },
+    RESTA { public int aplicar(int a, int b) { return a - b; } },
+    MULT { public int aplicar(int a, int b) { return a * b; } };
+
+    public abstract int aplicar(int a, int b);
+}
+```
+
 
 ## Patrones de diseño
 
