@@ -239,11 +239,11 @@ Scrum es un proceso en el que se aplican de manera regular un conjunto de buenas
 
 Existen varias implementaciones de sistemas para gestionar el proceso de Scrum, que van desde notas amarillas "post-it" y pizarras hasta paquetes de software. Si se utiliza una pizarra con notas cualquier miembro del equipo podrá ver tres columnas: trabajo pendiente ("To Do"), tareas en curso ("in progress") y hecho ("Done"). De un solo vistazo, una persona puede ver en qué están trabajando los demás en un momento determinado.
 
-##### Roles principales
+##### Roles principales de Scrum
 
-- Propietario del producto: Perfil del cliente ligado al proyecto, que actúa como su altavoz. Encargado de garantizar que el proyecto sigue los objetivos marcados en todo momento.
-- Scrum Master (facilitador) Es el responsable del cumplimiento de las reglas del marco scrum. Se asegura que estas son entendidas por la organización y de que se realiza el trabajo conforme a ellas. Elimina los obstáculos que impiden que se desarrolle el objetivo del sprint.  
-- Equipo de Desarrolladores: Cada uno de los profesionales que realizan la entrega del incremento de producto. Es recomendable un equipo de 3 a 9 personas.  
+- **Propietario del producto**: Perfil del cliente ligado al proyecto, que actúa como su altavoz. Encargado de garantizar que el proyecto sigue los objetivos marcados en todo momento.
+- **Scrum Master** (facilitador) Es el responsable del cumplimiento de las reglas del marco scrum. Se asegura que estas son entendidas por la organización y de que se realiza el trabajo conforme a ellas. Elimina los obstáculos que impiden que se desarrolle el objetivo del sprint.  
+- **Equipo de Desarrolladores**: Cada uno de los profesionales que realizan la entrega del incremento de producto. Es recomendable un equipo de 3 a 9 personas.  
 
 ###### Eventos
 
@@ -259,8 +259,10 @@ Existen varias implementaciones de sistemas para gestionar el proceso de Scrum, 
 ## Metodologías Clean code
 
 La metodología **Clean Code** es una filosofía que refiere a un conjunto de principios y prácticas de programación que tienen como objetivo producir un código fuente claro, legible, estructurado y de fácil mantenimiento. 
+
 Clean Code se enfoca en mejorar la calidad del código y hacerlo más comprensible para los desarrolladores y otros miembros del equipo.
-Sus principios generales son los siguientes:
+
+Sus **principios generales** son los siguientes:
 - La secuencia de ejecución del programa tiene una lógica y una estructura lo más sencilla posible
 - La relación entre las diferentes partes del código es claramente visible.
 - La tarea o función de cada clase, función, método y variable es comprensible a primera vista.
@@ -393,6 +395,21 @@ El Modelo Vista Controlador (MVC) es un patrón de diseño teórico que separa l
 
 El Modelo Vista Vista-Modelo (MVVM) es parecido al MVC pero en este caso se sustituye al **controlador** por **Vista-Modelo** o Modelo de Vista (*ViewModel*).
 
-A diferencia del MVC, la **vista** tiene una referencia al modelo de vista, pero el **vista-modelo** no sabe nada de la vista. La vista tampoco recibe información del modelo, ya que el vista-modelo hace la función de proveedor de datos.
+- **Vista**: la interfaz gráfica, que muestra datos y reacciona a eventos de usuario.
+- **VistaModelo**: expone los datos listos para ser mostrados y gestiona la lógica de presentación.
+- **Modelo**: sigue representando los datos de la aplicación (por ejemplo, acceso a bases de datos o APIs).
+
 
 ![](media/mvvm.png)
+
+### MVI reactivo
+
+En frameworks declarativos y reactivos la organización del código suele apoyarse en variantes como MVI (Model–View–Intent) o patrones unidireccionales de datos.
+
+- **Modelo** (State): representa el estado actual de la interfaz.
+- **Vista** (Composable/Widget/Component): se dibuja en función del estado.
+- **Intents** (Eventos/Acciones): interacciones del usuario.
+- El flujo es **unidireccional**:
+    - El usuario hace una acción (Intent).
+    - La lógica actualiza el estado (Modelo).
+    - La Vista se recompone con el nuevo estado.
