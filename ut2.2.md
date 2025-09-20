@@ -272,7 +272,6 @@ Dentro de la metodología agile, el **testing** es una fase crítica en el desar
 
 En proyectos desarrollados en Java, especialmente aquellos que incluyen interfaces gráficas, el testing se vuelve aún más esencial debido a la complejidad añadida de la interacción del usuario con la interfaz. Unos de los departamentos más importantes de cualquier empresa de desarrollo es el de Calidad y Testing (QA).
 
-
 Los beneficios del Testing en Proyectos en Java:
 
 - **Detección temprana de errores**: Identificar errores en las primeras etapas del desarrollo permite corregirlos antes de que se conviertan en problemas costosos.
@@ -282,6 +281,18 @@ Los beneficios del Testing en Proyectos en Java:
 - Facilita el **mantenimiento**: Un código bien probado es más fácil de mantener y actualizar, ya que las pruebas existentes pueden validar que las nuevas modificaciones no introducen errores.
 
 - Confianza en el **despliegue**: Proporciona una mayor confianza al equipo de desarrollo y a los clientes de que la aplicación es estable y funciona correctamente en diversos escenarios.
+
+Existen diferentes **tipos de pruebas** que estudiaremos más adelante:
+
+- Pruebas **unitarias**: verifican pequeñas partes del código (clases, métodos).
+
+- Pruebas de **integración**: comprueban que varios módulos funcionan juntos.
+
+- Pruebas **funcionales**: validan que el software cumple con los requisitos.
+
+- Pruebas de **interfaz gráfica** (GUI): verifican la interacción usuario-aplicación.
+
+- Pruebas de **regresión**: garantizan que nuevas modificaciones no rompan lo ya hecho.
 
 ### Casos de prueba
 
