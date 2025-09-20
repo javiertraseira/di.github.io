@@ -94,6 +94,16 @@ Ejemplo del fichero *build.gradle* de la clase principal de holamundo del ejempl
         testImpl    ementation'junit:junit:4.12'
         }
 
+
+### Comparativa
+
+| Herramienta | Época / Contexto | Valor educativo | Cuándo usarla | Ventajas | Limitaciones |
+|-------------|------------------|-----------------|---------------|----------|--------------|
+| **Ant** | Primeros 2000, primera gran herramienta para Java | Enseña la construcción paso a paso (clean, compile, jar, run) | En proyectos heredados o para entender la base de la automatización | Flexible, scripts explícitos en XML | Sin gestión integrada de dependencias |
+| **Maven** | Estándar de facto durante más de una década | Introduce gestión de dependencias y ciclo de vida predefinido | Proyectos medianos/grandes, entornos corporativos | Estandarización, amplio ecosistema, integración con CI/CD | Configuración extensa en XML |
+| **Gradle** | Herramienta moderna (popular en Android y microservicios) | Construcciones rápidas y personalizadas, DSL en Groovy/Kotlin | Proyectos actuales que buscan eficiencia y flexibilidad | Builds incrementales, sintaxis compacta, integración moderna | Más compleja de aprender al inicio |
+
+
 ## Repositorios Github
 
 ```note

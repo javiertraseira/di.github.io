@@ -231,6 +231,15 @@ Este enfoque se ha convertido en una alternativa popular a los métodos de desar
 
 ![](media/435345345642.png)
 
+**Integración continua o CI** (*Continuous Integration*)
+
+La integración continua, utilizada en las metodologías de desarrollo ágil, es la práctica de que los desarrolladores suban su código frecuentemente a un repositorio compartido (GitHub, GitLab, Bitbucket…).
+
+Cada vez que se sube código, un sistema automáticamente compila, ejecuta los tests y valida que no se haya roto nada.
+
+![](media/continuous_integration.png)
+
+
 #### Scrum
 
 Scrum es un proceso en el que se aplican de manera regular un conjunto de buenas prácticas para trabajar colaborativamente, en equipo, y obtener el mejor resultado posible de un proyecto. La metodología scrum consiste en abordar cualquier proyecto dividiéndolo en sprints o partes más pequeñas y abordarlo mediante unos **roles** específicos y sistema de asignación de tareas.
