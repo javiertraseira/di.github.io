@@ -104,10 +104,19 @@ Ejemplo del fichero *build.gradle* de la clase principal de holamundo del ejempl
 | **Gradle** | Herramienta moderna (popular en Android y microservicios) | Construcciones rápidas y personalizadas, DSL en Groovy/Kotlin | Proyectos actuales que buscan eficiencia y flexibilidad | Builds incrementales, sintaxis compacta, integración moderna | Más compleja de aprender al inicio |
 
 
-## Repositorios Github
+## Git y repositorios Github
 
 ```note
-Un repositorio contiene todos los archivos de un proyecto y el historial de revisiones de cada uno de ellos.
+Un sistema de control de versiones (CVS) es una herramienta de software que registra y gestiona todos los cambios realizados en un archivo o conjunto de archivos (como el código fuente) a lo largo del tiempo, permitiendo a los usuarios recuperar versiones anteriores, comparar cambios y colaborar  
+```
+
+- **Git** es un sistema de **control de versiones** distribuido creado por Linus Torvalds en 2005. Permite llevar un historial de cambios en los archivos de un proyecto, volver a versiones anteriores y trabajar en paralelo con ramas. Funciona en local: no necesita conexión a Internet para registrar cambios.
+
+- Ejemplo: Un estudiante puede crear un repositorio con git init en su ordenador y guardar versiones de su código sin necesidad de conectarse a ninguna web.
+
+
+```note
+Un **repositorio** contiene todos los archivos de un proyecto y el historial de revisiones de cada uno de ellos.
 ```
 
 Github es un portal creado para alojar el código de las aplicaciones de cualquier desarrollador, y que fue comprada por Microsoft en junio del 2018. La plataforma está creada para que los desarrolladores suban el código de sus aplicaciones y herramientas, y que como usuario no sólo puedas descargarte la aplicación, sino también entrar a su perfil para leer sobre ella o colaborar con su desarrollo.
@@ -116,35 +125,31 @@ Github es un portal creado para alojar el código de las aplicaciones de cualqui
 
 Utiliza el sistema de control de versiones Git diseñado por Linus Torvalds. Con dicho sistema de gestión de versiones los desarrolladores pueden administrar su proyecto, trabajando colaborativamente y gestionar las distintas versiones para evitar confusiones.
 
-### Github classroom
+### Comparativa de plataformas
 
-Github classroom es una herramienta específica para el trabajo con estudiantes.
-
-Acceder a Github Clasroom y desde ahí a la tarea que se especifique con las instrucciones de desarrollo requeridas:
-
-![](media/a9676197c22b9ccd12bfd3807227a6d3.jpeg)
+Herramienta    | Qué es                                        | Ventajas principales                            | Ejemplo de uso
+---------------|-----------------------------------------------|------------------------------------------------|-----------------------------------------------------
+Git          | Sistema de control de versiones distribuido    | Funciona en local, rápido, historial de cambios | Guardar versiones de un proyecto en tu PC
+GitHub       | Plataforma en la nube para repositorios Git    | Trabajo colaborativo, pull requests, CI/CD      | Subir proyectos para colaborar en equipo
+GitLab       | Plataforma en la nube o self-hosted            | CI/CD integrado, instalación en servidores      | Empresas que quieren control interno del código
+SourceForge  | Hosting clásico de proyectos open source       | Gran repositorio histórico de software libre    | Descargar librerías y proyectos open source antiguos
 
 
 ### Comandos git
 
 ![](media/a368506762f9f3e596e4409f14b23482.png)
 
-```
-git config --global user.name [nombre] # Definir nombre usuario
-git config --global user.email [email] # Definir email
 
-git init # Crear un repositorio en la carpeta actual
+| Comando | Descripción | Ejemplo |
+|---------|-------------|---------|
+| `git config --global user.name "nombre"` | Configura el nombre de usuario para los commits | `git config --global user.name "Ana López"` |
+| `git config --global user.email "email"` | Configura el correo electrónico asociado al usuario | `git config --global user.email "ana@example.com"` |
+| `git init` | Crea un nuevo repositorio Git en la carpeta actual | `git init` |
+| `git clone [url-repository]` | Clona un repositorio remoto en local | `git clone https://github.com/usuario/proyecto.git` |
+| `git add .` | Añade todos los archivos modificados al área de preparación (stage) | `git add .` |
+| `git commit -m "mensaje"` | Registra los cambios añadidos al repositorio | `git commit -m "Añadida pantalla de login"` |
+| `git pull origin [branch]` | Descarga y fusiona los cambios del repositorio remoto en la rama actual | `git pull origin main` |
 
-git clone [url-repository] # Crear un repositorio basado en un repositorio remoto
-
-git add . # Agregar todos los archivos modificados al stage
-git reset # Deshacer los cambios locales en el estado de un repositorio de Git.
-
-git commit -m "[description]" # Crear un commit de los archivos en stage, con una descripción breve
-
-git push origin [branch] # Subir al repositorio los cambios de la rama [branch]
-git push --force # Ignorar los cambios locales y hacer push
-```
 
 ![](media/981334452a05339b78e1b26cd3e6b0b9.jpeg)
 
@@ -188,6 +193,34 @@ Para actualizar un repositorio local con los últimos cambios del repositorio re
 ```
 git pull origin [branch] # Trae los cambios del repositorio a local
 ```
+
+### Ramas en git
+
+En Git, una rama es una línea de desarrollo independiente. Permite trabajar en nuevas características, correcciones de errores o experimentos sin afectar directamente al código principal. Si un cambio rompe algo, afecta solo a la rama en la que se trabaja.
+
+> La rama principal por defecto suele llamarse main.
+
+| Comando                       | Descripción                            | Ejemplo                          |
+| ----------------------------- | -------------------------------------- | -------------------------------- |
+| `git branch`                  | Lista todas las ramas existentes       | `git branch`                     |
+| `git branch nombre-rama`      | Crea una nueva rama                    | `git branch feature-login`       |
+| `git checkout nombre-rama`    | Cambia a la rama indicada              | `git checkout feature-login`     |
+| `git checkout -b nombre-rama` | Crea y cambia a una nueva rama         | `git checkout -b hotfix-errores` |
+| `git merge nombre-rama`       | Combina la rama indicada con la actual | `git merge feature-login`        |
+| `git branch -d nombre-rama`   | Elimina la rama indicada               | `git branch -d feature-login`    |
+
+
+
+### Github classroom
+
+Github classroom es una herramienta específica para el trabajo con estudiantes.
+
+Acceder a Github Clasroom y desde ahí a la tarea que se especifique con las instrucciones de desarrollo requeridas:
+
+![](media/a9676197c22b9ccd12bfd3807227a6d3.jpeg)
+
+Una vez aceptada una tarea será necesaria clonarla haciendo clic en el botón code, que dará varias opciones para su clonado (comandos mediante la consola CLI o abrir con Github Desktop)
+
 
 ### Github desktop
 
