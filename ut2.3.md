@@ -249,15 +249,18 @@ Una vez llevada a cabo la interacción por parte del usuario tendremos:
 
 Con el siguiente fragmento de código comprobaremos que se ha dado al botón **aceptar** después de seleccionar un fichero, con lo cual tendremos su lógica básica, y de recuperación del fichero mediante el método *getSelectedFile*:
 
+```java
     if(seleccion== JFileChooser.APROVE_OPTION)
     {
     File fichero = fileChooser.getSelectedFile();
     // Aquí debemos abrir y leer el fichero.
     ...
     }
+```
 
 Para seleccionar un fichero para **guardar** datos, el mecanismo es igual, pero llamando al método *showSaveDialog()*
 
+```java
     JFileChooserfileChooser= new JFileChooser();
     intseleccion= fileChooser.showSaveDialog(ComponentePadre);
     if(seleccion== JFileChooser.APPROVE_OPTION)
@@ -266,12 +269,15 @@ Para seleccionar un fichero para **guardar** datos, el mecanismo es igual, pero 
     // Abrir a continuación el fichero para escritura y guardar los datos.
     ...
     }
+```
 
 Podemos también establecer un **filtro** de ficheros que aparezcan por defecto en dicho cuadro, usando para ello la clase *FileNameExtensionFilter* a la que le pasaremos un String con las extensiones que queramos filtrar.
 
+```java
     JFileChooserfileChooser= new JFileChooser();
     FileNameExtensionFilterfilter= new FileNameExtensionFilter("jpg", "gif");
     fileChooser.setFilter(filter);
+```
 
 Por defecto, *JFileChooser* solo nos permite elegir ficheros, si queremos elegir solo directorios o ambos, usaremos el método *setFileSelectionMode(int mode),* también tenemos constantes para ello:
 
@@ -308,8 +314,10 @@ El *JList* se asocia al DefaultListModel. Esto significa que cuando el modelo ca
 
 Aparte de usar otros constructores que hay en *JTable*, una de las formas más rápidas de utilizar un JTable es instanciar como modelo de datos un *DefaultTableModel* y luego un JTable , pasándole el modelo en el constructor.
 
+```java
     DefaultTableModelmodelo = new DefaultTableModel();
     JTabletabla = new JTable(modelo);
+```
 
 ![](media/977d79c53b936ce0d52ad3afe93835c9.jpeg)
 
@@ -345,6 +353,7 @@ El **LookAndFeel** en swing son clases .java que determinan la apariencia que te
 
 Por defecto existe un código autogenerado por Netbeans, o que podremos añadir nosotros en el método Main, y desde el que se hace visible generalmente a continuación el elemtno Jframe.
 
+```java
     try {
     for(javax.swing.UIManager.LookAndFeelInfoinfo: javax.swing.UIManager.getInstalledLookAndFeels()) {
         if("Nimbus".equals(info.getName())) {
@@ -354,6 +363,7 @@ Por defecto existe un código autogenerado por Netbeans, o que podremos añadir 
         }
     } catch (ClassNotFoundExceptionex) {
     java.util.logging.Logger.getLogger(Modulos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+```
 
 ![](media/94d9f57d494e3315c939bdd7dd047e85.png)
 
@@ -372,16 +382,36 @@ Un evento es por tanto un suceso que ocurre como consecuencia de la interacción
 
 ## Manejo de eventos
 
+La clave de la interacción entre el usuario y una interfaz es la inclusión de eventos. Este tipo de programación podría dividirse en dos grandes bloques: la detección de los eventos y las acciones asociadas a su respuesta.
+Un evento es por tanto un suceso que ocurre como consecuencia de la interacción del usuario con la interfaz gráfica:
+
+- Pulsación de un botón.
+- Cambio del contenido en un cuadro de texto.
+- Deslizamiento de una barra.
+- Activación de un JCheckBox.
+- Movimiento de la ventana.
+
+La clave de una interfaz gráfica está en responder a la interacción del usuario. Java swing lo hace mediante el siguiente modelo de eventos:
+1. El usuario interactúa con un componente (ej. pulsar un botón).
+2. El componente genera un evento (ej. ActionEvent, MouseEvent, etc.).
+3. Un listener (escuchador) detecta el evento.
+4. Se ejecuta el código asociado.
+
+```java
+JButton btnSaludar = new JButton("Saludar");
+
+btnSaludar.addActionListener(e -> {
+    JOptionPane.showMessageDialog(null, "¡Hola mundo!");
+});
+```
+
+### Tipos de eventos
+
 En Java, podremos distinguir entre dos tipos básicos de eventos:
 
--   **Físicos** o de bajo nivel: que corresponden a un evento hardware claramente identificable. Por ejemplo, se pulsó una tecla (*KeyStrokeEvent*). Destacar los siguientes:
-    -   En componentes: *ComponentEvent*. Indica que un componente se ha movido, cambiado de tamaño o de visibilidad
-    -   En contenedores: *ContainerEvent*. Indica que el contenido de un contenedor ha cambiado porque se añadió o eliminó un componente.
-    -   En ventanas: *WindowsEvent*. Indica que una ventana ha cambiado su estado.
-    -   FocusEvent, indica que un componente ha obtenido o perdido la entrada del foco.
--   **Semánticos** o de mayor nivel de abstracción: se componen de un conjunto de eventos físicos, que se suceden en un determinado orden y tienen un significado más abstracto. Por ejemplo: el usuario elige un elemento de una lista desplegable (ItemEvent). *ActionEvent, ItemEvent, TextEvent, AdjustmentEvent*.
+-  **Físicos** (bajo nivel): teclado, ratón, ventana (KeyEvent, MouseEvent, WindowEvent).
+-  **Semánticos** (alto nivel): acciones interpretadas por el componente (ActionEvent, ItemEvent, TextEvent).
 
-### Tipos de eventos asociados
 
 |    			   |                                              													                                                                                                     |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -394,9 +424,8 @@ En Java, podremos distinguir entre dos tipos básicos de eventos:
 
 ### Componentes y eventos
 
-Los componentes utilizados para el desarrollo de interfaces normalmente tienen un evento asociado, por ejemplo, no es lo mismo el tipo de detección asociado a un botón
+Cada **componente** utilizado en la interfaz tienen un evento en concreto asociado. Por ejemplo, no es lo mismo el tipo de detección asociado a un botón que la pulsación de una tecla. En el siguiente cuadro los vemos los más habituales:
 
-o una pulsación de una tecla. En el siguiente cuadro los vemos los más habituales:
 
 |       |            |   |
 |----------------|-------------------------|---------------------------------------------------------------------------|
@@ -406,6 +435,8 @@ o una pulsación de una tecla. En el siguiente cuadro los vemos los más habitua
 | JCheckBox      | *ActionEvent ItemEvent* | Se detecta el marcado de una de las celdas de selección.                  |
 | JTextComponent | *TextEvent*             | Se produce un cambio en el texto.                                         |
 | JScrollBar     | *AdjustmentEvent*       | Detecta el movimiento de la barra desplazamiento (*scroll*)               |
+
+### Listeners
 
 Los **listeners** o escuchadores permiten detectar la ocurrencia de los eventos, se podría decir que cuando estos se definen y activan quedan a la espera (escuchando) si se produce un evento, si este se produce se ejecutan las acciones asociadas a tal ocurrencia.
 
@@ -417,7 +448,7 @@ A continuación, se verán todos los tipos de *listeners* asociados al tipo de e
 
 ![](media/d02b9db27cca781d3f946dbbe16f0dfa.png)
 
-### KeyListener
+### Listeners: KeyListener
 
 Este evento se detecta al pulsar cualquier tecla. Bajo este escuchador se contemplan varios tipos de pulsaciones, cada uno de los cuales presentará un método de control propio. Se implementan los eventos **ActionEvent**.
 
@@ -427,7 +458,7 @@ Este evento se detecta al pulsar cualquier tecla. Bajo este escuchador se contem
 | keyTyped      | Se invoca cada vez que se ha pulsado una tecla y se ha traducido en un carácter.              |
 | KeyReleased | Se invoca al soltar una tecla.                     												|
 
-### ActionListener
+### Listeners: ActionListener
 
 Este evento detecta la pulsación sobre un componente, está presente en varios tipos de elementos siendo uno de los escuchadores más comunes.
 
@@ -440,7 +471,7 @@ La detección tiene lugar ante dos tipos de acciones, la pulsación sobre el com
 | *JMenuItem* | Al seleccionar alguna opción del componente menú.                                                 |
 | *JList*     | Al hacer doble click sobre uno de los elementos del componente lista.                             |
 
-### MouseListener
+### Listeners: MouseListener
 
 Este evento se produce al hacer click con el **puntero del ratón** sobre algún componente. Es posible diferenciar entre distintos tipos de pulsaciones y asociar a cada una de ellas una acción diferente.
 
