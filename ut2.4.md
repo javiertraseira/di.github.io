@@ -63,10 +63,16 @@ JDBC ofrece el paquete java.sql, en el que existen **clases** muy útiles para t
 
 ### 1. Asignar driver de conexión
 
-El primer paso es asignar el driver de la base de datos que vamos a utilizar en nuestro IDE (Netbeans), utilizando el archivo **JAR** descargado previamente en el apartado librerías de nuestro proyecto o desde la carpeta *Libraries*.
+Si estamos en **ANT** el primer paso es asignar el driver de la base de datos que vamos a utilizar en nuestro IDE (Netbeans), utilizando el archivo JAR descargado previamente en el apartado librerías de nuestro proyecto o desde la carpeta Libraries 
 
 
 ![](media/5169a4340cf541caf4ec264fc654971b.jpeg)
+
+Si trabajamos en **Maven** debemos de agregar la dependencia de nuestra Base de Datos en nuestro fichero `pom.xml`:
+
+
+
+
 
 NetBeans puede reconocer automáticamente conectores instalados:
 - En la pestaña lateral Servicios (o en Ventana > Servicios).
