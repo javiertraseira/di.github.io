@@ -70,8 +70,21 @@ Si estamos en **ANT** el primer paso es asignar el driver de la base de datos qu
 
 Si trabajamos en **Maven** debemos de agregar la dependencia de nuestra Base de Datos en nuestro fichero `pom.xml`:
 
-
-
+```xml
+    <!-- Dependencia para MySQL -->
+  <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-j</artifactId>
+      <version>9.1.0</version>
+  </dependency>
+    
+    <!-- Dependencia para el cliente Derby (modo red) -->
+    <dependency>
+        <groupId>org.apache.derby</groupId>
+        <artifactId>derbyclient</artifactId>
+        <version>10.15.2.0</version>
+    </dependency>    
+```
 
 
 NetBeans puede reconocer automáticamente conectores instalados:
