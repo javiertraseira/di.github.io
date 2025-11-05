@@ -1,4 +1,4 @@
-# UT3.3 Guías de estilo. Retícula, color y fuentes
+# UT3.3 Guías de estilo. Retícula, color, fuentes e imágenes
 
 ## Guías de estilo
 
@@ -197,7 +197,7 @@ A mayor luminosidad, mayor es nuestra capacidad para memorizar un color:
 -  Verde: memoria de color y de forma equilibrados
 -  Azul: menos memoria de color, más memoria de forma
 
-![](media/0654fda95f26554dddfa62de200e295b.png
+![](media/0654fda95f26554dddfa62de200e295b.png)
 
 La **visibilidad** de un color decrece cuando se asocia con otros colores (efecto de contigüidad).
 
@@ -244,6 +244,100 @@ Los iconos se pueden encontrar en formatos diferentes:
 ![](media/9dc00ef71411f20beababcb419f1d4d8.jpeg)
 ![](media/df19f6b4c0e625e590a75b977c64fdb0.png)
 ![](media/588ba74bc1175527c779819b929c87eb.png)
+
+
+## Imágenes
+
+El uso de imágenes es muy importante en el diseño de cualquier tipo de interfaz, puesto que estas contribuyen favorablemente a la experiencia del usuario, siempre y cuando se adecuen al contenido que se está trabajando.
+
+Además de cumplir ciertos requisitos de calidad y formato, se debe tener en cuenta la autoría de las imágenes o derechos de autor para ciertos trabajos.
+
+Una de las características más importantes que tener en cuenta es el formato de las imágenes, puesto que de esta forma se define la calidad visual frente al peso de las ilustraciones.
+
+![](media/f2d9ecbbf0c624fe93fabd9eaf058e6f.jpeg)
+
+### Imágenes de mapa de bits
+
+```note
+Estas imágenes, también llamadas de **raster**, son aquellas formadas por un conjunto de puntos, llamados **píxeles**, donde cada uno de estos puntos contiene un conjunto de valores que define un color.
+```
+
+Por esta razón, son indicadas para aquellas imágenes en las que es deseable mostrar una gama de colores muy amplia y con variaciones precisas de color y luminosidad.
+
+La calidad de estas imágenes depende de la cantidad de píxeles utilizados en su representación (PPP). Una de las desventajas principales de las imágenes bitmap es que no permiten un cambio de escala significativo, puesto que aparece el llamado **pixelado**.
+
+![](media/44bacf59c527a4e8202252462fb075f8.jpeg)
+
+### Imágenes vectorizadas
+
+```note
+Representan, a través de **fórmulas matemáticas**, entidades geométricas simples (puntos, segmentos, rectángulos, círculos), sus parámetros principales: grosor, posición inicial, final, etc. El procesador es el encargado de traducir esta información matemática a la tarjeta gráfica.
+```
+
+Las imágenes vectoriales mantendrán su forma independientemente de cuán grande o pequeño sea su tamaño. Esto significa que no se mostrarán píxeles cuando amplíe. La calidad de estos diseños seguirá siendo la misma.
+
+No son adecuados para describir imágenes demasiado irregulares (un paisaje de fotografía real), ya que necesitaría millones de fórmulas para ello.
+
+
+![](media/903d2825fdafee86ed713f6b19b2426f.png) 
+![](media/972ffbf86726b595c60295f066c8c519.png) 
+![](media/08c97e391ed1ac5137f31b9967e70acd.jpeg)
+
+### Bitmap vs vector
+
+![](media/30db5216e3a7187e109649b69050afae.png)
+
+
+### Compresión de imágenes
+
+Uno de los factores más importantes a la hora de escoger las imágenes que formarán parte del diseño de una interfaz, es el **tamaño** de archivo de imagen, puesto que de esto dependerá la velocidad de la transferencia.
+
+La **compresión** de una imagen es la reducción de los datos digitales que no resultan necesarios e importantes. Esta compresión permite almacenar mayor número de imágenes al conseguir que los archivos resultantes no ocupen mucho espacio.
+
+!(media/968e5353b17b85e1b502b015ad023dc3.jpeg)
+
+Hay dos clases principales de compresión, la **compresión con pérdida**, conocida también como *Lossy* en inglés o la **compresión sin pérdida** o *Lossless*.
+
+![](media/b6d66da386eb4149ea422beb46b7a90f.jpeg)
+
+Si una imagen es demasiado pesada, es recomendable utilizar formatos con compresión que veremos próximamente, como JPEG o HEIF.
+
+## Formatos de imagen
+
+Como se ha visto en el apartado anterior, existen dos tipos de imágenes digitales, las cuales presentan varias diferencias, entre ellas el formato en el que deben almacenarse para su posterior reproducción. Este formato aparece reflejado en la parte del nombre del fichero conocida como extensión. La elección de un tipo u otro, se puede basar en tres factores importantes:
+- El contenido de la imagen (foto, dibujo, logotipo).
+- La calidad que se desea obtener en función del sitio y finalidad de la publicación (publicación en web, impresión).
+- El tamaño que tendrá el archivo resultante.
+
+Una de las principales decisiones a la hora de incluir gráficos en cualquier tipo de interfaz es elegir el formato correcto para cada tipo de imagen de manera que se consiga una correcta relación entre la calidad visual y su tamaño, es decir, su peso.
+
+### Formatos de mapa de bits
+
+- **JPEG**: Formato con pérdida, ideal para fotografías; buena compresión y tamaño reducido, óptimo para la web, no para gráficos con transparencias.
+- **GIF**: Formato limitado a 256 colores, admite animaciones y transparencia simple; tamaño pequeño, usado en iconos o animaciones web.
+- **PNG**: Compresión sin pérdida, admite transparencias y buena calidad; tamaño mayor que JPEG, excelente para gráficos y interfaces web.
+- **BMP**: Sin compresión, gran tamaño; alta calidad pero poco eficiente, no recomendable para la web.
+- **TIFF**: Sin pérdida o con compresión opcional, alta calidad; muy grande, usado en impresión o archivado, no para web.
+- **HEIF**: Alta compresión con gran calidad (mejor que JPEG), usado en móviles modernos; soporte web aún limitado.
+- **WEBP**: Compresión eficiente con o sin pérdida, admite transparencia y animaciones; tamaño reducido y óptimo para la web moderna.
+
+
+| **Formato** | **Tamaño**    | **Colores** | **Compresión** | **Compatibilidad** | **Ideal Para**       | **Optimo en web** |
+|-------------|---------------|-------------|----------------|--------------------|----------------------|-------------------|
+| **JPEG**    | Pequeño/medio | Muy bueno   | Pérdida        | Alta               | Fotografías          | 🟢🟢              |
+| **GIF**     | Muy pequeño   | Pobre       | Pérdida        | Alta               | Gráficos/animaciones | 🟢🟢              |
+| **PNG**     | Grande        | Muy bueno   | Sin pérdida    | Alta               | Todo                 | 🟢🟢              |
+| **BMP**     | El más grande | Muy bueno   | Sin pérdida    | Alta               | Fotografías          | 🔴🔴              |
+| **TIFF**    | Muy grande    | Muy bueno   | Pérdida        | Alta               | Fotografías          | 🔴🔴              |
+| **HEIF**    | Pequeño       | Excepcional | Pérdida        | Media              | Todo                 | 🟢🟢              |
+| **WEBP**    | Pequeño/medio | Muy bueno   | Ambas          | Baja               | Gráficos/animaciones | 🟢🟢              |
+
+### Formatos vectoriales
+
+- **AI**: Es uno de los formatos vectoriales más usados y la opción por defecto del programa Adobe Illustrator. Permite escalado sin pérdida y guardado de transparencias en los diseños.
+- **EPS**: Formato antiguo de archivos vectoriales. A diferencia del formato AI no permite transparencias.
+- **SVG**: Es un formato basado en XML muy extendido en el diseño web ya que está optimizado como lenguaje de programación y puede ser indexado, por eso suele utilizarse para logotipos, botones y otros elementos web.
+
 
 ## Modelo guía de estilo
 
